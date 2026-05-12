@@ -1,0 +1,50 @@
+2026-05-12T20:29:58+00:00
+Running ./release/arrow-compute-vector-selection-benchmark
+Run on (4 X 2100 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x4)
+  L1 Instruction 32 KiB (x4)
+  L2 Unified 2048 KiB (x4)
+  L3 Unified 266240 KiB (x1)
+Load Average: 4.06, 3.81, 1.83
+-----------------------------------------------------------------------------------------------------------------
+Benchmark                                                       Time             CPU   Iterations UserCounters...
+-----------------------------------------------------------------------------------------------------------------
+FilterStringViewInlinedNoNulls/2097152/0                   775817 ns       775801 ns          548 bytes_per_second=2.51756Gi/s data null%=0 items_per_second=450.534M/s mask null%=0 select%=99.9 size=2.09715M view_kind=0
+FilterStringViewInlinedNoNulls/2097152/1                  2161486 ns      2161496 ns          211 bytes_per_second=925.285Mi/s data null%=0 items_per_second=161.705M/s mask null%=0 select%=50 size=2.09715M view_kind=0
+FilterStringViewInlinedNoNulls/2097152/4                  2205291 ns      2205097 ns          189 bytes_per_second=906.99Mi/s data null%=0.1 items_per_second=158.666M/s mask null%=0 select%=50 size=2.09715M view_kind=0
+FilterStringViewInlinedNoNulls/2097152/7                  2281245 ns      2281206 ns          185 bytes_per_second=876.729Mi/s data null%=1 items_per_second=154.767M/s mask null%=0 select%=50 size=2.09715M view_kind=0
+FilterStringViewInlinedNoNulls/2097152/10                 2675420 ns      2675262 ns          156 bytes_per_second=747.59Mi/s data null%=10 items_per_second=145.167M/s mask null%=0 select%=50 size=2.09715M view_kind=0
+FilterStringViewInlinedWithNulls/2097152/0                2849234 ns      2849244 ns          165 bytes_per_second=701.941Mi/s data null%=0 items_per_second=122.673M/s mask null%=5 select%=99.9 size=2.09715M view_kind=0
+FilterStringViewInlinedWithNulls/2097152/1                3569631 ns      3569638 ns          118 bytes_per_second=560.281Mi/s data null%=0 items_per_second=97.9161M/s mask null%=5 select%=50 size=2.09715M view_kind=0
+FilterStringViewInlinedWithNulls/2097152/4                3717680 ns      3717506 ns          112 bytes_per_second=537.995Mi/s data null%=0.1 items_per_second=94.1152M/s mask null%=5 select%=50 size=2.09715M view_kind=0
+FilterStringViewInlinedWithNulls/2097152/7                3805542 ns      3805309 ns          111 bytes_per_second=525.581Mi/s data null%=1 items_per_second=92.7796M/s mask null%=5 select%=50 size=2.09715M view_kind=0
+FilterStringViewInlinedWithNulls/2097152/10               4407157 ns      4406990 ns           92 bytes_per_second=453.825Mi/s data null%=10 items_per_second=88.1239M/s mask null%=5 select%=50 size=2.09715M view_kind=0
+FilterStringViewLongNoNulls/2097152/0                       74645 ns        74646 ns         5912 bytes_per_second=26.1653Gi/s data null%=0 items_per_second=702.358M/s mask null%=0 select%=99.9 size=2.09715M view_kind=1
+FilterStringViewLongNoNulls/2097152/1                      289672 ns       289632 ns         1510 bytes_per_second=6.74346Gi/s data null%=0 items_per_second=181.016M/s mask null%=0 select%=50 size=2.09715M view_kind=1
+FilterStringViewLongNoNulls/2097152/4                      319069 ns       319070 ns         1304 bytes_per_second=6.12131Gi/s data null%=0.1 items_per_second=164.478M/s mask null%=0 select%=50 size=2.09715M view_kind=1
+FilterStringViewLongNoNulls/2097152/7                      325194 ns       325187 ns         1272 bytes_per_second=6.00616Gi/s data null%=1 items_per_second=162.851M/s mask null%=0 select%=50 size=2.09715M view_kind=1
+FilterStringViewLongNoNulls/2097152/10                     397521 ns       397523 ns         1086 bytes_per_second=4.91324Gi/s data null%=10 items_per_second=146.54M/s mask null%=0 select%=50 size=2.09715M view_kind=1
+FilterStringViewLongWithNulls/2097152/0                    331215 ns       331161 ns         1277 bytes_per_second=5.89781Gi/s data null%=0 items_per_second=158.316M/s mask null%=5 select%=99.9 size=2.09715M view_kind=1
+FilterStringViewLongWithNulls/2097152/1                    489233 ns       489221 ns          888 bytes_per_second=3.99231Gi/s data null%=0 items_per_second=107.166M/s mask null%=5 select%=50 size=2.09715M view_kind=1
+FilterStringViewLongWithNulls/2097152/4                    513915 ns       513917 ns          810 bytes_per_second=3.80046Gi/s data null%=0.1 items_per_second=102.118M/s mask null%=5 select%=50 size=2.09715M view_kind=1
+FilterStringViewLongWithNulls/2097152/7                    527004 ns       527005 ns          808 bytes_per_second=3.70609Gi/s data null%=1 items_per_second=100.487M/s mask null%=5 select%=50 size=2.09715M view_kind=1
+FilterStringViewLongWithNulls/2097152/10                   612835 ns       612765 ns          695 bytes_per_second=3.1874Gi/s data null%=10 items_per_second=95.0659M/s mask null%=5 select%=50 size=2.09715M view_kind=1
+TakeStringRandomIndicesNoNulls/2097152/10               133509024 ns    133496195 ns            3 items_per_second=15.7095M/s null_percent=10 selection_factor=1 size=2.09715M
+TakeStringRandomIndicesNoNulls/2097152/1                 11970459 ns     11970118 ns           33 items_per_second=175.199M/s null_percent=100 selection_factor=1 size=2.09715M
+TakeStringRandomIndicesNoNulls/2097152/0                167552348 ns    167552518 ns            2 items_per_second=12.5164M/s null_percent=0 selection_factor=1 size=2.09715M
+TakeStringRandomIndicesWithNulls/2097152/10             156511316 ns    156511202 ns            3 items_per_second=13.3994M/s null_percent=10 selection_factor=1 size=2.09715M
+TakeStringRandomIndicesWithNulls/2097152/1               13859485 ns     13859495 ns           30 items_per_second=151.315M/s null_percent=100 selection_factor=1 size=2.09715M
+TakeStringRandomIndicesWithNulls/2097152/0              174575433 ns    174575452 ns            2 items_per_second=12.0129M/s null_percent=0 selection_factor=1 size=2.09715M
+TakeStringViewInlinedRandomIndicesNoNulls/2097152/10     20209711 ns     20209702 ns           20 items_per_second=103.77M/s null_percent=10 selection_factor=1 size=2.09715M view_kind=0
+TakeStringViewInlinedRandomIndicesNoNulls/2097152/1       5462124 ns      5461383 ns           77 items_per_second=383.997M/s null_percent=100 selection_factor=1 size=2.09715M view_kind=0
+TakeStringViewInlinedRandomIndicesNoNulls/2097152/0      15058535 ns     15057499 ns           26 items_per_second=139.276M/s null_percent=0 selection_factor=1 size=2.09715M view_kind=0
+TakeStringViewInlinedRandomIndicesWithNulls/2097152/10   31350759 ns     31350839 ns           10 items_per_second=66.893M/s null_percent=10 selection_factor=1 size=2.09715M view_kind=0
+TakeStringViewInlinedRandomIndicesWithNulls/2097152/1     3152017 ns      3151690 ns          121 items_per_second=665.406M/s null_percent=100 selection_factor=1 size=2.09715M view_kind=0
+TakeStringViewInlinedRandomIndicesWithNulls/2097152/0    15139522 ns     15138511 ns           27 items_per_second=138.531M/s null_percent=0 selection_factor=1 size=2.09715M view_kind=0
+TakeStringViewLongRandomIndicesNoNulls/2097152/10        34307079 ns     34305130 ns           12 items_per_second=61.1323M/s null_percent=10 selection_factor=1 size=2.09715M view_kind=1
+TakeStringViewLongRandomIndicesNoNulls/2097152/1         18400603 ns     18400605 ns           22 items_per_second=113.972M/s null_percent=100 selection_factor=1 size=2.09715M view_kind=1
+TakeStringViewLongRandomIndicesNoNulls/2097152/0         28836697 ns     28835679 ns           12 items_per_second=72.7277M/s null_percent=0 selection_factor=1 size=2.09715M view_kind=1
+TakeStringViewLongRandomIndicesWithNulls/2097152/10      44417055 ns     44413942 ns            7 items_per_second=47.2183M/s null_percent=10 selection_factor=1 size=2.09715M view_kind=1
+TakeStringViewLongRandomIndicesWithNulls/2097152/1       16086988 ns     16087009 ns           26 items_per_second=130.363M/s null_percent=100 selection_factor=1 size=2.09715M view_kind=1
+TakeStringViewLongRandomIndicesWithNulls/2097152/0       28286841 ns     28167450 ns           11 items_per_second=74.453M/s null_percent=0 selection_factor=1 size=2.09715M view_kind=1

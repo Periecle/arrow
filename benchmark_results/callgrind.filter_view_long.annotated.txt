@@ -1,0 +1,296 @@
+--------------------------------------------------------------------------------
+Profile data file 'benchmark_results/callgrind.filter_view_long.out' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 9056464
+Trigger: Program termination
+Profiled target:  ./release/arrow-compute-vector-selection-benchmark --benchmark_filter=FilterStringViewLongNoNulls/[0-9]+/1$ --benchmark_min_time=1x (PID 15826, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       98
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                  
+--------------------------------------------------------------------------------
+54,962,570 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                  file:function
+--------------------------------------------------------------------------------
+8,934,588 (16.26%)  ???:unsigned short std::uniform_int_distribution<unsigned short>::operator()<arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> > >(arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> >&, std::uniform_int_distribution<unsigned short>::param_type const&) [clone .isra.0] [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+8,046,796 (14.64%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+5,465,952 ( 9.94%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+3,443,635 ( 6.27%)  ???:std::vector<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::operator=(std::vector<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > const&) [clone .isra.0] [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+2,659,198 ( 4.84%)  ???:std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::regex_traits<char>, true>::_Match_mode, long)'2 [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+2,495,599 ( 4.54%)  ???:std::shared_ptr<arrow::Array> arrow::random::GenerateBinaryArray<arrow::StringViewType, int>(arrow::random::RandomArrayGenerator*, long, int, int, double, std::optional<long>, long, arrow::MemoryPool*) [clone .isra.0] [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+2,194,661 ( 3.99%)  ???:std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::regex_traits<char>, true>::_Match_mode, long) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+1,720,699 ( 3.13%)  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,501,440 ( 2.73%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+1,206,169 ( 2.19%)  ./malloc/./malloc/malloc.c:_int_free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,113,781 ( 2.03%)  ???:bool std::__detail::__regex_algo_impl<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, char, std::__cxx11::regex_traits<char> >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::match_results<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, std::__cxx11::basic_regex<char, std::__cxx11::regex_traits<char> > const&, std::regex_constants::match_flag_type, std::__detail::_RegexExecutorPolicy, bool) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+1,071,100 ( 1.95%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  879,986 ( 1.60%)  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  872,392 ( 1.59%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+  865,051 ( 1.57%)  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  831,679 ( 1.51%)  ./elf/./elf/do-rel.h:_dl_relocate_object
+  629,187 ( 1.14%)  ???:arrow::BinaryViewBuilder::Append(unsigned char const*, long) [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+  609,429 ( 1.11%)  ???:double arrow::random::detail::generate_canonical<double, arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> > >(arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> >&) [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+  540,952 ( 0.98%)  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  470,248 ( 0.86%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  430,380 ( 0.78%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  328,111 ( 0.60%)  ???:arrow::compute::KernelSignature::Make(std::vector<arrow::compute::InputType, std::allocator<arrow::compute::InputType> >, arrow::compute::OutputType, bool, std::shared_ptr<arrow::compute::MatchConstraint>) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+  307,824 ( 0.56%)  ???:operator new(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  263,840 ( 0.48%)  ./malloc/./malloc/malloc.c:_int_free_merge_chunk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  259,760 ( 0.47%)  ???:std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::__cxx11::regex_traits<char>, false, false> >::_M_invoke(std::_Any_data const&, char&&) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+  230,555 ( 0.42%)  ???:arrow::random::RandomArrayGenerator::Boolean(long, double, double, long, arrow::MemoryPool*) [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+  216,249 ( 0.39%)  ???:int std::uniform_int_distribution<int>::operator()<arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> > >(arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> >&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0] [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+  210,858 ( 0.38%)  ???:arrow::internal::StringHeapBuilder::Reserve(long) [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+  205,138 ( 0.37%)  ???:std::_Sp_counted_ptr_inplace<arrow::compute::KernelSignature, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+  183,716 ( 0.33%)  ???:std::shared_ptr<arrow::NumericArray<arrow::Int32Type> > arrow::random::(anonymous namespace)::GenerateNumericArray<arrow::Int32Type, arrow::random::(anonymous namespace)::GenerateOptions<int, std::uniform_int_distribution<int> > >(long, arrow::random::(anonymous namespace)::GenerateOptions<int, std::uniform_int_distribution<int> >, long, arrow::MemoryPool*) [clone .constprop.0] [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+  164,165 ( 0.30%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  138,357 ( 0.25%)  ./stdio-common/./stdio-common/vfprintf-internal.c:__printf_buffer [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  137,865 ( 0.25%)  ???:arrow::Status::CopyFrom(arrow::Status const&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+  131,371 ( 0.24%)  ???:arrow::Status::~Status() [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+  127,731 ( 0.23%)  ???:std::vector<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::allocator<std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::_M_fill_assign(unsigned long, std::__cxx11::sub_match<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+  122,639 ( 0.22%)  ./stdio-common/./stdio-common/vfprintf-process-arg.c:__printf_buffer
+  119,280 ( 0.22%)  ???:benchmark::internal::BenchmarkInstance::BenchmarkInstance(benchmark::internal::Benchmark*, int, int, std::vector<long, std::allocator<long> > const&, int) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+  111,664 ( 0.20%)  ???:arrow::compute::VectorFunction::AddKernel(arrow::compute::VectorKernel) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+  107,886 ( 0.20%)  ???:std::vector<arrow::compute::InputType, std::allocator<arrow::compute::InputType> >::vector(std::initializer_list<arrow::compute::InputType>, std::allocator<arrow::compute::InputType> const&) [clone .constprop.0] [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   94,376 ( 0.17%)  ./malloc/./malloc/malloc.c:_int_free_maybe_consolidate [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   93,872 ( 0.17%)  ???:arrow::compute::ScalarFunction::AddKernel(std::vector<arrow::compute::InputType, std::allocator<arrow::compute::InputType> >, arrow::compute::OutputType, arrow::Status (*)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*), std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>, std::shared_ptr<arrow::compute::MatchConstraint>) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   91,096 ( 0.17%)  ???:std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+   87,981 ( 0.16%)  ./stdio-common/./stdio-common/Xprintf_buffer_write.c:__printf_buffer_write [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   87,285 ( 0.16%)  ???:arrow::internal::BaseSetBitRunReader<false>::NextRun() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   82,155 ( 0.15%)  ???:void std::vector<arrow::compute::ScalarKernel, std::allocator<arrow::compute::ScalarKernel> >::_M_realloc_insert<std::shared_ptr<arrow::compute::KernelSignature>, arrow::Status (*&)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*), std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>&>(__gnu_cxx::__normal_iterator<arrow::compute::ScalarKernel*, std::vector<arrow::compute::ScalarKernel, std::allocator<arrow::compute::ScalarKernel> > >, std::shared_ptr<arrow::compute::KernelSignature>&&, arrow::Status (*&)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*), std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   78,650 ( 0.14%)  ./elf/../sysdeps/generic/ldsodefs.h:do_lookup_x
+   78,598 ( 0.14%)  ./elf/../sysdeps/generic/ldsodefs.h:_dl_relocate_object
+   76,071 ( 0.14%)  ???:arrow::Result<std::shared_ptr<arrow::ArrayData> > arrow::compute::internal::(anonymous namespace)::GetTakeIndicesFromBitmapImpl<arrow::UInt16Type>(arrow::ArraySpan const&, arrow::compute::FilterOptions::NullSelectionBehavior, arrow::MemoryPool*) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   75,021 ( 0.14%)  ???:benchmark::internal::BenchmarkFamilies::FindBenchmarks(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> >*, std::ostream*) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   74,855 ( 0.14%)  ???:benchmark::(anonymous namespace)::StrFormatImp(char const*, __va_list_tag*) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   74,204 ( 0.14%)  ???:arrow::compute::CheckArityImpl(arrow::compute::Function const&, int) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   73,860 ( 0.13%)  ???:void std::vector<arrow::compute::ScalarKernel, std::allocator<arrow::compute::ScalarKernel> >::_M_realloc_insert<arrow::compute::ScalarKernel>(__gnu_cxx::__normal_iterator<arrow::compute::ScalarKernel*, std::vector<arrow::compute::ScalarKernel, std::allocator<arrow::compute::ScalarKernel> > >, arrow::compute::ScalarKernel&&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   67,122 ( 0.12%)  ???:std::_Function_handler<arrow::Result<arrow::TypeHolder> (arrow::compute::KernelContext*, std::vector<arrow::TypeHolder, std::allocator<arrow::TypeHolder> > const&), arrow::Result<arrow::TypeHolder> (*)(arrow::compute::KernelContext*, std::vector<arrow::TypeHolder, std::allocator<arrow::TypeHolder> > const&)>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   66,421 ( 0.12%)  ???:benchmark::BenchmarkName::str[abi:cxx11]() const [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   64,719 ( 0.12%)  ./stdio-common/./stdio-common/_itoa.c:_itoa_word [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   62,920 ( 0.11%)  ./elf/../sysdeps/generic/dl-protected.h:do_lookup_x
+   61,520 ( 0.11%)  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   59,353 ( 0.11%)  ./elf/./elf/dl-runtime.c:_dl_fixup [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   57,954 ( 0.11%)  ./malloc/./malloc/arena.c:free
+   53,281 ( 0.10%)  ./elf/./elf/dl-version.c:_dl_check_map_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   49,167 ( 0.09%)  ???:arrow::compute::internal::MakeKernel(arrow::compute::InputType, std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>, bool) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   48,747 ( 0.09%)  ???:arrow::compute::ScalarFunction::AddKernel(arrow::compute::ScalarKernel) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   48,020 ( 0.09%)  ./malloc/./malloc/malloc.c:alloc_perturb [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   47,600 ( 0.09%)  ???:arrow::compute::match::SameTypeId(arrow::Type::type) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   46,409 ( 0.08%)  ./string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   45,467 ( 0.08%)  ./string/../sysdeps/x86_64/multiarch/strchr-avx2.S:__strchrnul_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   44,222 ( 0.08%)  ./elf/./elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   44,175 ( 0.08%)  ???:arrow::compute::FunctionDoc::~FunctionDoc() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   44,074 ( 0.08%)  ???:decltype (::new ((void*)(0)) arrow::compute::ScalarKernel((declval<std::shared_ptr<arrow::compute::KernelSignature> >)(), (declval<arrow::Status (*&)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)>)(), (declval<std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>&>)())) std::construct_at<arrow::compute::ScalarKernel, std::shared_ptr<arrow::compute::KernelSignature>, arrow::Status (*&)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*), std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>&>(arrow::compute::ScalarKernel*, std::shared_ptr<arrow::compute::KernelSignature>&&, arrow::Status (*&)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*), std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>&) [clone .isra.0] [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   42,519 ( 0.08%)  ???:std::_Hash_bytes(void const*, unsigned long, unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   39,323 ( 0.07%)  ???:0x00000000048a44e0 [???]
+   38,663 ( 0.07%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [clone .isra.0] [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+   38,485 ( 0.07%)  ???:0x0000000006518210 [???]
+   38,475 ( 0.07%)  ???:0x0000000006518c60 [???]
+   38,470 ( 0.07%)  ???:operator delete(void*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   38,190 ( 0.07%)  ???:std::vector<arrow::compute::InputType, std::allocator<arrow::compute::InputType> >::~vector() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   38,168 ( 0.07%)  ???:arrow::compute::internal::AddAggKernel(std::shared_ptr<arrow::compute::KernelSignature>, std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>, arrow::compute::ScalarAggregateFunction*, arrow::compute::SimdLevel::type, bool) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   36,518 ( 0.07%)  ./libio/./libio/vsnprintf.c:__vsnprintf_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   36,501 ( 0.07%)  ???:arrow::internal::CpuInfo::Impl::Impl() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   35,257 ( 0.06%)  ???:arrow::compute::FunctionDoc::FunctionDoc(arrow::compute::FunctionDoc const&) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   33,972 ( 0.06%)  ???:arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   33,751 ( 0.06%)  ???:benchmark::StrFormat[abi:cxx11](char const*, ...) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   33,596 ( 0.06%)  ???:void std::vector<arrow::compute::ScalarAggregateKernel, std::allocator<arrow::compute::ScalarAggregateKernel> >::_M_realloc_insert<arrow::compute::ScalarAggregateKernel>(__gnu_cxx::__normal_iterator<arrow::compute::ScalarAggregateKernel*, std::vector<arrow::compute::ScalarAggregateKernel, std::allocator<arrow::compute::ScalarAggregateKernel> > >, arrow::compute::ScalarAggregateKernel&&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   32,910 ( 0.06%)  ???:std::_Function_handler<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&), arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (*)(arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   32,852 ( 0.06%)  ./string/../sysdeps/x86_64/multiarch/memchr-avx2.S:__memchr_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   32,380 ( 0.06%)  ???:void std::vector<std::vector<long, std::allocator<long> >, std::allocator<std::vector<long, std::allocator<long> > > >::_M_realloc_insert<std::vector<long, std::allocator<long> > const&>(__gnu_cxx::__normal_iterator<std::vector<long, std::allocator<long> >*, std::vector<std::vector<long, std::allocator<long> >, std::allocator<std::vector<long, std::allocator<long> > > > >, std::vector<long, std::allocator<long> > const&) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   32,365 ( 0.06%)  ???:arrow::compute::Kernel::Kernel(std::vector<arrow::compute::InputType, std::allocator<arrow::compute::InputType> >, arrow::compute::OutputType, std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   30,315 ( 0.06%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   30,273 ( 0.06%)  ???:std::vector<arrow::compute::InputType, std::allocator<arrow::compute::InputType> >::vector(std::initializer_list<arrow::compute::InputType>, std::allocator<arrow::compute::InputType> const&) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   27,256 ( 0.05%)  ./stdlib/./stdlib/cxa_finalize.c:__cxa_finalize [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   27,211 ( 0.05%)  ???:0x0000000006518430 [???]
+   26,488 ( 0.05%)  ???:operator delete(void*, unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   25,926 ( 0.05%)  ???:arrow::compute::OutputType::OutputType(arrow::compute::OutputType const&) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   25,279 ( 0.05%)  ???:arrow::compute::FunctionRegistry::AddFunction(std::shared_ptr<arrow::compute::Function>, bool) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   25,193 ( 0.05%)  ???:std::__detail::_Map_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> > >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   24,996 ( 0.05%)  ???:arrow::compute::ScalarAggregateFunction::AddKernel(arrow::compute::ScalarAggregateKernel) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   24,985 ( 0.05%)  ???:arrow::compute::ScalarKernel::ScalarKernel(std::vector<arrow::compute::InputType, std::allocator<arrow::compute::InputType> >, arrow::compute::OutputType, arrow::Status (*)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*), std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   24,598 ( 0.04%)  ???:arrow::compute::internal::AddHashAggKernels(std::vector<std::shared_ptr<arrow::DataType>, std::allocator<std::shared_ptr<arrow::DataType> > > const&, std::function<arrow::Result<arrow::compute::HashAggregateKernel> (std::shared_ptr<arrow::DataType> const&)>, arrow::compute::HashAggregateFunction*) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   24,541 ( 0.04%)  ./malloc/./malloc/arena.c:malloc
+   24,524 ( 0.04%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   24,395 ( 0.04%)  ./elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   23,317 ( 0.04%)  ???:std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   22,661 ( 0.04%)  ./stdlib/./stdlib/getenv.c:getenv [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   22,641 ( 0.04%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+   22,534 ( 0.04%)  ./stdio-common/./stdio-common/Xprintf_buffer_done.c:__printf_buffer_done [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   22,393 ( 0.04%)  ???:arrow::compute::internal::RegisterVectorRunEndDecode(arrow::compute::FunctionRegistry*)::{lambda(arrow::Type::type)#1}::operator()(arrow::Type::type) const [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   21,648 ( 0.04%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::__cxx11::regex_traits<char>::transform_primary<char const*>(char const*, char const*) const [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   21,056 ( 0.04%)  ???:void std::vector<arrow::compute::HashAggregateKernel, std::allocator<arrow::compute::HashAggregateKernel> >::_M_realloc_insert<arrow::compute::HashAggregateKernel>(__gnu_cxx::__normal_iterator<arrow::compute::HashAggregateKernel*, std::vector<arrow::compute::HashAggregateKernel, std::allocator<arrow::compute::HashAggregateKernel> > >, arrow::compute::HashAggregateKernel&&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   20,672 ( 0.04%)  ???:arrow::compute::InputType::CopyInto(arrow::compute::InputType const&) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   20,444 ( 0.04%)  ???:benchmark::internal::Benchmark::Args(std::vector<long, std::allocator<long> > const&) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   20,442 ( 0.04%)  ???:testing::internal::StringStreamToString(std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*) [/home/user/arrow/cpp/build/release/libarrow_gtest.so.1.17.0]
+   19,973 ( 0.04%)  ???:arrow::compute::ScalarFunction::ScalarFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, arrow::compute::Arity const&, arrow::compute::FunctionDoc, arrow::compute::FunctionOptions const*, bool) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   19,968 ( 0.04%)  ???:arrow::compute::Kernel::~Kernel() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   19,760 ( 0.04%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char const*, unsigned long, unsigned long) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   19,471 ( 0.04%)  ???:std::__cxx11::collate<char>::do_transform(char const*, char const*) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   19,383 ( 0.04%)  ???:0x0000000005982600 [???]
+   19,240 ( 0.04%)  ???:void std::vector<benchmark::internal::Statistics, std::allocator<benchmark::internal::Statistics> >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, double (*&)(std::vector<double, std::allocator<double> > const&), benchmark::StatisticUnit&>(__gnu_cxx::__normal_iterator<benchmark::internal::Statistics*, std::vector<benchmark::internal::Statistics, std::allocator<benchmark::internal::Statistics> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, double (*&)(std::vector<double, std::allocator<double> > const&), benchmark::StatisticUnit&) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   19,149 ( 0.03%)  ./stdlib/./stdlib/cxa_atexit.c:__cxa_atexit [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   18,877 ( 0.03%)  ???:std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> > >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_find_before_node(unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) const [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   18,637 ( 0.03%)  ???:void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.0] [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   18,594 ( 0.03%)  ???:arrow::compute::internal::(anonymous namespace)::RegisterPairwiseDiffKernels(std::basic_string_view<char, std::char_traits<char> >, std::basic_string_view<char, std::char_traits<char> >, arrow::compute::FunctionDoc const&, arrow::compute::FunctionRegistry*) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   18,300 ( 0.03%)  ???:arrow::compute::FunctionDoc::FunctionDoc(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   18,283 ( 0.03%)  ./stdlib/./stdlib/cxa_atexit.c:__new_exitfn [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   18,230 ( 0.03%)  ???:std::ostream::put(char) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   18,026 ( 0.03%)  ???:arrow::compute::ScalarFunction::~ScalarFunction() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   18,003 ( 0.03%)  ???:std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, false, false>::_M_ready() [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   16,764 ( 0.03%)  ???:arrow::internal::TrimString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   16,110 ( 0.03%)  ???:arrow::compute::HashAggregateFunction::AddKernel(arrow::compute::HashAggregateKernel) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   15,968 ( 0.03%)  ???:std::ostream::sentry::sentry(std::ostream&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   15,648 ( 0.03%)  ./elf/./elf/dl-misc.c:_dl_name_match_p [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   15,420 ( 0.03%)  ./malloc/./malloc/malloc.c:unlink_chunk.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   15,192 ( 0.03%)  ???:std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_copy() [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+   14,763 ( 0.03%)  ???:arrow::compute::internal::RegisterSelectionFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, arrow::compute::FunctionDoc, arrow::compute::VectorKernel, std::vector<arrow::compute::internal::SelectionKernelData, std::allocator<arrow::compute::internal::SelectionKernelData> >&&, arrow::compute::FunctionOptions const*, arrow::compute::FunctionRegistry*) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   14,679 ( 0.03%)  ???:0x0000000005982400 [???]
+   14,622 ( 0.03%)  ./nptl/./nptl/pthread_mutex_lock.c:pthread_mutex_lock@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   14,118 ( 0.03%)  ???:arrow::compute::InputType::MoveInto(arrow::compute::InputType&&) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   13,786 ( 0.03%)  ???:arrow::compute::HashAggregateKernel::operator=(arrow::compute::HashAggregateKernel&&) [clone .isra.0] [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   13,757 ( 0.03%)  ???:std::shared_ptr<arrow::compute::internal::(anonymous namespace)::ArithmeticFloatingPointFunction>::shared_ptr<std::allocator<void>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, arrow::compute::Arity, arrow::compute::FunctionDoc>(std::_Sp_alloc_shared_tag<std::allocator<void> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, arrow::compute::Arity&&, arrow::compute::FunctionDoc&&) [clone .constprop.0] [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   13,704 ( 0.02%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   13,573 ( 0.02%)  ???:arrow::compute::VectorFunction::~VectorFunction() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   13,537 ( 0.02%)  ???:0x00000000048a2a90 [???]
+   13,310 ( 0.02%)  ???:arrow::compute::InputType::~InputType() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   13,179 ( 0.02%)  ???:0x00000000048a3330 [???]
+   13,162 ( 0.02%)  ???:__static_initialization_and_destruction_0() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   13,113 ( 0.02%)  ???:0x00000000048a33c0 [???]
+   13,111 ( 0.02%)  ???:0x00000000048a3500 [???]
+   13,111 ( 0.02%)  ???:0x00000000048a4450 [???]
+   13,069 ( 0.02%)  ???:std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::overflow(int) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   12,947 ( 0.02%)  ./debug/./debug/vsnprintf_chk.c:__vsnprintf_chk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   12,936 ( 0.02%)  ???:std::locale::locale() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   12,869 ( 0.02%)  ???:std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   12,814 ( 0.02%)  ???:void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0] [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+   12,756 ( 0.02%)  ./elf/../sysdeps/x86_64/tls_get_addr.S:__tls_get_addr [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   12,661 ( 0.02%)  ???:arrow::compute::internal::AddBasicAggKernels(std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>, std::vector<std::shared_ptr<arrow::DataType>, std::allocator<std::shared_ptr<arrow::DataType> > > const&, std::shared_ptr<arrow::DataType>, arrow::compute::ScalarAggregateFunction*, arrow::compute::SimdLevel::type) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   12,294 ( 0.02%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   12,192 ( 0.02%)  ???:std::locale::_Impl::_M_install_facet(std::locale::id const*, std::locale::facet const*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   12,057 ( 0.02%)  ???:arrow::compute::ScalarAggregateFunction::~ScalarAggregateFunction() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   11,753 ( 0.02%)  ???:0x0000000004a8c7b0 [???]
+   11,680 ( 0.02%)  ???:arrow::compute::internal::RegisterScalarArithmetic(arrow::compute::FunctionRegistry*) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   11,574 ( 0.02%)  ???:std::locale::id::_M_id() const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   11,424 ( 0.02%)  ???:std::_Sp_counted_ptr_inplace<arrow::compute::match::SameTypeIdMatcher, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   11,319 ( 0.02%)  ???:arrow::compute::internal::AddNullExec(arrow::compute::ScalarFunction*) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+   11,264 ( 0.02%)  ???:0x0000000000111fb0 [???]
+   11,263 ( 0.02%)  ???:0x0000000004a8d460 [???]
+   11,195 ( 0.02%)  ???:std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector<char const* const*, void>(char const* const*, char const* const*, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+   11,115 ( 0.02%)  ./string/./string/strxfrm_l.c:strxfrm_l [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   11,012 ( 0.02%)  ./stdio-common/./stdio-common/printf-parse.h:__printf_buffer
+   10,716 ( 0.02%)  ???:0x0000000000112180 [???]
+   10,422 ( 0.02%)  ./elf/./elf/dl-load.c:_dl_map_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   10,208 ( 0.02%)  ???:std::basic_ios<char, std::char_traits<char> >::_M_cache_locale(std::locale const&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   10,043 ( 0.02%)  ???:std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+   10,040 ( 0.02%)  ???:0x0000000000111c00 [???]
+   10,014 ( 0.02%)  ???:arrow::compute::internal::(anonymous namespace)::AddKernel(arrow::Type::type, std::shared_ptr<arrow::compute::KernelSignature>, arrow::Status (*)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*), arrow::Status (*)(arrow::compute::KernelContext*, arrow::compute::ExecBatch const&, arrow::Datum*), arrow::compute::FunctionRegistry*, arrow::compute::VectorFunction*) [clone .isra.0] [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    9,913 ( 0.02%)  ???:arrow::DataType::~DataType() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    9,830 ( 0.02%)  ???:arrow::compute::internal::(anonymous namespace)::ArithmeticFunction::~ArithmeticFunction() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    9,808 ( 0.02%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+    9,619 ( 0.02%)  ./stdlib/./stdlib/exit.c:__run_exit_handlers [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    9,518 ( 0.02%)  ???:std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> > >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    9,453 ( 0.02%)  ???:arrow::compute::VectorKernel::VectorKernel(arrow::compute::VectorKernel const&) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    9,418 ( 0.02%)  ???:arrow::compute::FunctionRegistry::FunctionRegistryImpl::CanAddFunctionName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    9,216 ( 0.02%)  ./wcsmbs/./wcsmbs/btowc.c:btowc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    9,107 ( 0.02%)  ???:std::vector<std::shared_ptr<arrow::Field>, std::allocator<std::shared_ptr<arrow::Field> > >::~vector() [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+    9,097 ( 0.02%)  ???:std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> > >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    9,096 ( 0.02%)  ./nptl/./nptl/pthread_mutex_unlock.c:pthread_mutex_unlock@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    9,044 ( 0.02%)  ???:std::ios_base::_M_init() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    8,987 ( 0.02%)  ???:std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector<char const* const*, void>(char const* const*, char const* const*, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) [clone .constprop.0] [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    8,965 ( 0.02%)  ???:arrow::compute::HashAggregateFunction::~HashAggregateFunction() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    8,902 ( 0.02%)  ???:benchmark::(anonymous namespace)::GetNumCPUs() [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+    8,776 ( 0.02%)  ???:arrow::compute::internal::(anonymous namespace)::AddBasicSetLookupKernels(arrow::compute::ScalarKernel, std::shared_ptr<arrow::DataType> const&, arrow::compute::ScalarFunction*)::{lambda(std::vector<std::shared_ptr<arrow::DataType>, std::allocator<std::shared_ptr<arrow::DataType> > > const&)#1}::operator()(std::vector<std::shared_ptr<arrow::DataType>, std::allocator<std::shared_ptr<arrow::DataType> > > const&) const [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    8,723 ( 0.02%)  ./ctype/./ctype/ctype.c:toupper [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    8,610 ( 0.02%)  ???:__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > std::find<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+    8,520 ( 0.02%)  ???:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    8,514 ( 0.02%)  ???:arrow::detail::Fingerprintable::~Fingerprintable() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    8,468 ( 0.02%)  ???:arrow::compute::internal::RegisterVectorHash(arrow::compute::FunctionRegistry*) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    8,444 ( 0.02%)  ???:arrow::compute::ScalarKernel::ScalarKernel(arrow::compute::ScalarKernel const&) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    8,387 ( 0.02%)  ???:arrow::compute::internal::(anonymous namespace)::AddCaseWhenKernel(std::shared_ptr<arrow::compute::internal::(anonymous namespace)::CaseWhenFunction> const&, arrow::compute::internal::detail::GetTypeId, arrow::Status (*)(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*), std::shared_ptr<arrow::compute::MatchConstraint>) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    8,364 ( 0.02%)  ???:std::_Sp_counted_ptr_inplace<arrow::compute::KernelSignature, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    8,246 ( 0.02%)  ./libio/../include/printf_buffer.h:__vsnprintf_internal
+    8,174 ( 0.01%)  ???:arrow::compute::internal::(anonymous namespace)::MakeFlippedCompare(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, arrow::compute::ScalarFunction const&, arrow::compute::FunctionDoc) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    8,145 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/strncpy-avx2.S:__stpncpy_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    8,118 ( 0.01%)  ???:0x000000000010c8e0 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    8,066 ( 0.01%)  ???:arrow::compute::internal::AddMinMaxKernel(std::function<arrow::Result<std::unique_ptr<arrow::compute::KernelState, std::default_delete<arrow::compute::KernelState> > > (arrow::compute::KernelContext*, arrow::compute::KernelInitArgs const&)>, arrow::compute::internal::detail::GetTypeId, arrow::compute::ScalarAggregateFunction*, arrow::compute::SimdLevel::type) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    7,969 ( 0.01%)  ???:std::shared_ptr<arrow::compute::internal::(anonymous namespace)::ArithmeticFunction>::shared_ptr<std::allocator<void>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, arrow::compute::Arity, arrow::compute::FunctionDoc>(std::_Sp_alloc_shared_tag<std::allocator<void> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, arrow::compute::Arity&&, arrow::compute::FunctionDoc&&) [clone .constprop.0] [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    7,922 ( 0.01%)  ???:benchmark::(anonymous namespace)::FlagToEnvVar(char const*) [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+    7,920 ( 0.01%)  ???:std::ios_base::ios_base() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    7,897 ( 0.01%)  ???:void std::_Construct<arrow::compute::ScalarFunction, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, arrow::compute::Arity, arrow::compute::FunctionDoc, arrow::compute::FunctionOptions const*&>(arrow::compute::ScalarFunction*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, arrow::compute::Arity&&, arrow::compute::FunctionDoc&&, arrow::compute::FunctionOptions const*&) [clone .isra.0] [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    7,830 ( 0.01%)  ???:std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold() [/home/user/arrow/cpp/build/release/libarrow_testing.so.2500.0.0]
+    7,820 ( 0.01%)  ???:std::_Function_base::~_Function_base() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    7,706 ( 0.01%)  ???:testing::internal::FlagToEnvVar(char const*) [/home/user/arrow/cpp/build/release/libarrow_gtest.so.1.17.0]
+    7,692 ( 0.01%)  ./stdio-common/./stdio-common/printf_fp.c:__printf_fp_buffer_1.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    7,682 ( 0.01%)  ???:std::istream::sentry::sentry(std::istream&, bool) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    7,656 ( 0.01%)  ???:std::basic_ios<char, std::char_traits<char> >::init(std::basic_streambuf<char, std::char_traits<char> >*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    7,650 ( 0.01%)  ???:arrow::compute::internal::RegisterVectorRunEndEncode(arrow::compute::FunctionRegistry*)::{lambda(arrow::Type::type)#1}::operator()(arrow::Type::type) const [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    7,644 ( 0.01%)  ???:arrow::duration(arrow::TimeUnit::type) [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    7,626 ( 0.01%)  ???:std::__cxx11::regex_traits<char>::isctype(char, std::__cxx11::regex_traits<char>::_RegexMask) const [clone .isra.0] [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+    7,551 ( 0.01%)  ???:arrow::compute::OutputType::~OutputType() [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    7,498 ( 0.01%)  ???:std::locale::operator=(std::locale const&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    7,384 ( 0.01%)  ???:benchmark::internal::Benchmark::~Benchmark() [/home/user/arrow/cpp/build/release/arrow-compute-vector-selection-benchmark]
+    7,368 ( 0.01%)  ???:std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::shared_ptr<arrow::compute::Function> > >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::clear() [/home/user/arrow/cpp/build/release/libarrow.so.2500.0.0]
+    7,363 ( 0.01%)  ???:arrow::compute::HashAggregateFunction::HashAggregateFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, arrow::compute::Arity const&, arrow::compute::FunctionDoc, arrow::compute::FunctionOptions const*) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    7,313 ( 0.01%)  ???:0x0000000005983030 [???]
+    7,194 ( 0.01%)  ???:arrow::compute::internal::(anonymous namespace)::ReplaceMask<arrow::FixedSizeBinaryType>::GetSignature(arrow::compute::internal::detail::GetTypeId) [/home/user/arrow/cpp/build/release/libarrow_compute.so.2500.0.0]
+    7,080 ( 0.01%)  ???:std::locale::~locale() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+
+--------------------------------------------------------------------------------
+The following files chosen for auto-annotation could not be found:
+--------------------------------------------------------------------------------
+  ./ctype/./ctype/ctype.c
+  ./debug/./debug/vsnprintf_chk.c
+  ./elf/../sysdeps/generic/dl-new-hash.h
+  ./elf/../sysdeps/generic/dl-protected.h
+  ./elf/../sysdeps/generic/ldsodefs.h
+  ./elf/../sysdeps/x86_64/dl-machine.h
+  ./elf/../sysdeps/x86_64/dl-trampoline.h
+  ./elf/../sysdeps/x86_64/tls_get_addr.S
+  ./elf/./elf/dl-load.c
+  ./elf/./elf/dl-lookup.c
+  ./elf/./elf/dl-misc.c
+  ./elf/./elf/dl-reloc.c
+  ./elf/./elf/dl-runtime.c
+  ./elf/./elf/dl-tunables.c
+  ./elf/./elf/dl-version.c
+  ./elf/./elf/do-rel.h
+  ./libio/../include/printf_buffer.h
+  ./libio/./libio/vsnprintf.c
+  ./malloc/./malloc/arena.c
+  ./malloc/./malloc/malloc.c
+  ./nptl/./nptl/pthread_mutex_lock.c
+  ./nptl/./nptl/pthread_mutex_unlock.c
+  ./stdio-common/./stdio-common/Xprintf_buffer_done.c
+  ./stdio-common/./stdio-common/Xprintf_buffer_write.c
+  ./stdio-common/./stdio-common/_itoa.c
+  ./stdio-common/./stdio-common/printf-parse.h
+  ./stdio-common/./stdio-common/printf_fp.c
+  ./stdio-common/./stdio-common/vfprintf-internal.c
+  ./stdio-common/./stdio-common/vfprintf-process-arg.c
+  ./stdlib/./stdlib/cxa_atexit.c
+  ./stdlib/./stdlib/cxa_finalize.c
+  ./stdlib/./stdlib/exit.c
+  ./stdlib/./stdlib/getenv.c
+  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S
+  ./string/../sysdeps/x86_64/multiarch/memchr-avx2.S
+  ./string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S
+  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+  ./string/../sysdeps/x86_64/multiarch/strchr-avx2.S
+  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S
+  ./string/../sysdeps/x86_64/multiarch/strncpy-avx2.S
+  ./string/./string/strxfrm_l.c
+  ./wcsmbs/./wcsmbs/btowc.c
+
