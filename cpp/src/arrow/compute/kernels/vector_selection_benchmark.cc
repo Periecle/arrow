@@ -174,6 +174,29 @@ struct TakeBenchmark {
     Bench(values);
   }
 
+  // BinaryView/StringView take is a constant-time copy of 16-byte view structs:
+  // inlined strings stay in the view, longer strings keep the same out-of-line
+  // pointer. We benchmark both inlined (<= 12B) and out-of-line ranges to expose
+  // any difference (none expected for take, since the kernel never touches data).
+  static constexpr int kStringViewInlineMaxLength = 12;
+  static constexpr int kStringViewLongMinLength = 16;
+  static constexpr int kStringViewLongMaxLength = 64;
+
+  void StringViewInlined() {
+    auto values = rand.StringView(args.size, kStringMinLength,
+                                  kStringViewInlineMaxLength, args.null_proportion);
+    Bench(values);
+    state.counters["view_kind"] = 0;  // inlined
+  }
+
+  void StringViewLong() {
+    auto values =
+        rand.StringView(args.size, kStringViewLongMinLength, kStringViewLongMaxLength,
+                        args.null_proportion);
+    Bench(values);
+    state.counters["view_kind"] = 1;  // out-of-line
+  }
+
   void ChunkedInt64(int64_t num_chunks, bool chunk_indices_too) {
     auto chunked_array = GenChunkedArray(num_chunks, [this](int64_t chunk_length) {
       return rand.Int64(chunk_length, -100, 100, args.null_proportion);
@@ -195,6 +218,14 @@ struct TakeBenchmark {
     auto chunked_array = GenChunkedArray(num_chunks, [this](int64_t chunk_length) {
       return std::static_pointer_cast<StringArray>(rand.String(
           chunk_length, kStringMinLength, kStringMaxLength, args.null_proportion));
+    });
+    BenchChunked(chunked_array, chunk_indices_too);
+  }
+
+  void ChunkedStringView(int64_t num_chunks, bool chunk_indices_too) {
+    auto chunked_array = GenChunkedArray(num_chunks, [this](int64_t chunk_length) {
+      return rand.StringView(chunk_length, kStringMinLength, kStringViewInlineMaxLength,
+                             args.null_proportion);
     });
     BenchChunked(chunked_array, chunk_indices_too);
   }
@@ -317,6 +348,34 @@ struct FilterBenchmark {
     Bench(values);
   }
 
+  void StringViewImpl(int32_t min_length, int32_t max_length) {
+    const int32_t mean_length = (max_length + min_length) / 2;
+    // View arrays use fixed-width 16-byte view structs; use that as the "size"
+    // baseline so byte-budget heuristics line up with the int64 case.
+    int64_t array_size = args.size / static_cast<int64_t>(sizeof(BinaryViewType::c_type));
+    if (mean_length > 0 && args.values_null_proportion < 1) {
+      // For "long" strings, prefer a budget driven by data bytes so we don't
+      // blow up the data buffer.
+      const int64_t bytes_budget = args.size;
+      array_size = std::max<int64_t>(
+          1, static_cast<int64_t>(bytes_budget / mean_length /
+                                  (1 - args.values_null_proportion)));
+    }
+    auto values = rand.StringView(array_size, min_length, max_length,
+                                  args.values_null_proportion);
+    Bench(values);
+  }
+
+  void StringViewInlined() {
+    StringViewImpl(/*min_length=*/0, /*max_length=*/12);
+    state.counters["view_kind"] = 0;  // inlined
+  }
+
+  void StringViewLong() {
+    StringViewImpl(/*min_length=*/16, /*max_length=*/64);
+    state.counters["view_kind"] = 1;  // out-of-line
+  }
+
   void Bench(const std::shared_ptr<Array>& values) {
     auto filter = rand.Boolean(values->length(), args.selected_proportion,
                                args.filter_null_proportion);
@@ -394,6 +453,22 @@ static void FilterStringFilterWithNulls(benchmark::State& state) {
   FilterBenchmark(state, true).String();
 }
 
+static void FilterStringViewInlinedNoNulls(benchmark::State& state) {
+  FilterBenchmark(state, false).StringViewInlined();
+}
+
+static void FilterStringViewInlinedWithNulls(benchmark::State& state) {
+  FilterBenchmark(state, true).StringViewInlined();
+}
+
+static void FilterStringViewLongNoNulls(benchmark::State& state) {
+  FilterBenchmark(state, false).StringViewLong();
+}
+
+static void FilterStringViewLongWithNulls(benchmark::State& state) {
+  FilterBenchmark(state, true).StringViewLong();
+}
+
 static void FilterRecordBatchNoNulls(benchmark::State& state) {
   FilterBenchmark(state, false).BenchRecordBatch();
 }
@@ -449,6 +524,41 @@ static void TakeStringRandomIndicesWithNulls(benchmark::State& state) {
 
 static void TakeStringMonotonicIndices(benchmark::State& state) {
   TakeBenchmark(state, /*indices_with_nulls=*/false, /*monotonic=*/true).FSLInt64();
+}
+
+static void TakeStringViewInlinedRandomIndicesNoNulls(benchmark::State& state) {
+  TakeBenchmark(state, /*indices_with_nulls=*/false).StringViewInlined();
+}
+
+static void TakeStringViewInlinedRandomIndicesWithNulls(benchmark::State& state) {
+  TakeBenchmark(state, /*indices_with_nulls=*/true).StringViewInlined();
+}
+
+static void TakeStringViewInlinedMonotonicIndices(benchmark::State& state) {
+  TakeBenchmark(state, /*indices_with_nulls=*/false, /*monotonic=*/true)
+      .StringViewInlined();
+}
+
+static void TakeStringViewLongRandomIndicesNoNulls(benchmark::State& state) {
+  TakeBenchmark(state, /*indices_with_nulls=*/false).StringViewLong();
+}
+
+static void TakeStringViewLongRandomIndicesWithNulls(benchmark::State& state) {
+  TakeBenchmark(state, /*indices_with_nulls=*/true).StringViewLong();
+}
+
+static void TakeStringViewLongMonotonicIndices(benchmark::State& state) {
+  TakeBenchmark(state, /*indices_with_nulls=*/false, /*monotonic=*/true).StringViewLong();
+}
+
+static void TakeChunkedChunkedStringViewRandomIndicesNoNulls(benchmark::State& state) {
+  TakeBenchmark(state, /*indices_with_nulls=*/false)
+      .ChunkedStringView(/*num_chunks=*/100, /*chunk_indices_too=*/true);
+}
+
+static void TakeChunkedChunkedStringViewRandomIndicesWithNulls(benchmark::State& state) {
+  TakeBenchmark(state, /*indices_with_nulls=*/true)
+      .ChunkedStringView(/*num_chunks=*/100, /*chunk_indices_too=*/true);
 }
 
 static void TakeChunkedChunkedInt64RandomIndicesNoNulls(benchmark::State& state) {
@@ -579,6 +689,10 @@ BENCHMARK(FilterFSLInt64FilterNoNulls)->Apply(FilterSetArgs);
 BENCHMARK(FilterFSLInt64FilterWithNulls)->Apply(FilterSetArgs);
 BENCHMARK(FilterStringFilterNoNulls)->Apply(FilterSetArgs);
 BENCHMARK(FilterStringFilterWithNulls)->Apply(FilterSetArgs);
+BENCHMARK(FilterStringViewInlinedNoNulls)->Apply(FilterSetArgs);
+BENCHMARK(FilterStringViewInlinedWithNulls)->Apply(FilterSetArgs);
+BENCHMARK(FilterStringViewLongNoNulls)->Apply(FilterSetArgs);
+BENCHMARK(FilterStringViewLongWithNulls)->Apply(FilterSetArgs);
 
 void FilterRecordBatchSetArgs(benchmark::internal::Benchmark* bench) {
   for (auto num_cols : std::vector<int>({10, 50, 100})) {
@@ -623,6 +737,14 @@ BENCHMARK(TakeFSLInt64MonotonicIndices)->Apply(TakeSetArgs);
 BENCHMARK(TakeStringRandomIndicesNoNulls)->Apply(TakeSetArgs);
 BENCHMARK(TakeStringRandomIndicesWithNulls)->Apply(TakeSetArgs);
 BENCHMARK(TakeStringMonotonicIndices)->Apply(TakeSetArgs);
+BENCHMARK(TakeStringViewInlinedRandomIndicesNoNulls)->Apply(TakeSetArgs);
+BENCHMARK(TakeStringViewInlinedRandomIndicesWithNulls)->Apply(TakeSetArgs);
+BENCHMARK(TakeStringViewInlinedMonotonicIndices)->Apply(TakeSetArgs);
+BENCHMARK(TakeStringViewLongRandomIndicesNoNulls)->Apply(TakeSetArgs);
+BENCHMARK(TakeStringViewLongRandomIndicesWithNulls)->Apply(TakeSetArgs);
+BENCHMARK(TakeStringViewLongMonotonicIndices)->Apply(TakeSetArgs);
+BENCHMARK(TakeChunkedChunkedStringViewRandomIndicesNoNulls)->Apply(TakeSetArgs);
+BENCHMARK(TakeChunkedChunkedStringViewRandomIndicesWithNulls)->Apply(TakeSetArgs);
 
 // Chunked values x Chunked indices
 BENCHMARK(TakeChunkedChunkedInt64RandomIndicesNoNulls)->Apply(TakeSetArgs);
