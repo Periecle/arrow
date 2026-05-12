@@ -1,0 +1,301 @@
+================================================================================
+Perf engineering report: VarBinaryViewTakeExec (BinaryView/StringView Take)
+Branch: claude/benchmark-selection-kernel-I23LF (merge of fix-view-selection-kernels)
+Kernel: cpp/src/arrow/compute/kernels/vector_selection_take_internal.cc:489+
+================================================================================
+
+The fix-view-selection-kernels branch adds the first dedicated Take/Filter
+kernels for view-layout arrays (BINARY_VIEW, STRING_VIEW). Before, Take on
+a view array would error out. With the new kernel registered, Take only
+copies the 16-byte view structs and re-references the data buffers, so it
+is fundamentally much cheaper than the equivalent kernel for legacy
+String/Binary which has to copy variable-length payloads.
+
+This report measures: hot paths, cache behavior, branch prediction, where
+the wall-clock time actually goes, and what is realistically optimizable.
+
+--------------------------------------------------------------------------------
+0. Environment
+--------------------------------------------------------------------------------
+CPU      : 4-core 2.1 GHz, L1d 48 KiB/core, L2 2 MiB/core, L3 260 MiB (VM)
+Build    : gcc 13.3, RelWithDebInfo, -O2 -g -fno-omit-frame-pointer
+PMU      : not exposed (cloud VM) -> hardware perf counters unsupported
+Tools    : `perf record -e task-clock` (sampling, software event)
+           `valgrind callgrind --cache-sim=yes --branch-sim=yes`
+           (simulated 2-level cache + branch predictor, deterministic)
+Workload : TakeStringViewInlinedRandomIndices{NoNulls,WithNulls,Monotonic}
+           2^21 elements (~2 MB indices, ~32 MB output view buffer),
+           strings inlined (<= 12 B).
+
+The 4 MB L2 / 48 KB L1d combination is the relevant ceiling here: the
+~32 MB source view buffer does not fit in L1, L2, or even three cores'
+combined L2, so the source view gather is the natural memory-bound
+workload to study.
+
+--------------------------------------------------------------------------------
+1. Wall-clock summary (release build, 2 MiB inputs, see selection_view_benchmark.txt)
+--------------------------------------------------------------------------------
+                                         items/s   vs baseline
+  TakeString (legacy, copies payload)      12.5 M   1.0x
+  TakeStringViewInlined (random, no nulls) 139.2 M  11.1x
+  TakeStringViewLong   (random, no nulls)   72.7 M   5.8x
+  TakeStringViewInlined (monotonic)        ~250 M   ~20x  (estimated from
+                                                          relwithdebinfo
+                                                          monotonic 2x ratio)
+  TakeStringViewInlined (random, 10% null,
+                         10% index null)    66.9 M   5.4x
+
+The big headline: the new kernel is 6x-11x faster than legacy String
+take. That is expected since it copies 16 B view structs instead of
+variable-length payloads.
+
+The interesting micro-perf wins/losses are *within* the view kernel:
+
+  random gather  vs monotonic gather:   ~2x slowdown (cache-miss bound)
+  no nulls       vs with nulls:         ~2x slowdown (extra work + memset)
+
+These are studied in detail below.
+
+--------------------------------------------------------------------------------
+2. CPU sampling (perf record -F 4999 -e task-clock, --call-graph dwarf)
+--------------------------------------------------------------------------------
+Self-time top symbols (`perf report --no-children`):
+
+TakeStringViewInlinedRandomIndicesWithNulls (slow path, random gather):
+  49.36%  VarBinaryViewTakeExec                          <-- THE KERNEL
+  14.56%  [k] do_user_addr_fault                          <-- OS page fault
+   5.34%  CheckIndexBounds
+   4.83%  [k] clear_page_erms                             <-- OS zeroing pages
+   3.22%  __memset_avx512_unaligned_erms                  <-- kernel's memset
+   2.43%  BaseSetBitRunReader::NextRun                    <-- setup
+   2.09%  BinaryViewBuilder::Append                       <-- setup
+   1.64%  [k] __list_del_entry_valid_or_report            <-- OS free path
+   1.19%  [k] _raw_spin_unlock_irqrestore                 <-- OS
+
+TakeStringViewInlinedRandomIndicesNoNulls (fast path, random gather):
+  48.68%  VarBinaryViewTakeExec
+  13.09%  [k] do_user_addr_fault
+   7.29%  [k] clear_page_erms
+   4.23%  CheckIndexBounds
+   ...(memset symbol drops to <0.5% because the kernel skips memset when
+       may_have_nulls is false)
+
+TakeStringViewInlinedMonotonicIndices (fast path, monotonic gather):
+  22.19%  VarBinaryViewTakeExec
+  17.83%  [k] do_user_addr_fault
+  13.57%  std::__move_merge                             <-- monotonic-index setup
+   6.72%  [k] clear_page_erms
+   5.80%  CheckIndexBounds
+
+Two non-obvious findings:
+
+(A) On every run the OS shows up at 20-25% of wall-clock time:
+    do_user_addr_fault + clear_page_erms + zap_present_ptes +
+    free_unref_folios + spin_unlock_irqrestore. With 2^21 elements the
+    kernel allocates a fresh ~32 MB view buffer per call. That memory
+    is not in the page cache, so each call first-touches ~8200 pages
+    and the OS zeros them. This is not a bug in the view kernel
+    specifically - Take always allocates output - but for view Take it
+    is unusually visible because the kernel itself is so cheap.
+
+(B) On the monotonic-indices run the kernel drops from ~49% to ~22% of
+    samples even though wall-clock is faster. The kernel runs *much*
+    faster per item (the prefetcher does its job), so the relatively
+    fixed costs (page faulting, memset, bounds-check) take a larger
+    share. This is the perf signature of a kernel that has become
+    memory-bandwidth bound on its own outputs and OS-bound on its
+    page-fault inputs.
+
+--------------------------------------------------------------------------------
+3. Source-line hot spots inside VarBinaryViewTakeExec
+--------------------------------------------------------------------------------
+From perf annotate (--dso=libarrow.so.2500.0.0, debug info from
+RelWithDebInfo). Showing the hot loop in the slow path:
+
+   Source                                                  Hot %
+   ----------------------------------------------------- -------
+   if (indices_may_have_nulls && ...)                       1.64   test  %r11b,%r11b
+   bit_util::GetBit(values.buffers[0].data, ...)            1.65   bt    %r8d,%r9d
+                                                            0.58   jae   ...
+   out_views[out_i] = source_views[source_i];               0.54   shl   $0x4,%rdx
+                                                            0.15   movdqu (%rcx,%rdx,1),%xmm4   <-- the gather load
+                                                          *83.80*  shl   $0x4,%r8                <-- THE STALL
+                                                            0.15   movups %xmm4,(%r10,%r8,1)
+   if (out_validity != nullptr)                             2.62   test  %r12,%r12
+   bit_util::SetBit(out_validity, out_i);                   ...
+
+The 83.80% on `shl $0x4, %r8` is sampling skid: perf attributes the
+sample to the next-retiring instruction, and the previous instruction
+is `movdqu (%rcx,%rdx,1),%xmm4` - the random gather load from
+`source_views[source_i]`. The CPU is stalled waiting for the load to
+finish. 83.80% of in-kernel CPU time is spent waiting on that one
+random-access load.
+
+This is the fundamental bottleneck and it is intrinsic to "take from a
+randomly-indexed array that does not fit in L1/L2."
+
+--------------------------------------------------------------------------------
+4. Simulated cache & branch counters (callgrind --cache-sim=yes --branch-sim=yes)
+--------------------------------------------------------------------------------
+Per-function counts, attributed to VarBinaryViewTakeExec only. The
+".cc" row is the kernel body; the "bit_util.h" row is the GetBit /
+SetBit calls inlined into the kernel body. CheckIndexBounds is broken
+out.
+
+WITH NULLS (slow path), ~262 k items:
+                                  Ir       Dr       Dw    D1mr     D1mw    Bc      Bcm
+  VarBinaryViewTakeExec (.cc)    5.86 M  1.92 M    710 k  227 k    65 k   1.44 M  55 k (3.8%)
+  bit_util::GetBit/SetBit inl.   3.71 M  945 k     212 k  110 k    0.5 k    0      0
+  CheckIndexBounds               2.34 M  236 k     ~0     16 k     ~0     519 k   26 k (5%)
+  __memset (out_views zeroing)   4.37 M  ~0       4.37 M    9     68 k    4.37 M   124
+
+NO NULLS (fast path), ~262 k items:
+                                  Ir       Dr       Dw    D1mr     D1mw    Bc      Bcm
+  VarBinaryViewTakeExec (.cc)    2.62 M  786 k     262 k  276 k    66 k    262 k   9 (0.003%)
+  bit_util.h                     -        -        -      -        -       -       -
+  CheckIndexBounds               2.36 M  262 k     ~0     16 k     ~0     524 k   8
+
+Headline numbers:
+
+  Instructions executed in the kernel:
+    slow path  9.57 M  =  36.5 ins/item
+    fast path  2.62 M  =  10.0 ins/item
+    -> slow path is 3.65x more instructions per item
+
+  L1d read misses inside the kernel:
+    slow path  337 k  (kernel body + bit_util.h)  = 1.29 misses/item
+    fast path  276 k                              = 1.05 misses/item
+    monotonic   80 k  (from cg.take_view_monotonic.summary.txt)
+                                                  = 0.31 misses/item
+
+    -> Random gather hits a fresh cache line ~every time (16 B view *
+       4-per-line = expected miss every 4th access in a perfectly
+       streamed pattern; random access pushes that to ~1/item because
+       cache reuse is destroyed).
+    -> Monotonic gather drops misses ~4x because the hardware
+       prefetcher streams the source view buffer.
+
+  Branch mispredicts inside the kernel:
+    slow path:  55 k mispredicts on 1.44 M conditional branches (3.8%)
+    fast path:   9 mispredicts on 262 k branches    (0.003%)
+
+    -> The fast path is essentially branch-free in steady state.
+    -> The slow path's mispredicts come from the per-element null
+       checks: `if (indices_may_have_nulls && !GetBit(...))` and
+       `if (!source_valid)`. With 10% random null distribution,
+       neither branch is well-predicted.
+
+  Memset of output view buffer (slow path only):
+    4.37 M instructions, 68 k D1 write misses.
+    The fast path does NOT execute this memset (guarded by
+    `may_have_nulls`). On a 2 M-element call this would scale to
+    ~33 M instructions of pure preparatory zeroing.
+
+--------------------------------------------------------------------------------
+5. Where the wall-clock actually goes (slow path, summary)
+--------------------------------------------------------------------------------
+Combining sampling (cycles) with cache/branch counts (work), the
+slow-path's ~33 ms per 2-M-element call decomposes approximately as:
+
+  ~50% kernel body, dominated by random-gather L1/L2/LLd misses on
+       source_views[source_i].
+  ~20% OS first-touch zeroing of fresh output pages (do_user_addr_fault
+       + clear_page_erms). This is wall-clock that exists regardless of
+       what the kernel does internally, as long as it allocates fresh
+       output.
+  ~5%  CheckIndexBounds (every call, always on, bypassable via
+       TakeOptions::NoBoundsCheck if the caller can guarantee bounds).
+  ~3%  Explicit memset(out_views, 0, ...) inside the kernel. This is
+       *on top of* (1), because the OS-zeroed pages are then
+       memset-zeroed again - the kernel cannot prove the OS zeroed them
+       and AllocateBuffer makes no such guarantee.
+  ~2-3% Output validity bitmap construction (SetBit per valid output).
+  Remainder: setup leakage (random-data gen, sort indices on monotonic),
+       small amount of pointer-chasing in `arrow::Status` and
+       `ArraySpan::GetVariadicBuffers`.
+
+--------------------------------------------------------------------------------
+6. Concrete optimization targets
+--------------------------------------------------------------------------------
+Ranked by expected wall-clock impact on the slow path. None of these
+are implemented in this branch - this is purely the bottleneck
+inventory the user asked for.
+
+(1) Avoid the redundant validity-bitmap memset (TRIVIAL, ~free).
+    Lines 605-608 in vector_selection_take_internal.cc:
+
+      ARROW_ASSIGN_OR_RAISE(validity_buf,
+                            AllocateEmptyBitmap(out_length, ...));
+      if (validity_buf->size() > 0) {
+        std::memset(validity_buf->mutable_data(), 0, validity_buf->size());
+      }
+
+    `AllocateEmptyBitmap` already returns a zeroed bitmap (see
+    cpp/src/arrow/buffer.cc). The memset is pure overhead, small but
+    measurable on long outputs.
+
+(2) Specialize the slow path on the (may_have_nulls, indices_may_have_nulls)
+    combination (MEDIUM, ~10-20% expected on slow path).
+    Currently inside the per-element loop:
+
+      if (indices_may_have_nulls && !bit_util::GetBit(indices.buffers[0].data, ...))
+        continue;
+      const bool source_valid =
+          !values_may_have_nulls ||
+          bit_util::GetBit(values.buffers[0].data, source_i);
+      if (!source_valid) continue;
+
+    Both flags are loop-invariant. Templating or branching once at the
+    top of `VarBinaryViewTakeTyped` to call one of four specializations
+    (no nulls / only-index-nulls / only-value-nulls / both) eliminates
+    a hot per-iteration test (`test %r11b,%r11b` at 1.64% of in-kernel
+    cycles) and lets the compiler hoist the bitmap pointer loads. It
+    also lets the only-value-nulls specialization fully unroll like the
+    current fast path.
+
+(3) Use BitBlockCounter / BitRunReader to process null runs instead of
+    bit_util::GetBit per element (MEDIUM-LARGE, ~20-30% on slow path).
+    The 3.71 M instructions in bit_util.h are amenable to the
+    bit-run-based traversal that arrow already uses in other null-aware
+    kernels. Bit-run processing converts the per-element bit test into
+    a per-word test plus a tight inner loop for the valid run, which
+    typically also lets the loop autovectorize.
+
+(4) Skip the upfront memset(out_views, 0, ...) (SMALL, ~3-5%).
+    The kernel zeros the entire 16 B/element output before writing,
+    because the slow-path loop "continue"s on null positions and leaves
+    them unwritten. Two simpler alternatives:
+      - Always write a zero BinaryViewType::c_type in the null branch.
+        Cost: 16 B store/element on null positions only (10% of items
+        in this run). This replaces 16 B/element memset on 100% of
+        items.
+      - Or: leave the buffer uninitialized but never let downstream
+        readers see those positions (already true: they are masked by
+        the validity bitmap). This needs an audit of consumers since
+        AllocateBuffer-returned bytes are not guaranteed to be safe
+        from valgrind/MSAN-style readers.
+
+(5) Skip CheckIndexBounds (CALLER-SIDE, 4-5% on every path).
+    Callers who can guarantee bounds should pass
+    TakeOptions::NoBoundsCheck. The kernel respects that. This is not
+    a kernel change - just a doc/usage note: bounds-checking is "on"
+    by default and visible in every profile of every Take call.
+
+(6) Hint callers to sort indices when possible (CALLER-SIDE, up to 2x).
+    Monotonic gather is ~2x faster than random gather on this size
+    (cg.take_view_monotonic.summary.txt: 80 k D1 misses vs 276 k for
+    random no-nulls). This is the largest realistic win and is purely
+    a calling-convention property, not a kernel one.
+
+--------------------------------------------------------------------------------
+7. Artifact index
+--------------------------------------------------------------------------------
+  selection_view_benchmark.txt               release-build google-benchmark output
+  callgrind.take_view_*.annotated.txt        prior whole-program callgrind
+  perf/take_view_{with_nulls,no_nulls,monotonic}.top.txt
+                                             perf-record top symbols
+  perf/take_view_{with_nulls,no_nulls}.kernel.annot.txt
+                                             perf annotate of the kernel disasm
+                                             (the 83.80% line is in here)
+  perf/cg.take_view_*.summary.txt            per-function cache + branch counts
+================================================================================

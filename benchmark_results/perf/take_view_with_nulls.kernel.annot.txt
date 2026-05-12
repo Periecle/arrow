@@ -1,0 +1,2001 @@
+         : 5      0000000000974a50 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)>:
+         : 6      }
+         : 7      }
+         :
+         : 9      }  // namespace
+         :
+         : 11     Status VarBinaryViewTakeExec(KernelContext* ctx, const ExecSpan& batch, ExecResult* out) {
+    0.00 :   974a50: endbr64
+    0.00 :   974a54: push   %rbp
+    0.00 :   974a55: mov    %rsp,%rbp
+    0.00 :   974a58: push   %r15
+    0.00 :   974a5a: push   %r14
+    0.00 :   974a5c: push   %r13
+    0.00 :   974a5e: push   %r12
+    0.00 :   974a60: mov    %rsi,%r12
+    0.00 :   974a63: push   %rbx
+    0.00 :   974a64: sub    $0x118,%rsp
+    0.00 :   974a6b: mov    %rdi,-0xf8(%rbp)
+         : 23     _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+         : 24     const_reference
+         : 25     operator[](size_type __n) const _GLIBCXX_NOEXCEPT
+         : 26     {
+         : 27     __glibcxx_requires_subscript(__n);
+         : 28     return *(this->_M_impl._M_start + __n);
+    0.00 :   974a72: mov    0x8(%rdx),%r15
+    0.00 :   974a76: mov    %rcx,-0x110(%rbp)
+         : 31     typename std::remove_reference<OutputType>::type>::type>::value,
+         : 32     "checked_cast output type must be a class");
+         : 33     #ifdef NDEBUG
+         : 34     return static_cast<OutputType>(value);
+         : 35     #else
+         : 36     return dynamic_cast<OutputType>(value);
+    0.00 :   974a7d: mov    0x8(%rsi),%rdi
+    0.00 :   974a81: xor    %ecx,%ecx
+    0.00 :   974a83: mov    0x60865e(%rip),%rdx        # f7d0e8 <typeinfo for arrow::compute::internal::OptionsWrapper<arrow::compute::TakeOptions>@@Base+0x104b8>
+    0.00 :   974a8a: mov    0x606e37(%rip),%rsi        # f7b8c8 <typeinfo for arrow::compute::KernelState@@Base+0x10e40>
+    0.00 :   974a91: mov    %fs:0x28,%rax
+    0.00 :   974a9a: mov    %rax,-0x38(%rbp)
+    0.00 :   974a9e: xor    %eax,%eax
+    0.00 :   974aa0: call   298ba0 <__dynamic_cast@plt>
+    0.00 :   974aa5: test   %rax,%rax
+    0.00 :   974aa8: je     30fb0b <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0x62>
+         : 47     const ArraySpan& values = batch[0].array;
+         : 48     const ArraySpan& indices = batch[1].array;
+         :
+         : 50     if (TakeState::Get(ctx).boundscheck) {
+    0.00 :   974aae: cmpb   $0x0,0x18(%rax)
+    0.00 :   974ab2: jne    974cc0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x270>
+         : 53     RETURN_NOT_OK(CheckIndexBounds(indices, values.length));
+         : 54     }
+         :
+         : 56     const int64_t out_length = indices.length;
+    0.00 :   974ab8: mov    0x90(%r15),%rax
+         : 58     /// \see HasValidityBitmap
+         : 59     /// \see MayHaveLogicalNulls
+         : 60     bool MayHaveNulls() const {
+         : 61     // If an ArrayData is slightly malformed it may have kUnknownNullCount set
+         : 62     // but no buffer
+         : 63     return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   974abf: cmpq   $0x0,0x10(%r15)
+    0.00 :   974ac4: mov    %rax,-0xf0(%rbp)
+    0.00 :   974acb: je     974c58 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x208>
+    0.00 :   974ad1: cmpq   $0x0,0x20(%r15)
+         : 68     const bool may_have_nulls = values.MayHaveNulls() || indices.MayHaveNulls();
+    0.00 :   974ad6: mov    $0x1,%r13d
+    0.00 :   974adc: je     974c58 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x208>
+         : 71     const auto data_buffers = values.GetVariadicBuffers();
+    0.00 :   974ae2: mov    %r15,%rdi
+    0.00 :   974ae5: call   297d40 <arrow::ArraySpan::GetVariadicBuffers() const@plt>
+         :
+         : 75     ARROW_ASSIGN_OR_RAISE(
+    0.00 :   974aea: mov    -0xf0(%rbp),%rsi
+    0.00 :   974af1: lea    -0x70(%rbp),%rdi
+         : 78     const auto data_buffers = values.GetVariadicBuffers();
+    0.00 :   974af5: mov    %rax,-0x130(%rbp)
+         : 80     ::arrow::internal::Executor* executor = NULLPTR,
+         : 81     FunctionRegistry* func_registry = NULLPTR);
+         :
+         : 83     /// \brief The MemoryPool used for allocations, default is
+         : 84     /// default_memory_pool().
+         : 85     MemoryPool* memory_pool() const { return pool_; }
+    0.00 :   974afc: mov    (%r12),%rax
+    0.00 :   974b00: mov    %rdx,-0xe8(%rbp)
+         : 88     ARROW_ASSIGN_OR_RAISE(
+    0.00 :   974b07: shl    $0x4,%rsi
+    0.00 :   974b0b: mov    (%rax),%rdx
+    0.00 :   974b0e: mov    %rdi,-0x128(%rbp)
+    0.00 :   974b15: call   29a410 <arrow::AllocateBuffer(long, arrow::MemoryPool*)@plt>
+    0.00 :   974b1a: cmpq   $0x0,-0x70(%rbp)
+    0.00 :   974b1f: jne    975de0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1390>
+         :
+         : 96     // _GLIBCXX_RESOLVE_LIB_DEFECTS
+         : 97     // 2729. Missing SFINAE on std::pair::operator=
+         : 98     _Tuple_impl& operator=(const _Tuple_impl&) = delete;
+         :
+         : 100    _Tuple_impl(_Tuple_impl&&) = default;
+    0.00 :   974b25: mov    -0x68(%rbp),%rbx
+         : 102    : _M_t(__p, std::forward<_Del>(__d)) { }
+         :
+         : 104    _GLIBCXX23_CONSTEXPR
+         : 105    __uniq_ptr_impl(__uniq_ptr_impl&& __u) noexcept
+         : 106    : _M_t(std::move(__u._M_t))
+         : 107    { __u._M_ptr() = nullptr; }
+    0.00 :   974b29: movq   $0x0,-0x68(%rbp)
+         : 109    ///
+         : 110    /// To get the buffer's mutable data address regardless of its device, call
+         : 111    /// `mutable_address()`.
+         : 112    uint8_t* mutable_data() {
+         : 113    #ifndef NDEBUG
+         : 114    CheckCPU();
+    0.00 :   974b31: mov    %rbx,%rdi
+    0.00 :   974b34: mov    %rbx,-0xd8(%rbp)
+         : 117    }
+         :
+         : 119    _GLIBCXX23_CONSTEXPR
+         : 120    pointer&   _M_ptr() noexcept { return std::get<0>(_M_t); }
+         : 121    _GLIBCXX23_CONSTEXPR
+         : 122    pointer    _M_ptr() const noexcept { return std::get<0>(_M_t); }
+    0.00 :   974b3b: mov    %rbx,%r14
+    0.00 :   974b3e: call   29c470 <arrow::Buffer::CheckCPU() const@plt>
+         : 125    CheckMutable();
+    0.00 :   974b43: mov    %rbx,%rdi
+    0.00 :   974b46: call   2962a0 <arrow::Buffer::CheckMutable() const@plt>
+         : 128    #endif
+         : 129    return ARROW_PREDICT_TRUE(is_cpu_ && is_mutable_) ? const_cast<uint8_t*>(data_)
+    0.00 :   974b4b: cmpb   $0x0,0x9(%rbx)
+    0.00 :   974b4f: je     975dc8 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1378>
+    0.00 :   974b55: cmpb   $0x0,0x8(%rbx)
+    0.00 :   974b59: je     975dc8 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1378>
+    0.00 :   974b5f: mov    0x10(%rbx),%rax
+    0.00 :   974b63: mov    %rax,-0x108(%rbp)
+         : 136    auto views_buf,
+         : 137    AllocateBuffer(out_length * static_cast<int64_t>(sizeof(BinaryViewType::c_type)),
+         : 138    ctx->memory_pool()));
+         : 139    auto* out_views = reinterpret_cast<BinaryViewType::c_type*>(views_buf->mutable_data());
+         : 140    if (may_have_nulls && views_buf->size() > 0) {
+    0.00 :   974b6a: test   %r13b,%r13b
+    0.00 :   974b6d: je     974c80 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x230>
+         : 143    #endif
+         : 144    return ARROW_PREDICT_TRUE(is_mutable_) ? reinterpret_cast<uintptr_t>(data_) : 0;
+         : 145    }
+         :
+         : 147    /// \brief Return the buffer's size in bytes
+         : 148    int64_t size() const { return size_; }
+    0.00 :   974b73: mov    0x18(%rbx),%rdx
+    0.00 :   974b77: test   %rdx,%rdx
+    0.00 :   974b7a: jle    974b8a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x13a>
+         : 152    case no work is done at all.  We detect these problems by referring
+         : 153    non-existing functions.  */
+         : 154    __fortify_function void *
+         : 155    __NTH (memset (void *__dest, int __ch, size_t __len))
+         : 156    {
+         : 157    return __builtin___memset_chk (__dest, __ch, __len,
+    0.00 :   974b7c: mov    -0x108(%rbp),%rdi
+    0.00 :   974b83: xor    %esi,%esi
+    0.00 :   974b85: call   2941c0 <memset@plt>
+    0.00 :   974b8a: mov    (%r12),%rax
+         : 162    }
+         :
+         : 164    std::shared_ptr<Buffer> validity_buf;
+         : 165    uint8_t* out_validity = nullptr;
+         : 166    if (may_have_nulls) {
+         : 167    ARROW_ASSIGN_OR_RAISE(validity_buf,
+    0.00 :   974b8e: lea    -0x60(%rbp),%r13
+    0.00 :   974b92: mov    -0xf0(%rbp),%rsi
+    0.00 :   974b99: mov    %r13,%rdi
+    0.00 :   974b9c: mov    (%rax),%rdx
+    0.00 :   974b9f: call   29b040 <arrow::AllocateEmptyBitmap(long, arrow::MemoryPool*)@plt>
+         : 173    static Status AlreadyExists(Args&&... args) {
+         : 174    return Status::FromArgs(StatusCode::AlreadyExists, std::forward<Args>(args)...);
+         : 175    }
+         :
+         : 177    /// Return true iff the status indicates success.
+         : 178    constexpr bool ok() const { return (state_ == NULLPTR); }
+    0.00 :   974ba4: mov    -0x60(%rbp),%r12
+    0.00 :   974ba8: test   %r12,%r12
+    0.00 :   974bab: jne    976193 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1743>
+         : 182    }
+         :
+         : 184    void
+         : 185    _M_swap(__shared_count& __r) noexcept
+         : 186    {
+         : 187    _Sp_counted_base<_Lp>* __tmp = __r._M_pi;
+    0.00 :   974bb1: mov    -0x50(%rbp),%rax
+         : 189    __shared_ptr(const __shared_ptr<_Yp, _Lp>& __r) noexcept
+         : 190    : _M_ptr(__r._M_ptr), _M_refcount(__r._M_refcount)
+         : 191    { }
+         :
+         : 193    __shared_ptr(__shared_ptr&& __r) noexcept
+         : 194    : _M_ptr(__r._M_ptr), _M_refcount()
+    0.00 :   974bb5: mov    -0x58(%rbp),%r14
+         : 196    {
+         : 197    _M_refcount._M_swap(__r._M_refcount);
+         : 198    __r._M_ptr = nullptr;
+    0.00 :   974bb9: pxor   %xmm0,%xmm0
+    0.00 :   974bbd: movups %xmm0,-0x58(%rbp)
+         : 201    _Sp_counted_base<_Lp>* __tmp = __r._M_pi;
+    0.00 :   974bc1: mov    %rax,-0x100(%rbp)
+    0.00 :   974bc8: mov    0x18(%r14),%rax
+    0.00 :   974bcc: mov    %rax,-0x118(%rbp)
+         : 205    AllocateEmptyBitmap(out_length, ctx->memory_pool()));
+         : 206    if (validity_buf->size() > 0) {
+    0.00 :   974bd3: test   %rax,%rax
+    0.00 :   974bd6: jle    974c10 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1c0>
+         : 209    CheckCPU();
+    0.00 :   974bd8: mov    %r14,%rdi
+    0.00 :   974bdb: call   29c470 <arrow::Buffer::CheckCPU() const@plt>
+         : 212    CheckMutable();
+    0.00 :   974be0: mov    %r14,%rdi
+    0.00 :   974be3: call   2962a0 <arrow::Buffer::CheckMutable() const@plt>
+         : 215    return ARROW_PREDICT_TRUE(is_cpu_ && is_mutable_) ? const_cast<uint8_t*>(data_)
+    0.00 :   974be8: cmpb   $0x0,0x9(%r14)
+    0.00 :   974bed: je     97618c <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x173c>
+    0.00 :   974bf3: cmpb   $0x0,0x8(%r14)
+    0.00 :   974bf8: je     97618c <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x173c>
+    0.00 :   974bfe: mov    0x10(%r14),%rdi
+    0.00 :   974c02: mov    -0x118(%rbp),%rdx
+    0.00 :   974c09: xor    %esi,%esi
+    0.00 :   974c0b: call   2941c0 <memset@plt>
+         : 224    CheckCPU();
+    0.00 :   974c10: mov    %r14,%rdi
+    0.00 :   974c13: call   29c470 <arrow::Buffer::CheckCPU() const@plt>
+         : 227    CheckMutable();
+    0.00 :   974c18: mov    %r14,%rdi
+    0.00 :   974c1b: call   2962a0 <arrow::Buffer::CheckMutable() const@plt>
+         : 230    return ARROW_PREDICT_TRUE(is_cpu_ && is_mutable_) ? const_cast<uint8_t*>(data_)
+    0.00 :   974c20: cmpb   $0x0,0x9(%r14)
+    0.00 :   974c25: je     974c32 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1e2>
+    0.00 :   974c27: cmpb   $0x0,0x8(%r14)
+    0.00 :   974c2c: je     974c32 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1e2>
+    0.00 :   974c2e: mov    0x10(%r14),%r12
+         : 236    void ConstructValue(U&& u) noexcept {
+         : 237    storage_.construct(std::forward<U>(u));
+         : 238    }
+         :
+         : 240    void Destroy() noexcept {
+         : 241    if (ARROW_PREDICT_TRUE(status_.ok())) {
+    0.00 :   974c32: cmpq   $0x0,-0x60(%rbp)
+    0.00 :   974c37: jne    974c47 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1f7>
+         : 244    if (_M_pi != nullptr)
+    0.00 :   974c39: mov    -0x50(%rbp),%rdi
+    0.00 :   974c3d: test   %rdi,%rdi
+    0.00 :   974c40: je     974c47 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1f7>
+         : 248    _M_pi->_M_release();
+    0.00 :   974c42: call   34d570 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()>
+         : 250    ~Result() noexcept { Destroy(); }
+    0.00 :   974c47: mov    %r13,%rdi
+    0.00 :   974c4a: call   2987e0 <arrow::Status::~Status()@plt>
+         :
+         : 254    /// CRTP helper for declaring equality comparison. Defines operator== and operator!=
+         : 255    template <typename T>
+         : 256    class EqualityComparable {
+         : 257    public:
+         : 258    ~EqualityComparable() {
+    0.00 :   974c4f: jmp    974c91 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x241>
+    0.00 :   974c51: nopl   0x0(%rax)
+         : 261    const bool may_have_nulls = values.MayHaveNulls() || indices.MayHaveNulls();
+    0.00 :   974c58: xor    %r13d,%r13d
+    0.00 :   974c5b: cmpq   $0x0,0x98(%r15)
+    0.00 :   974c63: je     974ae2 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x92>
+    0.00 :   974c69: cmpq   $0x0,0xa8(%r15)
+    0.00 :   974c71: setne  %r13b
+    0.00 :   974c75: jmp    974ae2 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x92>
+    0.00 :   974c7a: nopw   0x0(%rax,%rax,1)
+         : 269    std::shared_ptr<Buffer> validity_buf;
+    0.00 :   974c80: movq   $0x0,-0x100(%rbp)
+    0.00 :   974c8b: xor    %r14d,%r14d
+         : 272    uint8_t* out_validity = nullptr;
+    0.00 :   974c8e: xor    %r12d,%r12d
+         : 274    switch (indices.type->id()) {
+    0.00 :   974c91: mov    0x88(%r15),%r13
+    0.00 :   974c98: cmpl   $0x9,0x28(%r13)
+    0.00 :   974c9d: ja     975e4e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x13fe>
+    0.00 :   974ca3: mov    0x28(%r13),%eax
+    0.00 :   974ca7: lea    0x462a7a(%rip),%rdx        # dd7728 <arrow::util::internal::kNonNullFiller+0x68>
+    0.00 :   974cae: movslq (%rdx,%rax,4),%rax
+    0.01 :   974cb2: add    %rdx,%rax
+    0.00 :   974cb5: notrack jmp *%rax
+    0.00 :   974cb8: nopl   0x0(%rax,%rax,1)
+         : 284    RETURN_NOT_OK(CheckIndexBounds(indices, values.length));
+    0.00 :   974cc0: mov    0x8(%r15),%rdx
+    0.00 :   974cc4: lea    -0x90(%rbp),%rdi
+         : 287    const ArraySpan& indices = batch[1].array;
+    0.00 :   974ccb: lea    0x88(%r15),%rsi
+         : 289    RETURN_NOT_OK(CheckIndexBounds(indices, values.length));
+    0.00 :   974cd2: call   290980 <arrow::internal::CheckIndexBounds(arrow::ArraySpan const&, unsigned long)@plt>
+         : 291    CopyFrom(s);
+         : 292    }
+         : 293    return *this;
+         : 294    }
+         :
+         : 296    Status::Status(Status&& s) noexcept : state_(s.state_) { s.state_ = NULLPTR; }
+    0.00 :   974cd7: mov    -0x90(%rbp),%rax
+    0.00 :   974cde: mov    %rax,-0xb0(%rbp)
+    0.00 :   974ce5: test   %rax,%rax
+    0.00 :   974ce8: jne    9761c1 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1771>
+    0.00 :   974cee: lea    -0xb0(%rbp),%rdi
+    0.00 :   974cf5: call   2987e0 <arrow::Status::~Status()@plt>
+    0.00 :   974cfa: jmp    974ab8 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x68>
+    0.00 :   974cff: nop
+         : 305    return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   974d00: mov    0x18(%r15),%rcx
+    0.00 :   974d04: mov    0xa0(%r15),%rax
+    0.00 :   974d0b: mov    0xc0(%r15),%rdx
+    0.00 :   974d12: shl    $0x4,%rcx
+    0.00 :   974d16: add    0x38(%r15),%rcx
+         : 311    return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   974d1a: cmpq   $0x0,0x10(%r15)
+         : 313    return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   974d1f: lea    (%rdx,%rax,8),%rsi
+         : 315    return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   974d23: mov    0x98(%r15),%rax
+    0.00 :   974d2a: je     975cae <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x125e>
+    0.00 :   974d30: cmpq   $0x0,0x20(%r15)
+    0.00 :   974d35: je     975cae <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x125e>
+    0.00 :   974d3b: test   %rax,%rax
+    0.00 :   974d3e: je     9761f4 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x17a4>
+    0.00 :   974d44: cmpq   $0x0,0xa8(%r15)
+    0.00 :   974d4c: mov    $0x1,%r11d
+    0.00 :   974d52: setne  %dil
+         : 325    std::memset(validity_buf->mutable_data(), 0, validity_buf->size());
+         : 326    }
+         : 327    out_validity = validity_buf->mutable_data();
+         : 328    }
+         :
+         : 330    int64_t valid_count = 0;
+    0.00 :   974d56: xor    %r13d,%r13d
+         : 332    for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   974d59: xor    %eax,%eax
+    0.00 :   974d5b: cmpq   $0x0,0x90(%r15)
+    0.00 :   974d63: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   974d69: mov    %r14,-0x118(%rbp)
+    0.00 :   974d70: mov    -0x108(%rbp),%r10
+    0.00 :   974d77: jmp    974df3 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3a3>
+    0.00 :   974d79: nopl   0x0(%rax)
+         : 340    const int64_t source_i = static_cast<int64_t>(index_values[out_i]);
+    0.00 :   974d80: mov    (%rsi,%rax,8),%rdx
+         : 342    !values_may_have_nulls ||
+    0.00 :   974d84: test   %r11b,%r11b
+    0.00 :   974d87: je     974daa <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x35a>
+         : 345    bit_util::GetBit(values.buffers[0].data, values.offset + source_i);
+    0.00 :   974d89: mov    0x18(%r15),%r8
+         :
+         : 348    // the bitwise complement version of kPrecedingBitmask
+         : 349    static constexpr uint8_t kTrailingBitmask[] = {255, 254, 252, 248, 240, 224, 192, 128};
+         :
+         : 351    static constexpr bool GetBit(const uint8_t* bits, uint64_t i) {
+         : 352    return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.00 :   974d8d: mov    0x20(%r15),%r14
+    0.00 :   974d91: add    %rdx,%r8
+    0.00 :   974d94: mov    %r8,%r9
+    0.00 :   974d97: and    $0x7,%r8d
+    0.00 :   974d9b: shr    $0x3,%r9
+    0.00 :   974d9f: movzbl (%r14,%r9,1),%r9d
+         : 359    !values_may_have_nulls ||
+    0.00 :   974da4: bt     %r8d,%r9d
+    0.00 :   974da8: jae    974de6 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x396>
+         : 362    out_views[out_i] = source_views[source_i];
+    0.00 :   974daa: shl    $0x4,%rdx
+    0.00 :   974dae: mov    %rax,%r8
+    0.00 :   974db1: movdqu (%rcx,%rdx,1),%xmm1
+    0.00 :   974db6: shl    $0x4,%r8
+    0.00 :   974dba: movups %xmm1,(%r10,%r8,1)
+         : 368    if (out_validity != nullptr) {
+    0.00 :   974dbf: test   %r12,%r12
+    0.00 :   974dc2: je     974de2 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x392>
+         :
+         : 372    static inline void ClearBit(uint8_t* bits, int64_t i) {
+         : 373    bits[i / 8] &= kFlippedBitmask[i % 8];
+         : 374    }
+         :
+         : 376    static inline void SetBit(uint8_t* bits, int64_t i) { bits[i / 8] |= kBitmask[i % 8]; }
+    0.00 :   974dc4: mov    %rax,%rdx
+    0.00 :   974dc7: mov    %rax,%r8
+    0.00 :   974dca: lea    0x462b0f(%rip),%r9        # dd78e0 <arrow::bit_util::kBitmask>
+    0.00 :   974dd1: sar    $0x3,%rdx
+    0.00 :   974dd5: and    $0x7,%r8d
+    0.00 :   974dd9: movzbl (%r9,%r8,1),%r8d
+    0.00 :   974dde: or     %r8b,(%r12,%rdx,1)
+         : 384    ++(*valid_count);
+    0.00 :   974de2: add    $0x1,%r13
+         : 386    for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   974de6: add    $0x1,%rax
+    0.00 :   974dea: cmp    0x90(%r15),%rax
+    0.00 :   974df1: jge    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+         : 390    if (indices_may_have_nulls &&
+    0.00 :   974df3: test   %dil,%dil
+    0.00 :   974df6: je     974d80 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x330>
+    0.00 :   974df8: mov    0xa0(%r15),%r14
+    0.00 :   974dff: mov    0xa8(%r15),%r9
+         : 395    !bit_util::GetBit(indices.buffers[0].data, indices.offset + out_i)) {
+    0.00 :   974e06: lea    (%rax,%r14,1),%rdx
+         : 397    return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.00 :   974e0a: mov    %rdx,%r8
+    0.00 :   974e0d: and    $0x7,%edx
+    0.00 :   974e10: shr    $0x3,%r8
+    0.00 :   974e14: movzbl (%r9,%r8,1),%r8d
+         : 402    if (indices_may_have_nulls &&
+    0.00 :   974e19: bt     %edx,%r8d
+    0.00 :   974e1d: jb     974d80 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x330>
+         : 405    for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   974e23: add    $0x1,%rax
+    0.00 :   974e27: cmp    %rax,0x90(%r15)
+    0.00 :   974e2e: jg     974e06 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3b6>
+    0.00 :   974e30: mov    -0x118(%rbp),%r14
+    0.00 :   974e37: movq   $0x0,-0xb0(%rbp)
+         : 411    RETURN_NOT_OK(
+    0.00 :   974e42: lea    -0xb0(%rbp),%rax
+    0.00 :   974e49: mov    %rax,%rdi
+    0.00 :   974e4c: mov    %rax,-0x118(%rbp)
+    0.00 :   974e53: call   2987e0 <arrow::Status::~Status()@plt>
+         : 416    VarBinaryViewTakeDispatch(values, indices, out_views, out_validity, &valid_count));
+         :
+         : 418    const int64_t null_count = out_length - valid_count;
+    0.00 :   974e58: mov    -0xf0(%rbp),%rax
+         : 420    BufferVector buffers;
+    0.00 :   974e5f: pxor   %xmm0,%xmm0
+    0.00 :   974e63: movq   $0x0,-0xa0(%rbp)
+    0.00 :   974e6e: movaps %xmm0,-0xb0(%rbp)
+         : 424    const int64_t null_count = out_length - valid_count;
+    0.00 :   974e75: sub    %r13,%rax
+    0.00 :   974e78: mov    %rax,-0x120(%rbp)
+         : 427    buffers.reserve(2 + data_buffers.size());
+    0.00 :   974e7f: mov    -0xe8(%rbp),%rax
+    0.00 :   974e86: lea    0x2(%rax),%r12
+         : 430    _GLIBCXX20_CONSTEXPR
+         : 431    void
+         : 432    vector<_Tp, _Alloc>::
+         : 433    reserve(size_type __n)
+         : 434    {
+         : 435    if (__n > this->max_size())
+    0.00 :   974e8a: mov    %r12,%rax
+    0.00 :   974e8d: shr    $0x3b,%rax
+    0.00 :   974e91: jne    976291 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1841>
+         : 439    __throw_length_error(__N("vector::reserve"));
+         : 440    if (this->capacity() < __n)
+    0.00 :   974e97: test   %r12,%r12
+    0.00 :   974e9a: jne    976020 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x15d0>
+         : 443    buffers.push_back(null_count == 0 ? nullptr : std::move(validity_buf));
+    0.00 :   974ea0: cmpq   $0x0,-0x120(%rbp)
+    0.00 :   974ea8: jne    975f50 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1500>
+         : 446    : _M_ptr(0), _M_refcount()
+    0.00 :   974eae: pxor   %xmm0,%xmm0
+    0.00 :   974eb2: movaps %xmm0,-0x90(%rbp)
+         :
+         : 450    #if __cplusplus >= 201103L
+         : 451    _GLIBCXX20_CONSTEXPR
+         : 452    void
+         : 453    push_back(value_type&& __x)
+         : 454    { emplace_back(std::move(__x)); }
+    0.00 :   974eb9: lea    -0x90(%rbp),%rax
+    0.00 :   974ec0: mov    -0x118(%rbp),%rdi
+    0.00 :   974ec7: mov    %rax,%rsi
+    0.00 :   974eca: mov    %rax,-0x108(%rbp)
+    0.00 :   974ed1: call   971ac0 <std::shared_ptr<arrow::Buffer>& std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::emplace_back<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>&&) [clone .isra.0]>
+         : 460    if (_M_pi != nullptr)
+    0.00 :   974ed6: mov    -0x88(%rbp),%rdi
+    0.00 :   974edd: test   %rdi,%rdi
+    0.00 :   974ee0: je     975f78 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1528>
+         : 464    _M_pi->_M_release();
+    0.00 :   974ee6: call   34d570 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()>
+         :
+         : 467    // If an exception is thrown this constructor has no effect.
+         : 468    template<typename _Yp, typename _Del,
+         : 469    typename = _UniqCompatible<_Yp, _Del>>
+         : 470    __shared_ptr(unique_ptr<_Yp, _Del>&& __r)
+         : 471    : _M_ptr(__r.get()), _M_refcount()
+    0.00 :   974eeb: mov    %rbx,-0x90(%rbp)
+         : 473    constexpr __shared_count() noexcept : _M_pi(0)
+    0.00 :   974ef2: movq   $0x0,-0x88(%rbp)
+         : 475    std::align_val_t __al = std::align_val_t(alignof(_Tp));
+         : 476    return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp),
+         : 477    __al));
+         : 478    }
+         : 479    #endif
+         : 480    return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+    0.00 :   974efd: mov    $0x18,%edi
+    0.00 :   974f02: call   297ad0 <operator new(unsigned long)@plt>
+         :
+         : 484    _GLIBCXX23_CONSTEXPR
+         : 485    pointer release() noexcept
+         : 486    {
+         : 487    pointer __p = _M_ptr();
+         : 488    _M_ptr() = nullptr;
+    0.00 :   974f07: movq   $0x0,-0xd8(%rbp)
+    0.00 :   974f12: mov    %rax,%r12
+         : 491    : _M_use_count(1), _M_weak_count(1) { }
+    0.00 :   974f15: mov    0x4424b4(%rip),%rax        # db73d0 <std::_Sp_make_shared_tag::_S_ti()::__tag+0x1830>
+         : 493    : _Del_base(std::move(__d)), _Alloc_base(__a), _M_ptr(__p)
+    0.00 :   974f1c: mov    %rbx,0x10(%r12)
+         : 495    __tmp->_M_add_ref_copy();
+    0.00 :   974f21: mov    %r12,%rdi
+         : 497    : _M_use_count(1), _M_weak_count(1) { }
+    0.00 :   974f24: mov    %rax,0x8(%r12)
+         : 499    : _M_impl(__p, std::move(__d), _Alloc()) { }
+    0.00 :   974f29: mov    0x607c78(%rip),%rax        # f7cba8 <vtable for std::_Sp_counted_deleter<arrow::Buffer*, std::default_delete<arrow::Buffer>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>@@Base+0x1ecd0>
+    0.00 :   974f30: add    $0x10,%rax
+    0.00 :   974f34: mov    %rax,(%r12)
+         : 503    __tmp->_M_add_ref_copy();
+    0.00 :   974f38: call   3781e0 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_copy()>
+         : 505    _M_pi->_M_release();
+    0.00 :   974f3d: mov    %r12,%rdi
+         : 507    _M_pi = __tmp;
+    0.00 :   974f40: mov    %r12,-0x88(%rbp)
+         : 509    _M_pi->_M_release();
+    0.00 :   974f47: call   34d570 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()>
+    0.00 :   974f4c: mov    -0x108(%rbp),%rsi
+    0.00 :   974f53: mov    -0x118(%rbp),%rdi
+    0.00 :   974f5a: call   971ac0 <std::shared_ptr<arrow::Buffer>& std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::emplace_back<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>&&) [clone .isra.0]>
+         : 514    if (_M_pi != nullptr)
+    0.00 :   974f5f: mov    -0x88(%rbp),%rdi
+    0.00 :   974f66: test   %rdi,%rdi
+    0.00 :   974f69: je     974f70 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x520>
+         : 518    _M_pi->_M_release();
+    0.00 :   974f6b: call   34d570 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()>
+         : 520    { return iterator(this->_M_ptr); }
+         :
+         : 522    [[nodiscard]]
+         : 523    constexpr iterator
+         : 524    end() const noexcept
+         : 525    { return iterator(this->_M_ptr + this->size()); }
+    0.00 :   974f70: mov    -0xe8(%rbp),%rax
+    0.00 :   974f77: mov    -0x130(%rbp),%rcx
+         : 528    : _M_start(__x._M_start), _M_finish(__x._M_finish),
+    0.00 :   974f7e: mov    -0xa8(%rbp),%rbx
+         : 530    _M_end_of_storage(__x._M_end_of_storage)
+    0.00 :   974f85: mov    -0xa0(%rbp),%r14
+    0.00 :   974f8c: shl    $0x4,%rax
+    0.00 :   974f90: add    %rcx,%rax
+    0.00 :   974f93: mov    %rax,-0xe8(%rbp)
+         : 535    buffers.push_back(std::move(views_buf));
+         :
+         : 537    for (const auto& data_buffer : data_buffers) {
+    0.00 :   974f9a: cmp    %rcx,%rax
+    0.00 :   974f9d: je     975138 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x6e8>
+    0.00 :   974fa3: mov    %rcx,%r12
+    0.00 :   974fa6: jmp    974ff3 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x5a3>
+    0.00 :   974fa8: nopl   0x0(%rax,%rax,1)
+         : 543    __shared_ptr(const __shared_ptr&) noexcept = default;
+    0.00 :   974fb0: movdqu (%r12),%xmm3
+    0.00 :   974fb6: mov    0x8(%r12),%rax
+    0.00 :   974fbb: movups %xmm3,(%rbx)
+         : 547    if (_M_pi != nullptr)
+    0.00 :   974fbe: test   %rax,%rax
+    0.00 :   974fc1: je     974fd7 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x587>
+         : 550    __is_single_threaded() _GLIBCXX_NOTHROW
+         : 551    {
+         : 552    #ifndef __GTHREADS
+         : 553    return true;
+         : 554    #elif __has_include(<sys/single_threaded.h>)
+         : 555    return ::__libc_single_threaded;
+    0.00 :   974fc3: mov    0x608436(%rip),%rdx        # f7d400 <__libc_single_threaded@GLIBC_2.32>
+         :
+         : 558    inline void
+         : 559    __attribute__ ((__always_inline__))
+         : 560    __atomic_add_dispatch(_Atomic_word* __mem, int __val)
+         : 561    {
+         : 562    if (__is_single_threaded())
+    0.00 :   974fca: cmpb   $0x0,(%rdx)
+    0.00 :   974fcd: je     975f30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x14e0>
+         : 565    { *__mem += __val; }
+    0.00 :   974fd3: addl   $0x1,0x8(%rax)
+         : 567    ++this->_M_impl._M_finish;
+    0.00 :   974fd7: add    $0x10,%rbx
+    0.00 :   974fdb: add    $0x10,%r12
+    0.00 :   974fdf: mov    %rbx,-0xa8(%rbp)
+    0.00 :   974fe6: cmp    %r12,-0xe8(%rbp)
+    0.00 :   974fed: je     975138 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x6e8>
+         : 573    if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+    0.00 :   974ff3: cmp    %r14,%rbx
+    0.00 :   974ff6: jne    974fb0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x560>
+         : 576    #if __cplusplus >= 201103L
+         : 577    template<typename _Tp, typename _Alloc>
+         : 578    template<typename... _Args>
+         : 579    _GLIBCXX20_CONSTEXPR
+         : 580    void
+         : 581    vector<_Tp, _Alloc>::
+    0.00 :   974ff8: mov    -0xb0(%rbp),%r13
+         : 583    { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+    0.00 :   974fff: mov    %rbx,%rax
+    0.00 :   975002: sub    %r13,%rax
+    0.00 :   975005: mov    %rax,%rdx
+    0.00 :   975008: mov    %rax,-0x130(%rbp)
+         : 588    // Called by _M_fill_insert, _M_insert_aux etc.
+         : 589    _GLIBCXX20_CONSTEXPR
+         : 590    size_type
+         : 591    _M_check_len(size_type __n, const char* __s) const
+         : 592    {
+         : 593    if (max_size() - size() < __n)
+    0.00 :   97500f: movabs $0x7ffffffffffffff,%rax
+         : 595    { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+    0.00 :   975019: sar    $0x4,%rdx
+         : 597    if (max_size() - size() < __n)
+    0.00 :   97501d: cmp    %rax,%rdx
+    0.00 :   975020: je     976271 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1821>
+         : 600    max(const _Tp& __a, const _Tp& __b)
+         : 601    {
+         : 602    // concept requirements
+         : 603    __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
+         : 604    //return  __a < __b ? __b : __a;
+         : 605    if (__a < __b)
+    0.00 :   975026: cmp    %r13,%rbx
+    0.00 :   975029: je     975f88 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1538>
+         : 608    __throw_length_error(__N(__s));
+         :
+         : 610    const size_type __len = size() + (std::max)(size(), __n);
+    0.00 :   97502f: lea    (%rdx,%rdx,1),%rax
+         : 612    return (__len < size() || __len > max_size()) ? max_size() : __len;
+    0.00 :   975033: cmp    %rdx,%rax
+    0.00 :   975036: jb     976050 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1600>
+         : 615    _M_allocate(size_t __n)
+    0.00 :   97503c: xor    %r8d,%r8d
+         : 617    return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
+    0.00 :   97503f: xor    %ecx,%ecx
+    0.00 :   975041: mov    $0x10,%edx
+    0.00 :   975046: test   %rax,%rax
+    0.00 :   975049: jne    976250 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1800>
+         : 622    __shared_ptr(const __shared_ptr&) noexcept = default;
+    0.00 :   97504f: mov    -0x130(%rbp),%rax
+    0.00 :   975056: movdqu (%r12),%xmm4
+    0.00 :   97505c: mov    0x8(%r12),%rdi
+    0.00 :   975061: movups %xmm4,(%rcx,%rax,1)
+         : 627    if (_M_pi != nullptr)
+    0.00 :   975065: test   %rdi,%rdi
+    0.00 :   975068: je     975099 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x649>
+    0.00 :   97506a: mov    %rcx,-0x140(%rbp)
+    0.00 :   975071: mov    %r8,-0x138(%rbp)
+    0.00 :   975078: mov    %rdx,-0x130(%rbp)
+         : 633    _M_pi->_M_add_ref_copy();
+    0.00 :   97507f: call   3781e0 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_copy()>
+    0.00 :   975084: mov    -0x130(%rbp),%rdx
+    0.00 :   97508b: mov    -0x138(%rbp),%r8
+    0.00 :   975092: mov    -0x140(%rbp),%rcx
+         : 638    typedef typename iterator_traits<_ForwardIterator>::value_type
+         : 639    _ValueType2;
+         : 640    static_assert(std::is_same<_ValueType, _ValueType2>::value,
+         : 641    "relocation is only possible for values of the same type");
+         : 642    _ForwardIterator __cur = __result;
+         : 643    for (; __first != __last; ++__first, (void)++__cur)
+    0.00 :   975099: cmp    %r13,%rbx
+    0.00 :   97509c: je     976070 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1620>
+    0.00 :   9750a2: mov    %rbx,%rax
+    0.00 :   9750a5: xor    %edx,%edx
+    0.00 :   9750a7: sub    %r13,%rax
+    0.00 :   9750aa: lea    -0x10(%rax),%rsi
+    0.00 :   9750ae: xor    %eax,%eax
+    0.00 :   9750b0: shr    $0x4,%rsi
+    0.00 :   9750b4: add    $0x1,%rsi
+    0.00 :   9750b8: nopl   0x0(%rax,%rax,1)
+         : 654    : _M_ptr(__r._M_ptr), _M_refcount()
+    0.00 :   9750c0: movdqu 0x0(%r13,%rax,1),%xmm2
+    0.00 :   9750c7: add    $0x1,%rdx
+    0.00 :   9750cb: movups %xmm2,(%rcx,%rax,1)
+    0.00 :   9750cf: add    $0x10,%rax
+    0.00 :   9750d3: cmp    %rsi,%rdx
+    0.00 :   9750d6: jb     9750c0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x670>
+         : 661    if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+         : 662    {
+         : 663    __new_finish = _S_relocate(__old_start, __position.base(),
+         : 664    __new_start, _M_get_Tp_allocator());
+         :
+         : 666    ++__new_finish;
+    0.00 :   9750d8: sub    %r13,%rbx
+    0.00 :   9750db: lea    0x10(%rcx,%rbx,1),%rbx
+         : 669    if _GLIBCXX17_CONSTEXPR (!_S_use_relocate())
+         : 670    #endif
+         : 671    std::_Destroy(__old_start, __old_finish, _M_get_Tp_allocator());
+         : 672    _GLIBCXX_ASAN_ANNOTATE_REINIT;
+         : 673    _M_deallocate(__old_start,
+         : 674    this->_M_impl._M_end_of_storage - __old_start);
+    0.00 :   9750e0: mov    %r14,%rsi
+         : 676    _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n),
+         : 677    std::align_val_t(alignof(_Tp)));
+         : 678    return;
+         : 679    }
+         : 680    #endif
+         : 681    _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+    0.00 :   9750e3: mov    %r13,%rdi
+    0.00 :   9750e6: mov    %rcx,-0x138(%rbp)
+    0.00 :   9750ed: sub    %r13,%rsi
+    0.00 :   9750f0: mov    %r8,-0x130(%rbp)
+    0.00 :   9750f7: call   297d00 <operator delete(void*, unsigned long)@plt>
+    0.00 :   9750fc: mov    -0x130(%rbp),%r8
+    0.00 :   975103: mov    -0x138(%rbp),%rcx
+         : 689    this->_M_impl._M_start = __new_start;
+    0.00 :   97510a: mov    %rcx,-0xb0(%rbp)
+         : 691    this->_M_impl._M_finish = __new_finish;
+         : 692    this->_M_impl._M_end_of_storage = __new_start + __len;
+    0.00 :   975111: mov    %r8,%r14
+    0.00 :   975114: add    $0x10,%r12
+         : 695    this->_M_impl._M_finish = __new_finish;
+    0.00 :   975118: mov    %rbx,-0xa8(%rbp)
+         : 697    this->_M_impl._M_end_of_storage = __new_start + __len;
+    0.00 :   97511f: mov    %r8,-0xa0(%rbp)
+    0.00 :   975126: cmp    %r12,-0xe8(%rbp)
+    0.00 :   97512d: jne    974ff3 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x5a3>
+    0.00 :   975133: nopl   0x0(%rax,%rax,1)
+         : 702    : _M_start(__x._M_start), _M_finish(__x._M_finish),
+    0.00 :   975138: movq   -0xb0(%rbp),%xmm0
+         : 704    buffers.push_back(data_buffer);
+         : 705    }
+         :
+         : 707    out->value = ArrayData::Make(values.type->GetSharedPtr(), out_length,
+    0.00 :   975140: mov    (%r15),%rdx
+         : 709    _M_end_of_storage(__x._M_end_of_storage)
+    0.00 :   975143: mov    %r14,-0x80(%rbp)
+         : 711    { __x._M_start = __x._M_finish = __x._M_end_of_storage = pointer(); }
+    0.00 :   975147: movq   $0x0,-0xa0(%rbp)
+         : 713    : _M_start(__x._M_start), _M_finish(__x._M_finish),
+    0.00 :   975152: pinsrq $0x1,%rbx,%xmm0
+         : 715    : _M_pi(__r._M_pi)
+    0.00 :   975159: mov    0x20(%rdx),%rax
+    0.00 :   97515d: movaps %xmm0,-0x90(%rbp)
+         : 718    { __x._M_start = __x._M_finish = __x._M_end_of_storage = pointer(); }
+    0.00 :   975164: pxor   %xmm0,%xmm0
+    0.00 :   975168: mov    %rax,-0xc8(%rbp)
+    0.00 :   97516f: movaps %xmm0,-0xb0(%rbp)
+         : 722    if (_M_pi == nullptr || !_M_pi->_M_add_ref_lock_nothrow())
+    0.00 :   975176: test   %rax,%rax
+    0.00 :   975179: je     30fb77 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0xce>
+         : 725    return __atomic_load_n(&_M_use_count, __ATOMIC_RELAXED);
+    0.00 :   97517f: lea    0x8(%rax),%rcx
+    0.00 :   975183: mov    0x8(%rax),%eax
+         : 728    if (__count == 0)
+    0.00 :   975186: test   %eax,%eax
+    0.00 :   975188: je     30fb77 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0xce>
+         : 731    while (!__atomic_compare_exchange_n(&_M_use_count, &__count, __count + 1,
+    0.00 :   97518e: lea    0x1(%rax),%esi
+    0.00 :   975191: lock cmpxchg %esi,(%rcx)
+    0.00 :   975195: jne    975186 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x736>
+         : 735    _M_ptr = __r._M_ptr;
+    0.00 :   975197: mov    0x18(%rdx),%rax
+    0.00 :   97519b: mov    -0x120(%rbp),%r8
+    0.00 :   9751a2: lea    -0xc0(%rbp),%rdi
+    0.00 :   9751a9: lea    -0xd0(%rbp),%rsi
+    0.00 :   9751b0: mov    -0x108(%rbp),%rcx
+    0.00 :   9751b7: mov    -0xf0(%rbp),%rdx
+    0.00 :   9751be: xor    %r9d,%r9d
+    0.00 :   9751c1: mov    %rax,-0xd0(%rbp)
+    0.00 :   9751c8: call   298de0 <arrow::ArrayData::Make(std::shared_ptr<arrow::DataType>, long, std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >, long, long)@plt>
+         : 745    {
+         : 746    using __index_type = typename _Base::__index_type;
+         : 747    if constexpr (__detail::__variant::__never_valueless<_Types...>())
+         : 748    return this->_M_index;
+         : 749    else if constexpr (sizeof...(_Types) <= __index_type(-1) / 2)
+         : 750    return make_signed_t<__index_type>(this->_M_index);
+    0.00 :   9751cd: mov    -0x110(%rbp),%rax
+    0.00 :   9751d4: movzbl 0x80(%rax),%eax
+         : 753    if (index() == __index)
+    0.00 :   9751db: cmp    $0x1,%al
+    0.00 :   9751dd: je     975fd0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1580>
+         : 756    if (!_M_valid()) [[unlikely]]
+    0.00 :   9751e3: cmp    $0xff,%al
+    0.00 :   9751e5: je     97525b <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x80b>
+         : 759    std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+    0.00 :   9751e7: mov    -0x110(%rbp),%rax
+    0.00 :   9751ee: mov    0x70(%rax),%r12
+    0.00 :   9751f2: mov    0x68(%rax),%rbx
+         : 763    {
+         : 764    template<typename _ForwardIterator>
+         : 765    static _GLIBCXX20_CONSTEXPR void
+         : 766    __destroy(_ForwardIterator __first, _ForwardIterator __last)
+         : 767    {
+         : 768    for (; __first != __last; ++__first)
+    0.00 :   9751f6: cmp    %rbx,%r12
+    0.00 :   9751f9: je     975236 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x7e6>
+    0.00 :   9751fb: nopl   0x0(%rax,%rax,1)
+         : 772    __attribute__((__always_inline__)) _GLIBCXX20_CONSTEXPR
+         : 773    inline void
+         : 774    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+         : 775    allocator<_Tp>&)
+         : 776    {
+         : 777    std::_Destroy(__first, __last);
+    0.00 :   975200: mov    0x68(%rbx),%rdi
+    0.00 :   975204: mov    0x70(%rbx),%rsi
+    0.00 :   975208: call   296d00 <void std::_Destroy<arrow::ArraySpan*>(arrow::ArraySpan*, arrow::ArraySpan*)@plt>
+         : 781    _M_impl._M_end_of_storage - _M_impl._M_start);
+    0.00 :   97520d: mov    0x68(%rbx),%rdi
+         : 783    if (__p)
+    0.00 :   975211: test   %rdi,%rdi
+    0.00 :   975214: je     975222 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x7d2>
+         : 786    _M_impl._M_end_of_storage - _M_impl._M_start);
+    0.00 :   975216: mov    0x78(%rbx),%rsi
+    0.00 :   97521a: sub    %rdi,%rsi
+    0.00 :   97521d: call   297d00 <operator delete(void*, unsigned long)@plt>
+    0.00 :   975222: sub    $0xffffffffffffff80,%rbx
+    0.00 :   975226: cmp    %rbx,%r12
+    0.00 :   975229: jne    975200 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x7b0>
+    0.00 :   97522b: mov    -0x110(%rbp),%rax
+    0.00 :   975232: mov    0x68(%rax),%rbx
+         : 795    if (__p)
+    0.00 :   975236: test   %rbx,%rbx
+    0.00 :   975239: je     97525b <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x80b>
+         : 798    _M_impl._M_end_of_storage - _M_impl._M_start);
+    0.00 :   97523b: mov    -0x110(%rbp),%rax
+    0.00 :   975242: mov    %rbx,%rdi
+    0.00 :   975245: mov    0x78(%rax),%rax
+    0.00 :   975249: mov    %rax,%rsi
+    0.00 :   97524c: mov    %rax,-0xe8(%rbp)
+    0.00 :   975253: sub    %rbx,%rsi
+    0.00 :   975256: call   297d00 <operator delete(void*, unsigned long)@plt>
+         : 806    : _M_ptr(__r._M_ptr), _M_refcount()
+    0.00 :   97525b: mov    -0x110(%rbp),%rax
+    0.00 :   975262: movdqa -0xc0(%rbp),%xmm5
+         : 809    __v._M_index = _Np;
+    0.00 :   97526a: movb   $0x1,0x80(%rax)
+    0.00 :   975271: movups %xmm5,(%rax)
+         : 812    if (_M_pi != nullptr)
+    0.00 :   975274: mov    -0xc8(%rbp),%rdi
+    0.00 :   97527b: test   %rdi,%rdi
+    0.00 :   97527e: je     975285 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x835>
+         : 816    _M_pi->_M_release();
+    0.00 :   975280: call   34d570 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()>
+    0.00 :   975285: mov    -0x108(%rbp),%rdi
+    0.00 :   97528c: call   291310 <std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::~vector()@plt>
+         : 820    constexpr Status() noexcept : state_(NULLPTR) {}
+    0.00 :   975291: mov    -0xf8(%rbp),%rax
+         : 822    std::move(buffers), null_count, /*offset=*/0);
+         : 823    return Status::OK();
+         : 824    }
+    0.00 :   975298: mov    -0x118(%rbp),%rdi
+    0.00 :   97529f: movq   $0x0,(%rax)
+    0.00 :   9752a6: call   291310 <std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::~vector()@plt>
+    0.00 :   9752ab: jmp    975ef8 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x14a8>
+         : 829    return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   9752b0: mov    0x18(%r15),%rcx
+    0.00 :   9752b4: mov    0xa0(%r15),%rax
+    0.00 :   9752bb: mov    0xc0(%r15),%rdx
+    0.00 :   9752c2: shl    $0x4,%rcx
+    0.00 :   9752c6: add    0x38(%r15),%rcx
+         : 835    return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   9752ca: cmpq   $0x0,0x10(%r15)
+         : 837    return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   9752cf: lea    (%rdx,%rax,8),%rsi
+         : 839    return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   9752d3: mov    0x98(%r15),%rax
+    0.00 :   9752da: je     975c05 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x11b5>
+    0.00 :   9752e0: cmpq   $0x0,0x20(%r15)
+    0.00 :   9752e5: je     975c05 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x11b5>
+    0.00 :   9752eb: test   %rax,%rax
+    0.00 :   9752ee: je     9761e7 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1797>
+    0.00 :   9752f4: cmpq   $0x0,0xa8(%r15)
+    0.00 :   9752fc: mov    $0x1,%r11d
+    0.00 :   975302: setne  %dil
+         : 849    int64_t valid_count = 0;
+    0.00 :   975306: xor    %r13d,%r13d
+         : 851    for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975309: xor    %eax,%eax
+    0.00 :   97530b: cmpq   $0x0,0x90(%r15)
+    0.00 :   975313: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975319: mov    %r14,-0x118(%rbp)
+    0.00 :   975320: mov    -0x108(%rbp),%r10
+    0.00 :   975327: jmp    9753a7 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x957>
+    0.00 :   975329: nopl   0x0(%rax)
+         : 859    const int64_t source_i = static_cast<int64_t>(index_values[out_i]);
+    0.00 :   975330: mov    (%rsi,%rax,8),%rdx
+         : 861    !values_may_have_nulls ||
+    0.00 :   975334: test   %r11b,%r11b
+    0.00 :   975337: je     97535a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x90a>
+         : 864    bit_util::GetBit(values.buffers[0].data, values.offset + source_i);
+    0.00 :   975339: mov    0x18(%r15),%r8
+    0.00 :   97533d: mov    0x20(%r15),%r14
+    0.00 :   975341: add    %rdx,%r8
+    0.00 :   975344: mov    %r8,%r9
+    0.00 :   975347: and    $0x7,%r8d
+    0.00 :   97534b: shr    $0x3,%r9
+    0.00 :   97534f: movzbl (%r14,%r9,1),%r9d
+         : 872    !values_may_have_nulls ||
+    0.00 :   975354: bt     %r8d,%r9d
+    0.00 :   975358: jae    975396 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x946>
+         : 875    out_views[out_i] = source_views[source_i];
+    0.00 :   97535a: shl    $0x4,%rdx
+    0.00 :   97535e: mov    %rax,%r8
+    0.00 :   975361: movdqu (%rcx,%rdx,1),%xmm4
+    0.00 :   975366: shl    $0x4,%r8
+    0.00 :   97536a: movups %xmm4,(%r10,%r8,1)
+         : 881    if (out_validity != nullptr) {
+    0.00 :   97536f: test   %r12,%r12
+    0.00 :   975372: je     975392 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x942>
+         : 884    static inline void SetBit(uint8_t* bits, int64_t i) { bits[i / 8] |= kBitmask[i % 8]; }
+    0.00 :   975374: mov    %rax,%rdx
+    0.00 :   975377: mov    %rax,%r8
+    0.00 :   97537a: lea    0x46255f(%rip),%r9        # dd78e0 <arrow::bit_util::kBitmask>
+    0.00 :   975381: sar    $0x3,%rdx
+    0.00 :   975385: and    $0x7,%r8d
+    0.00 :   975389: movzbl (%r9,%r8,1),%r8d
+    0.00 :   97538e: or     %r8b,(%r12,%rdx,1)
+         : 892    ++(*valid_count);
+    0.00 :   975392: add    $0x1,%r13
+         : 894    for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975396: add    $0x1,%rax
+    0.00 :   97539a: cmp    0x90(%r15),%rax
+    0.00 :   9753a1: jge    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+         : 898    if (indices_may_have_nulls &&
+    0.00 :   9753a7: test   %dil,%dil
+    0.00 :   9753aa: je     975330 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x8e0>
+    0.00 :   9753ac: mov    0xa0(%r15),%r14
+    0.00 :   9753b3: mov    0xa8(%r15),%r9
+         : 903    !bit_util::GetBit(indices.buffers[0].data, indices.offset + out_i)) {
+    0.00 :   9753ba: lea    (%rax,%r14,1),%rdx
+         : 905    return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.00 :   9753be: mov    %rdx,%r8
+    0.00 :   9753c1: and    $0x7,%edx
+    0.00 :   9753c4: shr    $0x3,%r8
+    0.00 :   9753c8: movzbl (%r9,%r8,1),%r8d
+         : 910    if (indices_may_have_nulls &&
+    0.00 :   9753cd: bt     %edx,%r8d
+    0.00 :   9753d1: jb     975330 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x8e0>
+         : 913    for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   9753d7: add    $0x1,%rax
+    0.00 :   9753db: cmp    0x90(%r15),%rax
+    0.00 :   9753e2: jl     9753ba <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x96a>
+    0.00 :   9753e4: jmp    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+    0.00 :   9753e9: nopl   0x0(%rax)
+         : 919    return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   9753f0: mov    0x18(%r15),%rcx
+    0.00 :   9753f4: mov    0xa0(%r15),%rax
+    0.00 :   9753fb: mov    0xc0(%r15),%rdx
+    0.00 :   975402: shl    $0x4,%rcx
+    0.00 :   975406: add    0x38(%r15),%rcx
+         : 925    return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   97540a: cmpq   $0x0,0x10(%r15)
+         : 927    return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   97540f: lea    (%rdx,%rax,2),%rsi
+         : 929    return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   975413: mov    0x98(%r15),%rax
+    0.00 :   97541a: je     975d4e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x12fe>
+    0.00 :   975420: cmpq   $0x0,0x20(%r15)
+    0.00 :   975425: je     975d4e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x12fe>
+    0.00 :   97542b: test   %rax,%rax
+    0.00 :   97542e: je     97620e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x17be>
+    0.00 :   975434: cmpq   $0x0,0xa8(%r15)
+    0.00 :   97543c: mov    $0x1,%r11d
+    0.00 :   975442: setne  %dil
+         : 939    int64_t valid_count = 0;
+    0.00 :   975446: xor    %r13d,%r13d
+         : 941    for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975449: xor    %eax,%eax
+    0.00 :   97544b: cmpq   $0x0,0x90(%r15)
+    0.00 :   975453: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975459: mov    %r14,-0x118(%rbp)
+    0.00 :   975460: mov    -0x108(%rbp),%r10
+    0.00 :   975467: jmp    9754e7 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xa97>
+    0.00 :   975469: nopl   0x0(%rax)
+         : 949    const int64_t source_i = static_cast<int64_t>(index_values[out_i]);
+    0.00 :   975470: movzwl (%rsi,%rax,2),%edx
+         : 951    !values_may_have_nulls ||
+    0.00 :   975474: test   %r11b,%r11b
+    0.00 :   975477: je     97549a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xa4a>
+         : 954    bit_util::GetBit(values.buffers[0].data, values.offset + source_i);
+    0.00 :   975479: mov    0x18(%r15),%r8
+    0.00 :   97547d: mov    0x20(%r15),%r14
+    0.00 :   975481: add    %rdx,%r8
+    0.00 :   975484: mov    %r8,%r9
+    0.00 :   975487: and    $0x7,%r8d
+    0.00 :   97548b: shr    $0x3,%r9
+    0.00 :   97548f: movzbl (%r14,%r9,1),%r9d
+         : 962    !values_may_have_nulls ||
+    0.00 :   975494: bt     %r8d,%r9d
+    0.00 :   975498: jae    9754d6 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xa86>
+         : 965    out_views[out_i] = source_views[source_i];
+    0.00 :   97549a: shl    $0x4,%rdx
+    0.00 :   97549e: mov    %rax,%r8
+    0.00 :   9754a1: movdqu (%rcx,%rdx,1),%xmm5
+    0.00 :   9754a6: shl    $0x4,%r8
+    0.00 :   9754aa: movups %xmm5,(%r10,%r8,1)
+         : 971    if (out_validity != nullptr) {
+    0.00 :   9754af: test   %r12,%r12
+    0.00 :   9754b2: je     9754d2 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xa82>
+         : 974    static inline void SetBit(uint8_t* bits, int64_t i) { bits[i / 8] |= kBitmask[i % 8]; }
+    0.00 :   9754b4: mov    %rax,%rdx
+    0.00 :   9754b7: mov    %rax,%r8
+    0.00 :   9754ba: lea    0x46241f(%rip),%r9        # dd78e0 <arrow::bit_util::kBitmask>
+    0.00 :   9754c1: sar    $0x3,%rdx
+    0.00 :   9754c5: and    $0x7,%r8d
+    0.00 :   9754c9: movzbl (%r9,%r8,1),%r8d
+    0.00 :   9754ce: or     %r8b,(%r12,%rdx,1)
+         : 982    ++(*valid_count);
+    0.00 :   9754d2: add    $0x1,%r13
+         : 984    for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   9754d6: add    $0x1,%rax
+    0.00 :   9754da: cmp    0x90(%r15),%rax
+    0.00 :   9754e1: jge    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+         : 988    if (indices_may_have_nulls &&
+    0.00 :   9754e7: test   %dil,%dil
+    0.00 :   9754ea: je     975470 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xa20>
+    0.00 :   9754ec: mov    0xa0(%r15),%r14
+    0.00 :   9754f3: mov    0xa8(%r15),%r9
+         : 993    !bit_util::GetBit(indices.buffers[0].data, indices.offset + out_i)) {
+    0.00 :   9754fa: lea    (%rax,%r14,1),%rdx
+         : 995    return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.00 :   9754fe: mov    %rdx,%r8
+    0.00 :   975501: and    $0x7,%edx
+    0.00 :   975504: shr    $0x3,%r8
+    0.00 :   975508: movzbl (%r9,%r8,1),%r8d
+         : 1000   if (indices_may_have_nulls &&
+    0.00 :   97550d: bt     %edx,%r8d
+    0.00 :   975511: jb     975470 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xa20>
+         : 1003   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975517: add    $0x1,%rax
+    0.00 :   97551b: cmp    %rax,0x90(%r15)
+    0.00 :   975522: jg     9754fa <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xaaa>
+    0.00 :   975524: jmp    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+    0.00 :   975529: nopl   0x0(%rax)
+         : 1009   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   975530: mov    0x18(%r15),%rcx
+    0.00 :   975534: mov    0xa0(%r15),%rax
+    0.00 :   97553b: mov    0xc0(%r15),%rdx
+    0.00 :   975542: shl    $0x4,%rcx
+    0.00 :   975546: add    0x38(%r15),%rcx
+         : 1015   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   97554a: cmpq   $0x0,0x10(%r15)
+         : 1017   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   97554f: lea    (%rdx,%rax,4),%rsi
+         : 1019   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   975553: mov    0x98(%r15),%rax
+    0.00 :   97555a: je     975baf <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x115f>
+    0.00 :   975560: cmpq   $0x0,0x20(%r15)
+    0.00 :   975565: je     975baf <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x115f>
+    0.00 :   97556b: test   %rax,%rax
+    0.00 :   97556e: je     976201 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x17b1>
+    0.00 :   975574: cmpq   $0x0,0xa8(%r15)
+    0.00 :   97557c: mov    $0x1,%r11d
+    0.00 :   975582: setne  %dil
+         : 1029   int64_t valid_count = 0;
+    0.00 :   975586: xor    %r13d,%r13d
+         : 1031   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975589: xor    %eax,%eax
+    0.00 :   97558b: cmpq   $0x0,0x90(%r15)
+    0.00 :   975593: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975599: mov    %r14,-0x118(%rbp)
+    0.00 :   9755a0: mov    -0x108(%rbp),%r10
+    0.00 :   9755a7: jmp    975626 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xbd6>
+    0.00 :   9755a9: nopl   0x0(%rax)
+         : 1039   const int64_t source_i = static_cast<int64_t>(index_values[out_i]);
+    0.00 :   9755b0: mov    (%rsi,%rax,4),%edx
+         : 1041   !values_may_have_nulls ||
+    0.00 :   9755b3: test   %r11b,%r11b
+    0.00 :   9755b6: je     9755d9 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xb89>
+         : 1044   bit_util::GetBit(values.buffers[0].data, values.offset + source_i);
+    0.00 :   9755b8: mov    0x18(%r15),%r8
+    0.00 :   9755bc: mov    0x20(%r15),%r14
+    0.00 :   9755c0: add    %rdx,%r8
+    0.00 :   9755c3: mov    %r8,%r9
+    0.00 :   9755c6: and    $0x7,%r8d
+    0.00 :   9755ca: shr    $0x3,%r9
+    0.00 :   9755ce: movzbl (%r14,%r9,1),%r9d
+         : 1052   !values_may_have_nulls ||
+    0.00 :   9755d3: bt     %r8d,%r9d
+    0.00 :   9755d7: jae    975615 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xbc5>
+         : 1055   out_views[out_i] = source_views[source_i];
+    0.00 :   9755d9: shl    $0x4,%rdx
+    0.00 :   9755dd: mov    %rax,%r8
+    0.00 :   9755e0: movdqu (%rcx,%rdx,1),%xmm6
+    0.00 :   9755e5: shl    $0x4,%r8
+    0.00 :   9755e9: movups %xmm6,(%r10,%r8,1)
+         : 1061   if (out_validity != nullptr) {
+    0.00 :   9755ee: test   %r12,%r12
+    0.00 :   9755f1: je     975611 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xbc1>
+         : 1064   static inline void SetBit(uint8_t* bits, int64_t i) { bits[i / 8] |= kBitmask[i % 8]; }
+    0.00 :   9755f3: mov    %rax,%rdx
+    0.00 :   9755f6: mov    %rax,%r8
+    0.00 :   9755f9: lea    0x4622e0(%rip),%r9        # dd78e0 <arrow::bit_util::kBitmask>
+    0.00 :   975600: sar    $0x3,%rdx
+    0.00 :   975604: and    $0x7,%r8d
+    0.00 :   975608: movzbl (%r9,%r8,1),%r8d
+    0.00 :   97560d: or     %r8b,(%r12,%rdx,1)
+         : 1072   ++(*valid_count);
+    0.00 :   975611: add    $0x1,%r13
+         : 1074   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975615: add    $0x1,%rax
+    0.00 :   975619: cmp    0x90(%r15),%rax
+    0.00 :   975620: jge    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+         : 1078   if (indices_may_have_nulls &&
+    0.00 :   975626: test   %dil,%dil
+    0.00 :   975629: je     9755b0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xb60>
+    0.00 :   97562b: mov    0xa0(%r15),%r14
+    0.00 :   975632: mov    0xa8(%r15),%r9
+         : 1083   !bit_util::GetBit(indices.buffers[0].data, indices.offset + out_i)) {
+    0.00 :   975639: lea    (%rax,%r14,1),%rdx
+         : 1085   return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.00 :   97563d: mov    %rdx,%r8
+    0.00 :   975640: and    $0x7,%edx
+    0.00 :   975643: shr    $0x3,%r8
+    0.00 :   975647: movzbl (%r9,%r8,1),%r8d
+         : 1090   if (indices_may_have_nulls &&
+    0.00 :   97564c: bt     %edx,%r8d
+    0.00 :   975650: jb     9755b0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xb60>
+         : 1093   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975656: add    $0x1,%rax
+    0.00 :   97565a: cmp    %rax,0x90(%r15)
+    0.00 :   975661: jg     975639 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xbe9>
+    0.00 :   975663: jmp    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+    0.00 :   975668: nopl   0x0(%rax,%rax,1)
+         : 1099   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   975670: mov    0x18(%r15),%rsi
+    0.00 :   975674: mov    0xa0(%r15),%rax
+    0.00 :   97567b: add    0xc0(%r15),%rax
+         : 1103   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   975682: mov    0x98(%r15),%rdx
+         : 1105   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   975689: shl    $0x4,%rsi
+    0.00 :   97568d: add    0x38(%r15),%rsi
+         : 1108   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   975691: cmpq   $0x0,0x10(%r15)
+    0.00 :   975696: je     975cfe <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x12ae>
+    0.00 :   97569c: cmpq   $0x0,0x20(%r15)
+    0.00 :   9756a1: je     975cfe <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x12ae>
+    0.00 :   9756a7: test   %rdx,%rdx
+    0.00 :   9756aa: je     976229 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x17d9>
+    0.00 :   9756b0: cmpq   $0x0,0xa8(%r15)
+    0.00 :   9756b8: mov    $0x1,%r11d
+    0.00 :   9756be: setne  %dil
+         : 1118   int64_t valid_count = 0;
+    0.00 :   9756c2: xor    %r13d,%r13d
+         : 1120   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   9756c5: xor    %edx,%edx
+    0.00 :   9756c7: cmpq   $0x0,0x90(%r15)
+    0.00 :   9756cf: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   9756d5: mov    %r14,-0x118(%rbp)
+    0.00 :   9756dc: mov    -0x108(%rbp),%r10
+    0.00 :   9756e3: jmp    97575f <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xd0f>
+    0.00 :   9756e5: nopl   (%rax)
+         : 1128   const int64_t source_i = static_cast<int64_t>(index_values[out_i]);
+    0.00 :   9756e8: movzbl (%rax,%rdx,1),%ecx
+         : 1130   !values_may_have_nulls ||
+    0.00 :   9756ec: test   %r11b,%r11b
+    0.00 :   9756ef: je     975712 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xcc2>
+         : 1133   bit_util::GetBit(values.buffers[0].data, values.offset + source_i);
+    0.00 :   9756f1: mov    0x18(%r15),%r8
+    0.00 :   9756f5: mov    0x20(%r15),%r14
+    0.00 :   9756f9: add    %rcx,%r8
+    0.00 :   9756fc: mov    %r8,%r9
+    0.00 :   9756ff: and    $0x7,%r8d
+    0.00 :   975703: shr    $0x3,%r9
+    0.00 :   975707: movzbl (%r14,%r9,1),%r9d
+         : 1141   !values_may_have_nulls ||
+    0.00 :   97570c: bt     %r8d,%r9d
+    0.00 :   975710: jae    97574e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xcfe>
+         : 1144   out_views[out_i] = source_views[source_i];
+    0.00 :   975712: shl    $0x4,%rcx
+    0.00 :   975716: mov    %rdx,%r8
+    0.00 :   975719: movdqu (%rsi,%rcx,1),%xmm7
+    0.00 :   97571e: shl    $0x4,%r8
+    0.00 :   975722: movups %xmm7,(%r10,%r8,1)
+         : 1150   if (out_validity != nullptr) {
+    0.00 :   975727: test   %r12,%r12
+    0.00 :   97572a: je     97574a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xcfa>
+         : 1153   static inline void SetBit(uint8_t* bits, int64_t i) { bits[i / 8] |= kBitmask[i % 8]; }
+    0.00 :   97572c: mov    %rdx,%rcx
+    0.00 :   97572f: mov    %rdx,%r8
+    0.00 :   975732: lea    0x4621a7(%rip),%r9        # dd78e0 <arrow::bit_util::kBitmask>
+    0.00 :   975739: sar    $0x3,%rcx
+    0.00 :   97573d: and    $0x7,%r8d
+    0.00 :   975741: movzbl (%r9,%r8,1),%r8d
+    0.00 :   975746: or     %r8b,(%r12,%rcx,1)
+         : 1161   ++(*valid_count);
+    0.00 :   97574a: add    $0x1,%r13
+         : 1163   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   97574e: add    $0x1,%rdx
+    0.00 :   975752: cmp    0x90(%r15),%rdx
+    0.00 :   975759: jge    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+         : 1167   if (indices_may_have_nulls &&
+    0.00 :   97575f: test   %dil,%dil
+    0.00 :   975762: je     9756e8 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xc98>
+    0.00 :   975764: mov    0xa0(%r15),%r14
+    0.00 :   97576b: mov    0xa8(%r15),%r9
+         : 1172   !bit_util::GetBit(indices.buffers[0].data, indices.offset + out_i)) {
+    0.00 :   975772: lea    (%rdx,%r14,1),%rcx
+         : 1174   return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.00 :   975776: mov    %rcx,%r8
+    0.00 :   975779: and    $0x7,%ecx
+    0.00 :   97577c: shr    $0x3,%r8
+    0.00 :   975780: movzbl (%r9,%r8,1),%r8d
+         : 1179   if (indices_may_have_nulls &&
+    0.00 :   975785: bt     %ecx,%r8d
+    0.00 :   975789: jb     9756e8 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xc98>
+         : 1182   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   97578f: add    $0x1,%rdx
+    0.00 :   975793: cmp    %rdx,0x90(%r15)
+    0.00 :   97579a: jg     975772 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xd22>
+    0.00 :   97579c: jmp    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+    0.00 :   9757a1: nopl   0x0(%rax)
+         : 1188   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   9757a8: mov    0x18(%r15),%rcx
+    0.00 :   9757ac: mov    0xa0(%r15),%rax
+    0.00 :   9757b3: mov    0xc0(%r15),%rdx
+    0.00 :   9757ba: shl    $0x4,%rcx
+    0.00 :   9757be: add    0x38(%r15),%rcx
+         : 1194   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   9757c2: cmpq   $0x0,0x10(%r15)
+         : 1196   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   9757c7: lea    (%rdx,%rax,4),%rsi
+         : 1198   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   9757cb: mov    0x98(%r15),%rax
+    0.00 :   9757d2: je     975c5e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x120e>
+    0.00 :   9757d8: cmpq   $0x0,0x20(%r15)
+    0.00 :   9757dd: je     975c5e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x120e>
+    0.00 :   9757e3: test   %rax,%rax
+    0.00 :   9757e6: je     976243 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x17f3>
+    0.00 :   9757ec: cmpq   $0x0,0xa8(%r15)
+    0.00 :   9757f4: mov    $0x1,%r11d
+    0.00 :   9757fa: setne  %dil
+         : 1208   int64_t valid_count = 0;
+    0.00 :   9757fe: xor    %r13d,%r13d
+         : 1210   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975801: xor    %eax,%eax
+    0.00 :   975803: cmpq   $0x0,0x90(%r15)
+    0.00 :   97580b: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975811: mov    %r14,-0x118(%rbp)
+    0.00 :   975818: mov    -0x108(%rbp),%r10
+    0.00 :   97581f: jmp    97589f <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xe4f>
+    0.00 :   975821: nopl   0x0(%rax)
+         : 1218   const int64_t source_i = static_cast<int64_t>(index_values[out_i]);
+    0.11 :   975828: movslq (%rsi,%rax,4),%rdx
+         : 1220   !values_may_have_nulls ||
+    1.64 :   97582c: test   %r11b,%r11b
+    0.00 :   97582f: je     975852 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xe02>
+         : 1223   bit_util::GetBit(values.buffers[0].data, values.offset + source_i);
+    0.40 :   975831: mov    0x18(%r15),%r8
+    0.30 :   975835: mov    0x20(%r15),%r14
+    0.20 :   975839: add    %rdx,%r8
+    0.09 :   97583c: mov    %r8,%r9
+    0.19 :   97583f: and    $0x7,%r8d
+    0.41 :   975843: shr    $0x3,%r9
+    0.17 :   975847: movzbl (%r14,%r9,1),%r9d
+         : 1231   !values_may_have_nulls ||
+    1.65 :   97584c: bt     %r8d,%r9d
+    0.58 :   975850: jae    97588e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xe3e>
+         : 1234   out_views[out_i] = source_views[source_i];
+    0.54 :   975852: shl    $0x4,%rdx
+    0.24 :   975856: mov    %rax,%r8
+    0.15 :   975859: movdqu (%rcx,%rdx,1),%xmm4
+   83.80 :   97585e: shl    $0x4,%r8
+    0.15 :   975862: movups %xmm4,(%r10,%r8,1)
+         : 1240   if (out_validity != nullptr) {
+    2.62 :   975867: test   %r12,%r12
+    0.00 :   97586a: je     97588a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xe3a>
+         : 1243   static inline void SetBit(uint8_t* bits, int64_t i) { bits[i / 8] |= kBitmask[i % 8]; }
+    0.50 :   97586c: mov    %rax,%rdx
+    0.32 :   97586f: mov    %rax,%r8
+    0.16 :   975872: lea    0x462067(%rip),%r9        # dd78e0 <arrow::bit_util::kBitmask>
+    0.11 :   975879: sar    $0x3,%rdx
+    0.04 :   97587d: and    $0x7,%r8d
+    0.03 :   975881: movzbl (%r9,%r8,1),%r8d
+    0.21 :   975886: or     %r8b,(%r12,%rdx,1)
+         : 1251   ++(*valid_count);
+    1.42 :   97588a: add    $0x1,%r13
+         : 1253   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.23 :   97588e: add    $0x1,%rax
+    0.19 :   975892: cmp    0x90(%r15),%rax
+    0.00 :   975899: jge    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+         : 1257   if (indices_may_have_nulls &&
+    0.20 :   97589f: test   %dil,%dil
+    0.00 :   9758a2: je     975828 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xdd8>
+    0.32 :   9758a4: mov    0xa0(%r15),%r14
+    0.13 :   9758ab: mov    0xa8(%r15),%r9
+         : 1262   !bit_util::GetBit(indices.buffers[0].data, indices.offset + out_i)) {
+    1.15 :   9758b2: lea    (%rax,%r14,1),%rdx
+         : 1264   return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.50 :   9758b6: mov    %rdx,%r8
+    0.26 :   9758b9: and    $0x7,%edx
+    0.18 :   9758bc: shr    $0x3,%r8
+    0.05 :   9758c0: movzbl (%r9,%r8,1),%r8d
+         : 1269   if (indices_may_have_nulls &&
+    0.24 :   9758c5: bt     %edx,%r8d
+    0.36 :   9758c9: jb     975828 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xdd8>
+         : 1272   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.01 :   9758cf: add    $0x1,%rax
+    0.14 :   9758d3: cmp    %rax,0x90(%r15)
+    0.00 :   9758da: jg     9758b2 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xe62>
+    0.00 :   9758dc: jmp    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+    0.00 :   9758e1: nopl   0x0(%rax)
+         : 1278   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   9758e8: mov    0x18(%r15),%rsi
+    0.00 :   9758ec: mov    0xa0(%r15),%rax
+    0.00 :   9758f3: add    0xc0(%r15),%rax
+         : 1282   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   9758fa: mov    0x98(%r15),%rdx
+         : 1284   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   975901: shl    $0x4,%rsi
+    0.00 :   975905: add    0x38(%r15),%rsi
+         : 1287   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   975909: cmpq   $0x0,0x10(%r15)
+    0.00 :   97590e: je     975d9e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x134e>
+    0.00 :   975914: cmpq   $0x0,0x20(%r15)
+    0.00 :   975919: je     975d9e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x134e>
+    0.00 :   97591f: test   %rdx,%rdx
+    0.00 :   975922: je     97621b <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x17cb>
+    0.00 :   975928: cmpq   $0x0,0xa8(%r15)
+    0.00 :   975930: mov    $0x1,%r11d
+    0.00 :   975936: setne  %r8b
+         : 1297   int64_t valid_count = 0;
+    0.00 :   97593a: xor    %r13d,%r13d
+         : 1299   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   97593d: xor    %edx,%edx
+    0.00 :   97593f: cmpq   $0x0,0x90(%r15)
+    0.00 :   975947: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   97594d: mov    %r14,-0x118(%rbp)
+    0.00 :   975954: mov    -0x108(%rbp),%r10
+    0.00 :   97595b: jmp    9759d6 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xf86>
+    0.00 :   97595d: nopl   (%rax)
+         : 1307   const int64_t source_i = static_cast<int64_t>(index_values[out_i]);
+    0.00 :   975960: movsbq (%rax,%rdx,1),%rcx
+         : 1309   !values_may_have_nulls ||
+    0.00 :   975965: test   %r11b,%r11b
+    0.00 :   975968: je     97598a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xf3a>
+         : 1312   bit_util::GetBit(values.buffers[0].data, values.offset + source_i);
+    0.00 :   97596a: mov    0x18(%r15),%rdi
+    0.00 :   97596e: mov    0x20(%r15),%r14
+    0.00 :   975972: add    %rcx,%rdi
+    0.00 :   975975: mov    %rdi,%r9
+    0.00 :   975978: and    $0x7,%edi
+    0.00 :   97597b: shr    $0x3,%r9
+    0.00 :   97597f: movzbl (%r14,%r9,1),%r9d
+         : 1320   !values_may_have_nulls ||
+    0.00 :   975984: bt     %edi,%r9d
+    0.00 :   975988: jae    9759c5 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xf75>
+         : 1323   out_views[out_i] = source_views[source_i];
+    0.00 :   97598a: shl    $0x4,%rcx
+    0.00 :   97598e: mov    %rdx,%rdi
+    0.00 :   975991: movdqu (%rsi,%rcx,1),%xmm7
+    0.00 :   975996: shl    $0x4,%rdi
+    0.00 :   97599a: movups %xmm7,(%r10,%rdi,1)
+         : 1329   if (out_validity != nullptr) {
+    0.00 :   97599f: test   %r12,%r12
+    0.00 :   9759a2: je     9759c1 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xf71>
+         : 1332   static inline void SetBit(uint8_t* bits, int64_t i) { bits[i / 8] |= kBitmask[i % 8]; }
+    0.00 :   9759a4: mov    %rdx,%rcx
+    0.00 :   9759a7: mov    %rdx,%rdi
+    0.00 :   9759aa: lea    0x461f2f(%rip),%r9        # dd78e0 <arrow::bit_util::kBitmask>
+    0.00 :   9759b1: sar    $0x3,%rcx
+    0.00 :   9759b5: and    $0x7,%edi
+    0.00 :   9759b8: movzbl (%r9,%rdi,1),%edi
+    0.00 :   9759bd: or     %dil,(%r12,%rcx,1)
+         : 1340   ++(*valid_count);
+    0.00 :   9759c1: add    $0x1,%r13
+         : 1342   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   9759c5: add    $0x1,%rdx
+    0.00 :   9759c9: cmp    0x90(%r15),%rdx
+    0.00 :   9759d0: jge    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+         : 1346   if (indices_may_have_nulls &&
+    0.00 :   9759d6: test   %r8b,%r8b
+    0.00 :   9759d9: je     975960 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xf10>
+    0.00 :   9759db: mov    0xa0(%r15),%r14
+    0.00 :   9759e2: mov    0xa8(%r15),%r9
+         : 1351   !bit_util::GetBit(indices.buffers[0].data, indices.offset + out_i)) {
+    0.00 :   9759e9: lea    (%rdx,%r14,1),%rcx
+         : 1353   return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.00 :   9759ed: mov    %rcx,%rdi
+    0.00 :   9759f0: and    $0x7,%ecx
+    0.00 :   9759f3: shr    $0x3,%rdi
+    0.00 :   9759f7: movzbl (%r9,%rdi,1),%edi
+         : 1358   if (indices_may_have_nulls &&
+    0.00 :   9759fc: bt     %ecx,%edi
+    0.00 :   9759ff: jb     975960 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xf10>
+         : 1361   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975a05: add    $0x1,%rdx
+    0.00 :   975a09: cmp    %rdx,0x90(%r15)
+    0.00 :   975a10: jg     9759e9 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xf99>
+    0.00 :   975a12: jmp    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+    0.00 :   975a17: nopw   0x0(%rax,%rax,1)
+         : 1367   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   975a20: mov    0x18(%r15),%rcx
+    0.00 :   975a24: mov    0xa0(%r15),%rax
+    0.00 :   975a2b: mov    0xc0(%r15),%rdx
+    0.00 :   975a32: shl    $0x4,%rcx
+    0.00 :   975a36: add    0x38(%r15),%rcx
+         : 1373   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   975a3a: cmpq   $0x0,0x10(%r15)
+         : 1375   return reinterpret_cast<const T*>(buffers[i].data) + absolute_offset;
+    0.00 :   975a3f: lea    (%rdx,%rax,2),%rsi
+         : 1377   return null_count != 0 && buffers[0].data != NULLPTR;
+    0.00 :   975a43: mov    0x98(%r15),%rax
+    0.00 :   975a4a: je     975b5a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x110a>
+    0.00 :   975a50: cmpq   $0x0,0x20(%r15)
+    0.00 :   975a55: je     975b5a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x110a>
+    0.00 :   975a5b: test   %rax,%rax
+    0.00 :   975a5e: je     976236 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x17e6>
+    0.00 :   975a64: cmpq   $0x0,0xa8(%r15)
+    0.00 :   975a6c: mov    $0x1,%r11d
+    0.00 :   975a72: setne  %dil
+         : 1387   int64_t valid_count = 0;
+    0.00 :   975a76: xor    %r13d,%r13d
+         : 1389   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975a79: xor    %eax,%eax
+    0.00 :   975a7b: cmpq   $0x0,0x90(%r15)
+    0.00 :   975a83: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975a89: mov    %r14,-0x118(%rbp)
+    0.00 :   975a90: mov    -0x108(%rbp),%r10
+    0.00 :   975a97: jmp    975b18 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x10c8>
+    0.00 :   975a99: nopl   0x0(%rax)
+         : 1397   const int64_t source_i = static_cast<int64_t>(index_values[out_i]);
+    0.00 :   975aa0: movswq (%rsi,%rax,2),%rdx
+         : 1399   !values_may_have_nulls ||
+    0.00 :   975aa5: test   %r11b,%r11b
+    0.00 :   975aa8: je     975acb <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x107b>
+         : 1402   bit_util::GetBit(values.buffers[0].data, values.offset + source_i);
+    0.00 :   975aaa: mov    0x18(%r15),%r8
+    0.00 :   975aae: mov    0x20(%r15),%r14
+    0.00 :   975ab2: add    %rdx,%r8
+    0.00 :   975ab5: mov    %r8,%r9
+    0.00 :   975ab8: and    $0x7,%r8d
+    0.00 :   975abc: shr    $0x3,%r9
+    0.00 :   975ac0: movzbl (%r14,%r9,1),%r9d
+         : 1410   !values_may_have_nulls ||
+    0.00 :   975ac5: bt     %r8d,%r9d
+    0.00 :   975ac9: jae    975b07 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x10b7>
+         : 1413   out_views[out_i] = source_views[source_i];
+    0.00 :   975acb: shl    $0x4,%rdx
+    0.00 :   975acf: mov    %rax,%r8
+    0.00 :   975ad2: movdqu (%rcx,%rdx,1),%xmm5
+    0.00 :   975ad7: shl    $0x4,%r8
+    0.00 :   975adb: movups %xmm5,(%r10,%r8,1)
+         : 1419   if (out_validity != nullptr) {
+    0.00 :   975ae0: test   %r12,%r12
+    0.00 :   975ae3: je     975b03 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x10b3>
+         : 1422   static inline void SetBit(uint8_t* bits, int64_t i) { bits[i / 8] |= kBitmask[i % 8]; }
+    0.00 :   975ae5: mov    %rax,%rdx
+    0.00 :   975ae8: mov    %rax,%r8
+    0.00 :   975aeb: lea    0x461dee(%rip),%r9        # dd78e0 <arrow::bit_util::kBitmask>
+    0.00 :   975af2: sar    $0x3,%rdx
+    0.00 :   975af6: and    $0x7,%r8d
+    0.00 :   975afa: movzbl (%r9,%r8,1),%r8d
+    0.00 :   975aff: or     %r8b,(%r12,%rdx,1)
+         : 1430   ++(*valid_count);
+    0.00 :   975b03: add    $0x1,%r13
+         : 1432   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975b07: add    $0x1,%rax
+    0.00 :   975b0b: cmp    0x90(%r15),%rax
+    0.00 :   975b12: jge    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+         : 1436   if (indices_may_have_nulls &&
+    0.00 :   975b18: test   %dil,%dil
+    0.00 :   975b1b: je     975aa0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1050>
+    0.00 :   975b1d: mov    0xa0(%r15),%r14
+    0.00 :   975b24: mov    0xa8(%r15),%r9
+         : 1441   !bit_util::GetBit(indices.buffers[0].data, indices.offset + out_i)) {
+    0.00 :   975b2b: lea    (%rax,%r14,1),%rdx
+         : 1443   return (bits[i >> 3] >> (i & 0x07)) & 1;
+    0.00 :   975b2f: mov    %rdx,%r8
+    0.00 :   975b32: and    $0x7,%edx
+    0.00 :   975b35: shr    $0x3,%r8
+    0.00 :   975b39: movzbl (%r9,%r8,1),%r8d
+         : 1448   if (indices_may_have_nulls &&
+    0.00 :   975b3e: bt     %edx,%r8d
+    0.00 :   975b42: jb     975aa0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1050>
+         : 1451   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975b48: add    $0x1,%rax
+    0.00 :   975b4c: cmp    0x90(%r15),%rax
+    0.00 :   975b53: jl     975b2b <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x10db>
+    0.00 :   975b55: jmp    974e30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e0>
+    0.00 :   975b5a: test   %rax,%rax
+    0.00 :   975b5d: jne    9760cf <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x167f>
+         : 1458   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975b63: mov    0x90(%r15),%r13
+    0.00 :   975b6a: mov    -0x108(%rbp),%r8
+    0.00 :   975b71: xor    %eax,%eax
+    0.00 :   975b73: test   %r13,%r13
+    0.00 :   975b76: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975b7c: nopl   0x0(%rax)
+         : 1465   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975b80: movswq (%rsi,%rax,2),%rdx
+    0.00 :   975b85: mov    %rax,%rdi
+         : 1468   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975b88: add    $0x1,%rax
+         : 1470   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975b8c: shl    $0x4,%rdi
+    0.00 :   975b90: shl    $0x4,%rdx
+    0.00 :   975b94: movdqu (%rcx,%rdx,1),%xmm7
+    0.00 :   975b99: movups %xmm7,(%r8,%rdi,1)
+         : 1475   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975b9e: mov    0x90(%r15),%r13
+    0.00 :   975ba5: cmp    %r13,%rax
+    0.00 :   975ba8: jl     975b80 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1130>
+    0.00 :   975baa: jmp    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975baf: test   %rax,%rax
+    0.00 :   975bb2: jne    976105 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x16b5>
+    0.00 :   975bb8: mov    0x90(%r15),%r13
+    0.00 :   975bbf: mov    -0x108(%rbp),%r8
+    0.00 :   975bc6: xor    %eax,%eax
+    0.00 :   975bc8: test   %r13,%r13
+    0.00 :   975bcb: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975bd1: nopl   0x0(%rax)
+         : 1488   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975bd8: mov    (%rsi,%rax,4),%edx
+    0.00 :   975bdb: mov    %rax,%rdi
+         : 1491   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975bde: add    $0x1,%rax
+         : 1493   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975be2: shl    $0x4,%rdi
+    0.00 :   975be6: shl    $0x4,%rdx
+    0.00 :   975bea: movdqu (%rcx,%rdx,1),%xmm1
+    0.00 :   975bef: movups %xmm1,(%r8,%rdi,1)
+         : 1498   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975bf4: mov    0x90(%r15),%r13
+    0.00 :   975bfb: cmp    %r13,%rax
+    0.00 :   975bfe: jl     975bd8 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1188>
+    0.00 :   975c00: jmp    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975c05: test   %rax,%rax
+    0.00 :   975c08: jne    9760ea <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x169a>
+    0.00 :   975c0e: mov    0x90(%r15),%r13
+    0.00 :   975c15: mov    -0x108(%rbp),%r8
+    0.00 :   975c1c: xor    %eax,%eax
+    0.00 :   975c1e: test   %r13,%r13
+    0.00 :   975c21: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975c27: nopw   0x0(%rax,%rax,1)
+         : 1511   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975c30: mov    (%rsi,%rax,8),%rdx
+    0.00 :   975c34: mov    %rax,%rdi
+         : 1514   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975c37: add    $0x1,%rax
+         : 1516   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975c3b: shl    $0x4,%rdi
+    0.00 :   975c3f: shl    $0x4,%rdx
+    0.00 :   975c43: movdqu (%rcx,%rdx,1),%xmm6
+    0.00 :   975c48: movups %xmm6,(%r8,%rdi,1)
+         : 1521   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975c4d: mov    0x90(%r15),%r13
+    0.00 :   975c54: cmp    %r13,%rax
+    0.00 :   975c57: jl     975c30 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x11e0>
+    0.00 :   975c59: jmp    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975c5e: test   %rax,%rax
+    0.00 :   975c61: jne    976171 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1721>
+    0.00 :   975c67: mov    0x90(%r15),%r13
+    0.00 :   975c6e: mov    -0x108(%rbp),%r8
+    0.00 :   975c75: xor    %eax,%eax
+    0.00 :   975c77: test   %r13,%r13
+    0.00 :   975c7a: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+         : 1533   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975c80: movslq (%rsi,%rax,4),%rdx
+    0.00 :   975c84: mov    %rax,%rdi
+         : 1536   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975c87: add    $0x1,%rax
+         : 1538   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975c8b: shl    $0x4,%rdi
+    0.00 :   975c8f: shl    $0x4,%rdx
+    0.00 :   975c93: movdqu (%rcx,%rdx,1),%xmm1
+    0.00 :   975c98: movups %xmm1,(%r8,%rdi,1)
+         : 1543   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975c9d: mov    0x90(%r15),%r13
+    0.00 :   975ca4: cmp    %r13,%rax
+    0.00 :   975ca7: jl     975c80 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1230>
+    0.00 :   975ca9: jmp    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975cae: test   %rax,%rax
+    0.00 :   975cb1: jne    976156 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1706>
+    0.00 :   975cb7: mov    0x90(%r15),%r13
+    0.00 :   975cbe: mov    -0x108(%rbp),%r8
+    0.00 :   975cc5: xor    %eax,%eax
+    0.00 :   975cc7: test   %r13,%r13
+    0.00 :   975cca: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+         : 1555   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975cd0: mov    (%rsi,%rax,8),%rdx
+    0.00 :   975cd4: mov    %rax,%rdi
+         : 1558   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975cd7: add    $0x1,%rax
+         : 1560   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975cdb: shl    $0x4,%rdi
+    0.00 :   975cdf: shl    $0x4,%rdx
+    0.00 :   975ce3: movdqu (%rcx,%rdx,1),%xmm6
+    0.00 :   975ce8: movups %xmm6,(%r8,%rdi,1)
+         : 1565   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975ced: mov    0x90(%r15),%r13
+    0.00 :   975cf4: cmp    %r13,%rax
+    0.00 :   975cf7: jl     975cd0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1280>
+    0.00 :   975cf9: jmp    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975cfe: test   %rdx,%rdx
+    0.00 :   975d01: jne    97613b <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x16eb>
+    0.00 :   975d07: mov    0x90(%r15),%r13
+    0.00 :   975d0e: mov    -0x108(%rbp),%r8
+    0.00 :   975d15: xor    %edx,%edx
+    0.00 :   975d17: test   %r13,%r13
+    0.00 :   975d1a: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+         : 1577   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975d20: movzbl (%rax,%rdx,1),%ecx
+    0.00 :   975d24: mov    %rdx,%rdi
+         : 1580   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975d27: add    $0x1,%rdx
+         : 1582   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975d2b: shl    $0x4,%rdi
+    0.00 :   975d2f: shl    $0x4,%rcx
+    0.00 :   975d33: movdqu (%rsi,%rcx,1),%xmm7
+    0.00 :   975d38: movups %xmm7,(%r8,%rdi,1)
+         : 1587   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975d3d: mov    0x90(%r15),%r13
+    0.00 :   975d44: cmp    %r13,%rdx
+    0.00 :   975d47: jl     975d20 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x12d0>
+    0.00 :   975d49: jmp    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975d4e: test   %rax,%rax
+    0.00 :   975d51: jne    976120 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x16d0>
+    0.00 :   975d57: mov    0x90(%r15),%r13
+    0.00 :   975d5e: mov    -0x108(%rbp),%r8
+    0.00 :   975d65: xor    %eax,%eax
+    0.00 :   975d67: test   %r13,%r13
+    0.00 :   975d6a: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+         : 1599   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975d70: movzwl (%rsi,%rax,2),%edx
+    0.00 :   975d74: mov    %rax,%rdi
+         : 1602   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975d77: add    $0x1,%rax
+         : 1604   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   975d7b: shl    $0x4,%rdi
+    0.00 :   975d7f: shl    $0x4,%rdx
+    0.00 :   975d83: movdqu (%rcx,%rdx,1),%xmm5
+    0.00 :   975d88: movups %xmm5,(%r8,%rdi,1)
+         : 1609   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   975d8d: mov    0x90(%r15),%r13
+    0.00 :   975d94: cmp    %r13,%rax
+    0.00 :   975d97: jl     975d70 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1320>
+    0.00 :   975d99: jmp    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   975d9e: test   %rdx,%rdx
+    0.00 :   975da1: je     976081 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1631>
+    0.00 :   975da7: cmpq   $0x0,0xa8(%r15)
+    0.00 :   975daf: je     976081 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1631>
+    0.00 :   975db5: mov    $0x1,%r8d
+    0.00 :   975dbb: xor    %r11d,%r11d
+    0.00 :   975dbe: jmp    97593a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xeea>
+    0.00 :   975dc3: nopl   0x0(%rax,%rax,1)
+    0.00 :   975dc8: movq   $0x0,-0x108(%rbp)
+    0.00 :   975dd3: jmp    974b6a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x11a>
+    0.00 :   975dd8: nopl   0x0(%rax,%rax,1)
+         : 1625   Status::Status(const Status& s) : state_{NULLPTR} { CopyFrom(s); }
+    0.00 :   975de0: mov    -0xf8(%rbp),%rax
+    0.00 :   975de7: mov    -0x128(%rbp),%rsi
+    0.00 :   975dee: movq   $0x0,(%rax)
+    0.00 :   975df5: mov    %rax,%rdi
+    0.00 :   975df8: call   298a80 <arrow::Status::CopyFrom(arrow::Status const&)@plt>
+    0.00 :   975dfd: nopl   (%rax)
+         : 1632   if (ARROW_PREDICT_TRUE(status_.ok())) {
+    0.00 :   975e00: cmpq   $0x0,-0x70(%rbp)
+    0.00 :   975e05: jne    975e16 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x13c6>
+         : 1635   ~unique_ptr() noexcept
+         : 1636   {
+         : 1637   static_assert(__is_invocable<deleter_type&, pointer>::value,
+         : 1638   "unique_ptr's deleter must be invocable with a pointer");
+         : 1639   auto& __ptr = _M_t._M_ptr();
+         : 1640   if (__ptr != nullptr)
+    0.00 :   975e07: mov    -0x68(%rbp),%rdi
+    0.00 :   975e0b: test   %rdi,%rdi
+    0.00 :   975e0e: je     975e16 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x13c6>
+         : 1644   delete __ptr;
+    0.00 :   975e10: mov    (%rdi),%rax
+    0.00 :   975e13: call   *0x8(%rax)
+         : 1647   ~Result() noexcept { Destroy(); }
+    0.00 :   975e16: mov    -0x128(%rbp),%rdi
+    0.00 :   975e1d: call   2987e0 <arrow::Status::~Status()@plt>
+         : 1650   }
+    0.00 :   975e22: mov    -0x38(%rbp),%rax
+    0.00 :   975e26: sub    %fs:0x28,%rax
+    0.00 :   975e2f: jne    97628c <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x183c>
+    0.00 :   975e35: mov    -0xf8(%rbp),%rax
+    0.00 :   975e3c: add    $0x118,%rsp
+    0.00 :   975e43: pop    %rbx
+    0.00 :   975e44: pop    %r12
+    0.00 :   975e46: pop    %r13
+    0.00 :   975e48: pop    %r14
+    0.00 :   975e4a: pop    %r15
+    0.00 :   975e4c: pop    %rbp
+    0.00 :   975e4d: ret
+         : 1663   std::ostream& ostream_;
+         : 1664   };
+         :
+         : 1666   template <typename... Args>
+         : 1667   std::string JoinToString(Args&&... args) {
+         : 1668   StringStreamWrapper ss;
+    0.00 :   975e4e: lea    -0x90(%rbp),%r12
+    0.00 :   975e55: mov    %r12,%rdi
+    0.00 :   975e58: mov    %r12,-0x108(%rbp)
+    0.00 :   975e5f: call   2971b0 <arrow::internal::StringStreamWrapper::StringStreamWrapper()@plt>
+         : 1673   operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+         : 1674   {
+         : 1675   if (!__s)
+         : 1676   __out.setstate(ios_base::badbit);
+         : 1677   else
+         : 1678   __ostream_insert(__out, __s,
+    0.00 :   975e64: mov    -0x88(%rbp),%rdi
+    0.00 :   975e6b: mov    $0x21,%edx
+    0.00 :   975e70: lea    0x414619(%rip),%rsi        # d8a490 <_fini+0x12390>
+    0.00 :   975e77: call   298d20 <std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@plt>
+         : 1683   [&ss](auto&& arg) {
+         : 1684   // Avoid losing precision when printing floating point numbers
+         : 1685   if constexpr (std::is_floating_point_v<std::decay_t<decltype(arg)>>) {
+         : 1686   ss.stream() << std::to_string(arg);
+         : 1687   } else {
+         : 1688   ss.stream() << arg;
+    0.00 :   975e7c: mov    -0x88(%rbp),%rdi
+    0.00 :   975e83: mov    %r13,%rsi
+    0.00 :   975e86: call   29acd0 <arrow::operator<<(std::ostream&, arrow::DataType const&)@plt>
+         : 1692   }
+         : 1693   }(std::forward<Args>(args)),
+         : 1694   ...);
+         : 1695   return ss.str();
+    0.00 :   975e8b: lea    -0x60(%rbp),%r13
+    0.00 :   975e8f: mov    %r12,%rsi
+    0.00 :   975e92: mov    %r13,%rdi
+    0.00 :   975e95: call   29e920 <arrow::internal::StringStreamWrapper::str[abi:cxx11]()@plt>
+         : 1700   }
+    0.00 :   975e9a: mov    %r12,%rdi
+    0.00 :   975e9d: call   292b20 <arrow::internal::StringStreamWrapper::~StringStreamWrapper()@plt>
+         : 1703   return Status(code, internal::JoinToString(std::forward<Args>(args)...));
+    0.00 :   975ea2: mov    %r13,%rdx
+    0.00 :   975ea5: mov    $0xa,%esi
+    0.00 :   975eaa: mov    %r12,%rdi
+    0.00 :   975ead: call   296d10 <arrow::Status::Status(arrow::StatusCode, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@plt>
+         : 1708   /**
+         : 1709   *  @brief  Destroy the string instance.
+         : 1710   */
+         : 1711   _GLIBCXX20_CONSTEXPR
+         : 1712   ~basic_string()
+         : 1713   { _M_dispose(); }
+    0.00 :   975eb2: mov    %r13,%rdi
+    0.00 :   975eb5: xor    %r13d,%r13d
+    0.00 :   975eb8: call   35a970 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()>
+         : 1717   Status::Status(Status&& s) noexcept : state_(s.state_) { s.state_ = NULLPTR; }
+    0.00 :   975ebd: mov    -0x90(%rbp),%rax
+    0.00 :   975ec4: mov    %rax,-0xb0(%rbp)
+         : 1720   RETURN_NOT_OK(
+    0.00 :   975ecb: test   %rax,%rax
+    0.00 :   975ece: je     974e42 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3f2>
+    0.00 :   975ed4: mov    -0xf8(%rbp),%rsi
+    0.00 :   975edb: lea    -0xb0(%rbp),%rdi
+    0.00 :   975ee2: movq   $0x0,-0xb0(%rbp)
+    0.00 :   975eed: mov    %rax,(%rsi)
+    0.00 :   975ef0: call   2987e0 <arrow::Status::~Status()@plt>
+    0.00 :   975ef5: nopl   (%rax)
+         : 1729   if (_M_pi != nullptr)
+    0.00 :   975ef8: cmpq   $0x0,-0x100(%rbp)
+    0.00 :   975f00: je     975f0e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x14be>
+         : 1732   _M_pi->_M_release();
+    0.00 :   975f02: mov    -0x100(%rbp),%rdi
+    0.00 :   975f09: call   34d570 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()>
+         : 1735   if (__ptr != nullptr)
+    0.00 :   975f0e: mov    -0xd8(%rbp),%r14
+    0.00 :   975f15: test   %r14,%r14
+    0.00 :   975f18: je     975e00 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x13b0>
+         : 1739   delete __ptr;
+    0.00 :   975f1e: mov    (%r14),%rax
+    0.00 :   975f21: mov    %r14,%rdi
+    0.00 :   975f24: call   *0x8(%rax)
+         : 1743   get_deleter()(std::move(__ptr));
+         : 1744   __ptr = pointer();
+         : 1745   }
+    0.00 :   975f27: jmp    975e00 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x13b0>
+    0.00 :   975f2c: nopl   0x0(%rax)
+         : 1748   { __atomic_fetch_add(__mem, __val, __ATOMIC_ACQ_REL); }
+    0.00 :   975f30: lock addl $0x1,0x8(%rax)
+         : 1750   ++this->_M_impl._M_finish;
+    0.00 :   975f35: mov    -0xa8(%rbp),%rbx
+         : 1752   _M_end_of_storage(__x._M_end_of_storage)
+    0.00 :   975f3c: mov    -0xa0(%rbp),%r14
+    0.00 :   975f43: jmp    974fd7 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x587>
+    0.00 :   975f48: nopl   0x0(%rax,%rax,1)
+         : 1756   _M_pi = __tmp;
+    0.00 :   975f50: mov    -0x100(%rbp),%rax
+         : 1758   : _M_ptr(__r._M_ptr), _M_refcount()
+    0.00 :   975f57: mov    %r14,-0x90(%rbp)
+         : 1760   __r._M_pi = _M_pi;
+    0.00 :   975f5e: movq   $0x0,-0x100(%rbp)
+         : 1762   _M_pi = __tmp;
+    0.00 :   975f69: mov    %rax,-0x88(%rbp)
+         : 1764   *  @brief  Move-constructs a %shared_ptr instance from @a __r.
+         : 1765   *  @param  __r  A %shared_ptr rvalue.
+         : 1766   *  @post   *this contains the old value of @a __r, @a __r is empty.
+         : 1767   */
+         : 1768   shared_ptr(shared_ptr&& __r) noexcept
+         : 1769   : __shared_ptr<_Tp>(std::move(__r)) { }
+    0.00 :   975f70: jmp    974eb9 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x469>
+    0.00 :   975f75: nopl   (%rax)
+         : 1772   : _M_ptr(__r.get()), _M_refcount()
+    0.00 :   975f78: mov    %rbx,-0x90(%rbp)
+         : 1774   }
+         :
+         : 1776   /// Return the stored pointer.
+         : 1777   _GLIBCXX23_CONSTEXPR
+         : 1778   pointer
+         : 1779   get() const noexcept
+    0.00 :   975f7f: jmp    974efd <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x4ad>
+    0.00 :   975f84: nopl   0x0(%rax)
+    0.00 :   975f88: add    $0x1,%rdx
+    0.00 :   975f8c: jb     976050 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1600>
+         : 1784   return (__len < size() || __len > max_size()) ? max_size() : __len;
+    0.00 :   975f92: movabs $0x7ffffffffffffff,%rax
+    0.00 :   975f9c: cmp    %rax,%rdx
+    0.00 :   975f9f: cmovbe %rdx,%rax
+         : 1788   return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+    0.00 :   975fa3: shl    $0x4,%rax
+    0.00 :   975fa7: mov    %rax,-0x138(%rbp)
+    0.00 :   975fae: mov    -0x138(%rbp),%rdi
+    0.00 :   975fb5: call   297ad0 <operator new(unsigned long)@plt>
+    0.00 :   975fba: mov    -0x138(%rbp),%r8
+    0.00 :   975fc1: mov    %rax,%rcx
+         : 1795   ++__new_finish;
+    0.00 :   975fc4: lea    0x10(%rax),%rdx
+         : 1797   this->_M_impl._M_end_of_storage = __new_start + __len;
+    0.00 :   975fc8: add    %rax,%r8
+    0.00 :   975fcb: jmp    97504f <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x5ff>
+         : 1800   _Sp_counted_base<_Lp>* __tmp = __r._M_pi;
+    0.00 :   975fd0: mov    -0x110(%rbp),%rax
+         : 1802   : _M_ptr(__r._M_ptr), _M_refcount()
+    0.00 :   975fd7: movdqa -0xc0(%rbp),%xmm0
+         : 1804   __r._M_ptr = nullptr;
+    0.00 :   975fdf: pxor   %xmm1,%xmm1
+    0.00 :   975fe3: movaps %xmm1,-0xc0(%rbp)
+         : 1807   _Sp_counted_base<_Lp>* __tmp = __r._M_pi;
+    0.00 :   975fea: mov    0x8(%rax),%rdi
+         : 1809   // concept requirements
+         : 1810   __glibcxx_function_requires(_SGIAssignableConcept<_Tp>)
+         : 1811   #endif
+         : 1812   _Tp __tmp = _GLIBCXX_MOVE(__a);
+         : 1813   __a = _GLIBCXX_MOVE(__b);
+         : 1814   __b = _GLIBCXX_MOVE(__tmp);
+    0.00 :   975fee: movups %xmm0,(%rax)
+         : 1816   if (_M_pi != nullptr)
+    0.00 :   975ff1: test   %rdi,%rdi
+    0.00 :   975ff4: je     975274 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x824>
+         : 1819   _M_pi->_M_release();
+    0.00 :   975ffa: call   34d570 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()>
+         : 1821   if (_M_pi != nullptr)
+    0.00 :   975fff: mov    -0xb8(%rbp),%rdi
+    0.00 :   976006: test   %rdi,%rdi
+    0.00 :   976009: je     975274 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x824>
+         : 1825   _M_pi->_M_release();
+    0.00 :   97600f: call   34d570 <std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()>
+    0.00 :   976014: jmp    975274 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x824>
+    0.00 :   976019: nopl   0x0(%rax)
+    0.00 :   976020: shl    $0x4,%r12
+    0.00 :   976024: mov    %r12,%rdi
+    0.00 :   976027: call   297ad0 <operator new(unsigned long)@plt>
+         : 1832   this->_M_impl._M_start = __tmp;
+    0.00 :   97602c: movq   %rax,%xmm1
+         : 1834   this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+    0.00 :   976031: add    %r12,%rax
+         : 1836   this->_M_impl._M_start = __tmp;
+    0.00 :   976034: movddup %xmm1,%xmm0
+         : 1838   this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+    0.00 :   976038: mov    %rax,-0xa0(%rbp)
+         : 1840   this->_M_impl._M_start = __tmp;
+    0.00 :   97603f: movaps %xmm0,-0xb0(%rbp)
+    0.00 :   976046: jmp    974ea0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x450>
+    0.00 :   97604b: nopl   0x0(%rax,%rax,1)
+    0.00 :   976050: movabs $0x7ffffffffffffff0,%rax
+    0.00 :   97605a: mov    %rax,-0x138(%rbp)
+    0.00 :   976061: jmp    975fae <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x155e>
+    0.00 :   976066: cs nopw 0x0(%rax,%rax,1)
+         : 1848   if (__p)
+    0.00 :   976070: test   %rbx,%rbx
+    0.00 :   976073: mov    %rdx,%rbx
+    0.00 :   976076: je     97510a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x6ba>
+    0.00 :   97607c: jmp    9750e0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x690>
+         : 1853   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   976081: mov    0x90(%r15),%r13
+    0.00 :   976088: mov    -0x108(%rbp),%r8
+    0.00 :   97608f: xor    %edx,%edx
+    0.00 :   976091: test   %r13,%r13
+    0.00 :   976094: jle    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   97609a: nopw   0x0(%rax,%rax,1)
+         : 1860   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   9760a0: movsbq (%rax,%rdx,1),%rcx
+    0.00 :   9760a5: mov    %rdx,%rdi
+         : 1863   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   9760a8: add    $0x1,%rdx
+         : 1865   out_views[out_i] = source_views[static_cast<int64_t>(index_values[out_i])];
+    0.00 :   9760ac: shl    $0x4,%rdi
+    0.00 :   9760b0: shl    $0x4,%rcx
+    0.00 :   9760b4: movdqu (%rsi,%rcx,1),%xmm6
+    0.00 :   9760b9: movups %xmm6,(%r8,%rdi,1)
+         : 1870   for (int64_t out_i = 0; out_i < indices.length; ++out_i) {
+    0.00 :   9760be: mov    0x90(%r15),%r13
+    0.00 :   9760c5: cmp    %r13,%rdx
+    0.00 :   9760c8: jl     9760a0 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1650>
+    0.00 :   9760ca: jmp    974e37 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x3e7>
+    0.00 :   9760cf: xor    %r11d,%r11d
+    0.00 :   9760d2: cmpq   $0x0,0xa8(%r15)
+    0.00 :   9760da: mov    $0x1,%edi
+    0.00 :   9760df: jne    975a76 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1026>
+    0.00 :   9760e5: jmp    975b63 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1113>
+    0.00 :   9760ea: xor    %r11d,%r11d
+    0.00 :   9760ed: cmpq   $0x0,0xa8(%r15)
+    0.00 :   9760f5: mov    $0x1,%edi
+    0.00 :   9760fa: jne    975306 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x8b6>
+    0.00 :   976100: jmp    975c0e <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x11be>
+    0.00 :   976105: xor    %r11d,%r11d
+    0.00 :   976108: cmpq   $0x0,0xa8(%r15)
+    0.00 :   976110: mov    $0x1,%edi
+    0.00 :   976115: jne    975586 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xb36>
+    0.00 :   97611b: jmp    975bb8 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1168>
+    0.00 :   976120: xor    %r11d,%r11d
+    0.00 :   976123: cmpq   $0x0,0xa8(%r15)
+    0.00 :   97612b: mov    $0x1,%edi
+    0.00 :   976130: jne    975446 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x9f6>
+    0.00 :   976136: jmp    975d57 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1307>
+    0.00 :   97613b: xor    %r11d,%r11d
+    0.00 :   97613e: cmpq   $0x0,0xa8(%r15)
+    0.00 :   976146: mov    $0x1,%edi
+    0.00 :   97614b: jne    9756c2 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xc72>
+    0.00 :   976151: jmp    975d07 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x12b7>
+    0.00 :   976156: xor    %r11d,%r11d
+    0.00 :   976159: cmpq   $0x0,0xa8(%r15)
+    0.00 :   976161: mov    $0x1,%edi
+    0.00 :   976166: jne    974d56 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x306>
+    0.00 :   97616c: jmp    975cb7 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1267>
+    0.00 :   976171: xor    %r11d,%r11d
+    0.00 :   976174: cmpq   $0x0,0xa8(%r15)
+    0.00 :   97617c: mov    $0x1,%edi
+    0.00 :   976181: jne    9757fe <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xdae>
+    0.00 :   976187: jmp    975c67 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1217>
+    0.00 :   97618c: xor    %edi,%edi
+    0.00 :   97618e: jmp    974c02 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1b2>
+         : 1912   Status::Status(const Status& s) : state_{NULLPTR} { CopyFrom(s); }
+    0.00 :   976193: mov    -0xf8(%rbp),%rax
+    0.00 :   97619a: mov    %r13,%rsi
+    0.00 :   97619d: movq   $0x0,(%rax)
+    0.00 :   9761a4: mov    %rax,%rdi
+    0.00 :   9761a7: call   298a80 <arrow::Status::CopyFrom(arrow::Status const&)@plt>
+    0.00 :   9761ac: mov    %r13,%rdi
+    0.00 :   9761af: call   290be0 <arrow::Result<std::shared_ptr<arrow::Buffer> >::Destroy()@plt>
+    0.00 :   9761b4: mov    %r13,%rdi
+    0.00 :   9761b7: call   2987e0 <arrow::Status::~Status()@plt>
+         : 1922   ~__shared_count() noexcept
+    0.00 :   9761bc: jmp    975f15 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x14c5>
+         : 1924   Status::Status(Status&& s) noexcept : state_(s.state_) { s.state_ = NULLPTR; }
+    0.00 :   9761c1: mov    -0xf8(%rbp),%rsi
+         : 1926   RETURN_NOT_OK(CheckIndexBounds(indices, values.length));
+    0.00 :   9761c8: lea    -0xb0(%rbp),%rdi
+    0.00 :   9761cf: movq   $0x0,-0xb0(%rbp)
+    0.00 :   9761da: mov    %rax,(%rsi)
+    0.00 :   9761dd: call   2987e0 <arrow::Status::~Status()@plt>
+    0.00 :   9761e2: jmp    975e22 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x13d2>
+    0.00 :   9761e7: xor    %edi,%edi
+    0.00 :   9761e9: mov    $0x1,%r11d
+    0.00 :   9761ef: jmp    975306 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x8b6>
+    0.00 :   9761f4: xor    %edi,%edi
+    0.00 :   9761f6: mov    $0x1,%r11d
+    0.00 :   9761fc: jmp    974d56 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x306>
+    0.00 :   976201: xor    %edi,%edi
+    0.00 :   976203: mov    $0x1,%r11d
+    0.00 :   976209: jmp    975586 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xb36>
+    0.00 :   97620e: xor    %edi,%edi
+    0.00 :   976210: mov    $0x1,%r11d
+    0.00 :   976216: jmp    975446 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x9f6>
+    0.00 :   97621b: xor    %r8d,%r8d
+    0.00 :   97621e: mov    $0x1,%r11d
+    0.00 :   976224: jmp    97593a <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xeea>
+    0.00 :   976229: xor    %edi,%edi
+    0.00 :   97622b: mov    $0x1,%r11d
+    0.00 :   976231: jmp    9756c2 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xc72>
+    0.00 :   976236: xor    %edi,%edi
+    0.00 :   976238: mov    $0x1,%r11d
+    0.00 :   97623e: jmp    975a76 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1026>
+    0.00 :   976243: xor    %edi,%edi
+    0.00 :   976245: mov    $0x1,%r11d
+    0.00 :   97624b: jmp    9757fe <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0xdae>
+         : 1956   return (__len < size() || __len > max_size()) ? max_size() : __len;
+    0.00 :   976250: movabs $0x7ffffffffffffff,%rdx
+    0.00 :   97625a: cmp    %rdx,%rax
+    0.00 :   97625d: cmova  %rdx,%rax
+    0.00 :   976261: shl    $0x4,%rax
+    0.00 :   976265: mov    %rax,-0x138(%rbp)
+    0.00 :   97626c: jmp    975fae <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x155e>
+         : 1963   __throw_length_error(__N(__s));
+    0.00 :   976271: mov    -0x38(%rbp),%rax
+    0.00 :   976275: sub    %fs:0x28,%rax
+    0.00 :   97627e: jne    9762ac <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x185c>
+    0.00 :   976280: lea    0x433cc6(%rip),%rdi        # da9f4d <_fini+0x31e4d>
+    0.00 :   976287: call   293f80 <std::__throw_length_error(char const*)@plt>
+         : 1969   }
+    0.00 :   97628c: call   298930 <__stack_chk_fail@plt>
+         : 1971   __throw_length_error(__N("vector::reserve"));
+    0.00 :   976291: mov    -0x38(%rbp),%rax
+    0.00 :   976295: sub    %fs:0x28,%rax
+    0.00 :   97629e: jne    9762b1 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)+0x1861>
+    0.00 :   9762a0: lea    0x4343a0(%rip),%rdi        # daa647 <_fini+0x32547>
+    0.00 :   9762a7: call   293f80 <std::__throw_length_error(char const*)@plt>
+    0.00 :   9762ac: call   298930 <__stack_chk_fail@plt>
+    0.00 :   9762b1: call   298930 <__stack_chk_fail@plt>
+    0.00 :   9762b6: endbr64
+    0.00 :   9762ba: mov    %rax,%rbx
+    0.00 :   9762bd: jmp    30faa9 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]>
+    0.00 :   9762c2: endbr64
+    0.00 :   9762c6: mov    %rax,%rbx
+    0.00 :   9762c9: jmp    30faea <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0x41>
+    0.00 :   9762ce: endbr64
+    0.00 :   9762d2: mov    %rax,%rbx
+    0.00 :   9762d5: jmp    30fabb <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0x12>
+    0.00 :   9762da: endbr64
+    0.00 :   9762de: mov    %rax,%rbx
+    0.00 :   9762e1: jmp    30fb2d <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0x84>
+    0.00 :   9762e6: endbr64
+    0.00 :   9762ea: mov    %rax,%rbx
+    0.00 :   9762ed: jmp    30fabb <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0x12>
+    0.00 :   9762f2: endbr64
+         : 1995   if (_M_pi != nullptr)
+    0.00 :   9762f6: mov    %rax,%rbx
+    0.00 :   9762f9: jmp    30fb42 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0x99>
+    0.00 :   9762fe: endbr64
+    0.00 :   976302: mov    %rax,%rbx
+    0.00 :   976305: jmp    30fab1 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0x8>
+    0.00 :   97630a: endbr64
+    0.00 :   97630e: mov    %rax,%rbx
+    0.00 :   976311: jmp    30fb64 <arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*) [clone .cold]+0xbb>
+    0.00 :   976316: endbr64
+    0.00 :   97631a: mov    %rax,%rbx

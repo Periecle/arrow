@@ -1,0 +1,1068 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4f/e305f12b21d6fc79012683d6b52a619926cd39/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+addr2line /root/.debug/.build-id/4c/102876d3180f6f41c4d4a27d1a39ecbb30ed5e/elf: could not read first record
+Warning:
+Processed 46447 events and lost 1 chunks!
+
+Check IO/CPU overload!
+
+#
+# Total Lost Samples: 15
+#
+# Samples: 41K of event 'task-clock'
+# Event count (approx.): 8400479760
+#
+# Overhead  Command          Shared Object                             Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ...............  ........................................  ....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    22.19%  arrow-compute-v  libarrow.so.2500.0.0                      [.] arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+            |
+            ---arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+               arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+               arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+               arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+               arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+               arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+               arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+               arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+               arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+               arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+               arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+               arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+               arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+               TakeStringViewInlinedMonotonicIndices (inlined)
+               benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+               benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+               benchmark::internal::BenchmarkRunner::DoNIterations()
+               benchmark::internal::BenchmarkRunner::DoOneRepetition()
+               benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+               |          
+                --22.19%--0xffffffffffffffff
+
+    17.83%  arrow-compute-v  [kernel.kallsyms]                         [k] do_user_addr_fault
+            |
+            ---do_user_addr_fault
+               |          
+                --17.82%--exc_page_fault
+                          asm_exc_page_fault
+                          |          
+                           --17.10%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                                     arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                     arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                     TakeStringViewInlinedMonotonicIndices (inlined)
+                                     benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                     benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                     benchmark::internal::BenchmarkRunner::DoNIterations()
+                                     benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                     benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                     0xffffffffffffffff
+
+    13.57%  arrow-compute-v  libarrow_compute.so.2500.0.0              [.] unsigned long* std::__move_merge<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |          
+            |--11.18%--unsigned long* std::__move_merge<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |          |          
+            |          |--10.14%--void std::__merge_sort_loop<unsigned long*, unsigned long*, long, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, long, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |          |          void std::__merge_sort_with_buffer<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |          |          void std::__stable_sort_adaptive<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |          |          std::_Function_handler<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<unsigned long> > (unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*), arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type> >::_M_invoke(std::_Any_data const&, unsigned long*&&, unsigned long*&&, arrow::Array const&, long&&, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*&&)
+            |          |          stable_sort<long unsigned int*, arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(uint64_t*, uint64_t*, const arrow::Array&, int64_t, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*)::<lambda(uint64_t, uint64_t)> > (inlined)
+            |          |          operator() (inlined)
+            |          |          operator() (inlined)
+            |          |          __invoke_impl<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<long unsigned int> >, arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type>&, long unsigned int*, long unsigned int*, const arrow::Array&, long int, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*> (inlined)
+            |          |          __invoke_r<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<long unsigned int> >, arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type>&, long unsigned int*, long unsigned int*, const arrow::Array&, long int, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*> (inlined)
+            |          |          _M_invoke (inlined)
+            |          |          std::function<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<unsigned long> > (unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*) const (inlined)
+            |          |          Exec (inlined)
+            |          |          arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+            |          |          arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+            |          |          arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+            |          |          arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+            |          |          arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+            |          |          arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+            |          |          arrow::compute::SortIndices(arrow::Array const&, arrow::compute::SortOrder, arrow::compute::ExecContext*)
+            |          |          arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+            |          |          arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+            |          |          TakeStringViewInlinedMonotonicIndices (inlined)
+            |          |          benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+            |          |          benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+            |          |          benchmark::internal::BenchmarkRunner::DoNIterations()
+            |          |          benchmark::internal::BenchmarkRunner::DoOneRepetition()
+            |          |          benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+            |          |          0xffffffffffffffff
+            |          |          
+            |           --0.76%--operator()<long unsigned int*, long unsigned int*> (inlined)
+            |                     unsigned long* std::__move_merge<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |                     void std::__merge_sort_loop<unsigned long*, unsigned long*, long, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, long, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |                     void std::__merge_sort_with_buffer<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |                     void std::__stable_sort_adaptive<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |                     std::_Function_handler<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<unsigned long> > (unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*), arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type> >::_M_invoke(std::_Any_data const&, unsigned long*&&, unsigned long*&&, arrow::Array const&, long&&, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*&&)
+            |                     stable_sort<long unsigned int*, arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(uint64_t*, uint64_t*, const arrow::Array&, int64_t, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*)::<lambda(uint64_t, uint64_t)> > (inlined)
+            |                     operator() (inlined)
+            |                     operator() (inlined)
+            |                     __invoke_impl<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<long unsigned int> >, arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type>&, long unsigned int*, long unsigned int*, const arrow::Array&, long int, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*> (inlined)
+            |                     __invoke_r<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<long unsigned int> >, arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type>&, long unsigned int*, long unsigned int*, const arrow::Array&, long int, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*> (inlined)
+            |                     _M_invoke (inlined)
+            |                     std::function<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<unsigned long> > (unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*) const (inlined)
+            |                     Exec (inlined)
+            |                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+            |                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+            |                     arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+            |                     arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+            |                     arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+            |                     arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+            |                     arrow::compute::SortIndices(arrow::Array const&, arrow::compute::SortOrder, arrow::compute::ExecContext*)
+            |                     arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+            |                     arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+            |                     TakeStringViewInlinedMonotonicIndices (inlined)
+            |                     benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+            |                     benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+            |                     benchmark::internal::BenchmarkRunner::DoNIterations()
+            |                     benchmark::internal::BenchmarkRunner::DoOneRepetition()
+            |                     benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+            |                     0xffffffffffffffff
+            |          
+             --1.91%--operator() (inlined)
+                       operator()<long unsigned int*, long unsigned int*> (inlined)
+                       unsigned long* std::__move_merge<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+                       void std::__merge_sort_loop<unsigned long*, unsigned long*, long, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, long, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+                       void std::__merge_sort_with_buffer<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+                       void std::__stable_sort_adaptive<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+                       std::_Function_handler<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<unsigned long> > (unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*), arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type> >::_M_invoke(std::_Any_data const&, unsigned long*&&, unsigned long*&&, arrow::Array const&, long&&, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*&&)
+                       stable_sort<long unsigned int*, arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(uint64_t*, uint64_t*, const arrow::Array&, int64_t, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*)::<lambda(uint64_t, uint64_t)> > (inlined)
+                       operator() (inlined)
+                       operator() (inlined)
+                       __invoke_impl<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<long unsigned int> >, arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type>&, long unsigned int*, long unsigned int*, const arrow::Array&, long int, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*> (inlined)
+                       __invoke_r<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<long unsigned int> >, arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type>&, long unsigned int*, long unsigned int*, const arrow::Array&, long int, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*> (inlined)
+                       _M_invoke (inlined)
+                       std::function<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<unsigned long> > (unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*) const (inlined)
+                       Exec (inlined)
+                       arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                       arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                       arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                       arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                       arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                       arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                       arrow::compute::SortIndices(arrow::Array const&, arrow::compute::SortOrder, arrow::compute::ExecContext*)
+                       arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                       arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                       TakeStringViewInlinedMonotonicIndices (inlined)
+                       benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                       benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                       benchmark::internal::BenchmarkRunner::DoNIterations()
+                       benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                       benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                       0xffffffffffffffff
+
+     6.72%  arrow-compute-v  [kernel.kallsyms]                         [k] clear_page_erms
+            |
+            ---clear_page_erms
+               |          
+                --6.72%--folios_put_refs
+                          |          
+                           --6.71%--free_pages_and_swap_cache
+                                     __tlb_batch_free_encoded_pages
+                                     tlb_finish_mmu
+                                     vms_clear_ptes.part.0
+                                     vms_complete_munmap_vmas
+                                     do_vmi_align_munmap
+                                     |          
+                                      --6.57%--do_vmi_munmap
+                                                __vm_munmap
+                                                __x64_sys_munmap
+                                                x64_sys_call
+                                                do_syscall_64
+                                                entry_SYSCALL_64_after_hwframe
+                                                __GI_munmap (inlined)
+                                                __GI___libc_free (inlined)
+                                                |          
+                                                 --6.54%--arrow::BaseMemoryPoolImpl<arrow::(anonymous namespace)::SystemAllocator>::Free(unsigned char*, long, long)
+                                                           arrow::PoolBuffer::~PoolBuffer()
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                                           std::__shared_ptr<arrow::Buffer, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                           std::shared_ptr<arrow::Buffer>::~shared_ptr() (inlined)
+                                                           void std::destroy_at<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                           void std::_Destroy<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                           void std::_Destroy_aux<false>::__destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                           void std::_Destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                           void std::_Destroy<std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*, std::allocator<std::shared_ptr<arrow::Buffer> >&) (inlined)
+                                                           std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::~vector() (inlined)
+                                                           arrow::ArrayData::~ArrayData() (inlined)
+                                                           void std::destroy_at<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                                           void std::_Destroy<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                                           void std::allocator_traits<std::allocator<void> >::destroy<arrow::ArrayData>(std::allocator<void>&, arrow::ArrayData*) (inlined)
+                                                           std::_Sp_counted_ptr_inplace<arrow::ArrayData, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                                           |          
+                                                            --6.37%--std::__shared_ptr<arrow::Table, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                                      std::shared_ptr<arrow::Table>::~shared_ptr() (inlined)
+                                                                      void std::destroy_at<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                                      void std::_Destroy<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                                      auto std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}::operator()<std::shared_ptr<arrow::Table>&>(std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      void std::__invoke_impl<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__invoke_other, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      std::enable_if<is_invocable_r_v<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>, void>::type std::__invoke_r<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      std::__detail::__variant::__gen_vtable_impl<std::__detail::__variant::_Multi_array<void (*)(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&)>, std::integer_sequence<unsigned long, 5ul> >::__visit_invoke(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayD
+                                                                      decltype(auto) std::__do_visit<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&) (inl
+                                                                      std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset() (inlined)
+                                                                      std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_storage() (inlined)
+                                                                      std::__detail::__variant::_Copy_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_ctor_base() (inlined)
+                                                                      std::__detail::__variant::_Move_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_ctor_base() (inlined)
+                                                                      std::__detail::__variant::_Copy_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_assign_base() (inlined)
+                                                                      std::__detail::__variant::_Move_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_assign_base() (inlined)
+                                                                      std::__detail::__variant::_Variant_base<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_base() (inlined)
+                                                                      std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~variant() (inlined)
+                                                                      arrow::Datum::~Datum() (inlined)
+                                                                      arrow::internal::AlignedStorage<arrow::Datum>::destroy() (inlined)
+                                                                      arrow::Result<arrow::Datum>::Destroy() (inlined)
+                                                                      arrow::Result<arrow::Datum>::~Result() (inlined)
+                                                                      arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                                                      arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                                                      TakeStringViewInlinedMonotonicIndices (inlined)
+                                                                      benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                                                      benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                                                      benchmark::internal::BenchmarkRunner::DoNIterations()
+                                                                      benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                                                      benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                                                      benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+                                                                      benchmark::RunSpecifiedBenchmarks()
+                                                                      main
+                                                                      __libc_start_call_main
+                                                                      __libc_start_main_impl (inlined)
+                                                                      _start
+
+     5.80%  arrow-compute-v  libarrow.so.2500.0.0                      [.] arrow::internal::CheckIndexBounds(arrow::ArraySpan const&, unsigned long)
+            |
+            ---arrow::internal::CheckIndexBounds(arrow::ArraySpan const&, unsigned long)
+               |          
+                --5.70%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                          arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                          arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                          arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                          arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                          arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                          arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                          arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                          arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                          arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                          arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                          arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                          arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                          TakeStringViewInlinedMonotonicIndices (inlined)
+                          benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                          benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                          benchmark::internal::BenchmarkRunner::DoNIterations()
+                          benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                          benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                          0xffffffffffffffff
+
+     3.54%  arrow-compute-v  [kernel.kallsyms]                         [k] __list_del_entry_valid_or_report
+            |
+            ---__list_del_entry_valid_or_report
+               |          
+                --3.52%--__rmqueue_pcplist
+                          rmqueue.constprop.0
+                          get_page_from_freelist
+                          __alloc_frozen_pages_noprof
+                          alloc_pages_mpol
+                          |          
+                           --3.50%--vma_alloc_folio_noprof
+                                     alloc_anon_folio
+                                     do_anonymous_page
+                                     handle_pte_fault
+                                     __handle_mm_fault
+                                     handle_mm_fault
+                                     do_user_addr_fault
+                                     exc_page_fault
+                                     asm_exc_page_fault
+                                     |          
+                                      --3.37%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                                                arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                                                arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                                                arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                                                arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                                arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                                arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                                arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                                arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                                arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                                arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                                arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                                arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                                TakeStringViewInlinedMonotonicIndices (inlined)
+                                                benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                                benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                                benchmark::internal::BenchmarkRunner::DoNIterations()
+                                                benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                                benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                                0xffffffffffffffff
+
+     3.06%  arrow-compute-v  [kernel.kallsyms]                         [k] _raw_spin_unlock_irqrestore
+            |
+            ---_raw_spin_unlock_irqrestore
+               |          
+               |--1.74%--folio_batch_move_lru
+               |          __folio_batch_add_and_move
+               |          folio_add_lru_vma
+               |          do_anonymous_page
+               |          handle_pte_fault
+               |          __handle_mm_fault
+               |          handle_mm_fault
+               |          do_user_addr_fault
+               |          exc_page_fault
+               |          asm_exc_page_fault
+               |          |          
+               |           --1.70%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+               |                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+               |                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+               |                     arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+               |                     arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+               |                     arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+               |                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+               |                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+               |                     arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+               |                     arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+               |                     arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+               |                     arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+               |                     arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+               |                     TakeStringViewInlinedMonotonicIndices (inlined)
+               |                     benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+               |                     benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+               |                     benchmark::internal::BenchmarkRunner::DoNIterations()
+               |                     benchmark::internal::BenchmarkRunner::DoOneRepetition()
+               |                     benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+               |                     0xffffffffffffffff
+               |          
+                --1.16%--folios_put_refs
+                          |          
+                           --1.16%--free_pages_and_swap_cache
+                                     __tlb_batch_free_encoded_pages
+                                     tlb_finish_mmu
+                                     vms_clear_ptes.part.0
+                                     vms_complete_munmap_vmas
+                                     do_vmi_align_munmap
+                                     |          
+                                      --1.16%--do_vmi_munmap
+                                                __vm_munmap
+                                                __x64_sys_munmap
+                                                x64_sys_call
+                                                do_syscall_64
+                                                entry_SYSCALL_64_after_hwframe
+                                                __GI_munmap (inlined)
+                                                __GI___libc_free (inlined)
+                                                |          
+                                                 --1.15%--arrow::BaseMemoryPoolImpl<arrow::(anonymous namespace)::SystemAllocator>::Free(unsigned char*, long, long)
+                                                           arrow::PoolBuffer::~PoolBuffer()
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                                           std::__shared_ptr<arrow::Buffer, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                           std::shared_ptr<arrow::Buffer>::~shared_ptr() (inlined)
+                                                           void std::destroy_at<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                           void std::_Destroy<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                           void std::_Destroy_aux<false>::__destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                           void std::_Destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                           void std::_Destroy<std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*, std::allocator<std::shared_ptr<arrow::Buffer> >&) (inlined)
+                                                           std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::~vector() (inlined)
+                                                           arrow::ArrayData::~ArrayData() (inlined)
+                                                           void std::destroy_at<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                                           void std::_Destroy<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                                           void std::allocator_traits<std::allocator<void> >::destroy<arrow::ArrayData>(std::allocator<void>&, arrow::ArrayData*) (inlined)
+                                                           std::_Sp_counted_ptr_inplace<arrow::ArrayData, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+                                                           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                                           |          
+                                                            --1.15%--std::__shared_ptr<arrow::Table, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                                      std::shared_ptr<arrow::Table>::~shared_ptr() (inlined)
+                                                                      void std::destroy_at<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                                      void std::_Destroy<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                                      auto std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}::operator()<std::shared_ptr<arrow::Table>&>(std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      void std::__invoke_impl<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__invoke_other, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      std::enable_if<is_invocable_r_v<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>, void>::type std::__invoke_r<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      std::__detail::__variant::__gen_vtable_impl<std::__detail::__variant::_Multi_array<void (*)(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&)>, std::integer_sequence<unsigned long, 5ul> >::__visit_invoke(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayD
+                                                                      decltype(auto) std::__do_visit<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&) (inl
+                                                                      std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset() (inlined)
+                                                                      std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_storage() (inlined)
+                                                                      std::__detail::__variant::_Copy_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_ctor_base() (inlined)
+                                                                      std::__detail::__variant::_Move_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_ctor_base() (inlined)
+                                                                      std::__detail::__variant::_Copy_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_assign_base() (inlined)
+                                                                      std::__detail::__variant::_Move_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_assign_base() (inlined)
+                                                                      std::__detail::__variant::_Variant_base<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_base() (inlined)
+                                                                      std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~variant() (inlined)
+                                                                      arrow::Datum::~Datum() (inlined)
+                                                                      arrow::internal::AlignedStorage<arrow::Datum>::destroy() (inlined)
+                                                                      arrow::Result<arrow::Datum>::Destroy() (inlined)
+                                                                      arrow::Result<arrow::Datum>::~Result() (inlined)
+                                                                      arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                                                      arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                                                      TakeStringViewInlinedMonotonicIndices (inlined)
+                                                                      benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                                                      benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                                                      benchmark::internal::BenchmarkRunner::DoNIterations()
+                                                                      benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                                                      benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                                                      benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+                                                                      benchmark::RunSpecifiedBenchmarks()
+                                                                      main
+                                                                      __libc_start_call_main
+                                                                      __libc_start_main_impl (inlined)
+                                                                      _start
+
+     1.98%  arrow-compute-v  libarrow_testing.so.2500.0.0              [.] arrow::BinaryViewBuilder::Append(unsigned char const*, long)
+            |          
+             --0.71%--arrow::Status::Status() (inlined)
+                       |          
+                        --0.70%--arrow::Result<arrow::BinaryViewType::c_type>::Result(arrow::BinaryViewType::c_type&&) (inlined)
+                                  std::conditional<true, arrow::Result<arrow::BinaryViewType::c_type>, arrow::BinaryViewType::c_type>::type arrow::internal::StringHeapBuilder::Append<true>(unsigned char const*, long) (inlined)
+                                  arrow::BinaryViewBuilder::Append(unsigned char const*, long)
+                                  std::shared_ptr<arrow::Array> arrow::random::GenerateBinaryArray<arrow::StringViewType, int>(arrow::random::RandomArrayGenerator*, long, int, int, double, std::optional<long>, long, arrow::MemoryPool*) [clone .isra.0]
+                                  arrow::random::RandomArrayGenerator::StringView(long, int, int, double, std::optional<long>, long, arrow::MemoryPool*)
+                                  arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                  TakeStringViewInlinedMonotonicIndices (inlined)
+                                  benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                  benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                  benchmark::internal::BenchmarkRunner::DoNIterations()
+                                  benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                  benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                  benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+                                  benchmark::RunSpecifiedBenchmarks()
+                                  main
+                                  __libc_start_call_main
+                                  __libc_start_main_impl (inlined)
+                                  _start
+
+     1.50%  arrow-compute-v  [kernel.kallsyms]                         [k] free_unref_folios
+            |
+            ---free_unref_folios
+               folios_put_refs
+               |          
+                --1.50%--free_pages_and_swap_cache
+                          __tlb_batch_free_encoded_pages
+                          tlb_finish_mmu
+                          vms_clear_ptes.part.0
+                          vms_complete_munmap_vmas
+                          do_vmi_align_munmap
+                          |          
+                           --1.48%--do_vmi_munmap
+                                     __vm_munmap
+                                     __x64_sys_munmap
+                                     x64_sys_call
+                                     do_syscall_64
+                                     entry_SYSCALL_64_after_hwframe
+                                     __GI_munmap (inlined)
+                                     __GI___libc_free (inlined)
+                                     |          
+                                      --1.47%--arrow::BaseMemoryPoolImpl<arrow::(anonymous namespace)::SystemAllocator>::Free(unsigned char*, long, long)
+                                                arrow::PoolBuffer::~PoolBuffer()
+                                                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                                std::__shared_ptr<arrow::Buffer, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                std::shared_ptr<arrow::Buffer>::~shared_ptr() (inlined)
+                                                void std::destroy_at<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                void std::_Destroy<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                void std::_Destroy_aux<false>::__destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                void std::_Destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                void std::_Destroy<std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*, std::allocator<std::shared_ptr<arrow::Buffer> >&) (inlined)
+                                                std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::~vector()
+                                                |          
+                                                 --1.47%--arrow::ArrayData::~ArrayData() (inlined)
+                                                           void std::destroy_at<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                                           void std::_Destroy<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                                           void std::allocator_traits<std::allocator<void> >::destroy<arrow::ArrayData>(std::allocator<void>&, arrow::ArrayData*) (inlined)
+                                                           std::_Sp_counted_ptr_inplace<arrow::ArrayData, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                                           |          
+                                                            --1.45%--std::__shared_ptr<arrow::Table, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                                      std::shared_ptr<arrow::Table>::~shared_ptr() (inlined)
+                                                                      void std::destroy_at<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                                      void std::_Destroy<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                                      auto std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}::operator()<std::shared_ptr<arrow::Table>&>(std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      void std::__invoke_impl<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__invoke_other, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      std::enable_if<is_invocable_r_v<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>, void>::type std::__invoke_r<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                                      std::__detail::__variant::__gen_vtable_impl<std::__detail::__variant::_Multi_array<void (*)(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&)>, std::integer_sequence<unsigned long, 5ul> >::__visit_invoke(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayD
+                                                                      decltype(auto) std::__do_visit<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&) (inl
+                                                                      std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset() (inlined)
+                                                                      std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_storage() (inlined)
+                                                                      std::__detail::__variant::_Copy_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_ctor_base() (inlined)
+                                                                      std::__detail::__variant::_Move_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_ctor_base() (inlined)
+                                                                      std::__detail::__variant::_Copy_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_assign_base() (inlined)
+                                                                      std::__detail::__variant::_Move_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_assign_base() (inlined)
+                                                                      std::__detail::__variant::_Variant_base<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_base() (inlined)
+                                                                      std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~variant() (inlined)
+                                                                      arrow::Datum::~Datum() (inlined)
+                                                                      arrow::internal::AlignedStorage<arrow::Datum>::destroy() (inlined)
+                                                                      arrow::Result<arrow::Datum>::Destroy() (inlined)
+                                                                      arrow::Result<arrow::Datum>::~Result() (inlined)
+                                                                      arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                                                      arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                                                      TakeStringViewInlinedMonotonicIndices (inlined)
+                                                                      benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                                                      benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                                                      benchmark::internal::BenchmarkRunner::DoNIterations()
+                                                                      benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                                                      benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                                                      benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+                                                                      benchmark::RunSpecifiedBenchmarks()
+                                                                      main
+                                                                      __libc_start_call_main
+                                                                      __libc_start_main_impl (inlined)
+                                                                      _start
+
+     1.45%  arrow-compute-v  [kernel.kallsyms]                         [k] zap_present_ptes.constprop.0
+            |
+            ---zap_present_ptes.constprop.0
+               |          
+                --1.44%--zap_pte_range
+                          zap_pmd_range.isra.0
+                          unmap_page_range
+                          unmap_single_vma.constprop.0
+                          unmap_vmas
+                          vms_clear_ptes.part.0
+                          vms_complete_munmap_vmas
+                          do_vmi_align_munmap
+                          |          
+                           --1.40%--do_vmi_munmap
+                                     __vm_munmap
+                                     __x64_sys_munmap
+                                     x64_sys_call
+                                     do_syscall_64
+                                     entry_SYSCALL_64_after_hwframe
+                                     __GI_munmap (inlined)
+                                     __GI___libc_free (inlined)
+                                     |          
+                                      --1.40%--arrow::BaseMemoryPoolImpl<arrow::(anonymous namespace)::SystemAllocator>::Free(unsigned char*, long, long)
+                                                arrow::PoolBuffer::~PoolBuffer()
+                                                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                                std::__shared_ptr<arrow::Buffer, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                std::shared_ptr<arrow::Buffer>::~shared_ptr() (inlined)
+                                                void std::destroy_at<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                void std::_Destroy<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                void std::_Destroy_aux<false>::__destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                void std::_Destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                                void std::_Destroy<std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*, std::allocator<std::shared_ptr<arrow::Buffer> >&) (inlined)
+                                                std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::~vector() (inlined)
+                                                arrow::ArrayData::~ArrayData() (inlined)
+                                                void std::destroy_at<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                                void std::_Destroy<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                                void std::allocator_traits<std::allocator<void> >::destroy<arrow::ArrayData>(std::allocator<void>&, arrow::ArrayData*) (inlined)
+                                                std::_Sp_counted_ptr_inplace<arrow::ArrayData, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+                                                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                                std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                                |          
+                                                 --1.36%--std::__shared_ptr<arrow::Table, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                           std::shared_ptr<arrow::Table>::~shared_ptr() (inlined)
+                                                           void std::destroy_at<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                           void std::_Destroy<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                           auto std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}::operator()<std::shared_ptr<arrow::Table>&>(std::shared_ptr<arrow::Table>&) (inlined)
+                                                           void std::__invoke_impl<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__invoke_other, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                           std::enable_if<is_invocable_r_v<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>, void>::type std::__invoke_r<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                           std::__detail::__variant::__gen_vtable_impl<std::__detail::__variant::_Multi_array<void (*)(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&)>, std::integer_sequence<unsigned long, 5ul> >::__visit_invoke(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayD
+                                                           decltype(auto) std::__do_visit<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&) (inl
+                                                           std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset() (inlined)
+                                                           std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_storage() (inlined)
+                                                           std::__detail::__variant::_Copy_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_ctor_base() (inlined)
+                                                           std::__detail::__variant::_Move_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_ctor_base() (inlined)
+                                                           std::__detail::__variant::_Copy_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_assign_base() (inlined)
+                                                           std::__detail::__variant::_Move_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_assign_base() (inlined)
+                                                           std::__detail::__variant::_Variant_base<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_base() (inlined)
+                                                           std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~variant() (inlined)
+                                                           arrow::Datum::~Datum() (inlined)
+                                                           arrow::internal::AlignedStorage<arrow::Datum>::destroy() (inlined)
+                                                           arrow::Result<arrow::Datum>::Destroy() (inlined)
+                                                           arrow::Result<arrow::Datum>::~Result() (inlined)
+                                                           arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                                           arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                                           TakeStringViewInlinedMonotonicIndices (inlined)
+                                                           benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                                           benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                                           benchmark::internal::BenchmarkRunner::DoNIterations()
+                                                           benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                                           benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                                           benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+                                                           benchmark::RunSpecifiedBenchmarks()
+                                                           main
+                                                           __libc_start_call_main
+                                                           __libc_start_main_impl (inlined)
+                                                           _start
+
+     1.33%  arrow-compute-v  libarrow_testing.so.2500.0.0              [.] unsigned short std::uniform_int_distribution<unsigned short>::operator()<arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> > >(arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> >&, std::uniform_int_distribution<unsigned short>::param_type const&) [clone .isra.0]
+            |          
+             --0.79%--unsigned short std::uniform_int_distribution<unsigned short>::operator()<arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> > >(arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> >&, std::uniform_int_distribution<unsigned short>::param_type const&) (inlined)
+                       unsigned short std::uniform_int_distribution<unsigned short>::operator()<arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> > >(arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> >&) (inlined)
+                       operator() (inlined)
+                       operator() (inlined)
+                       generate<unsigned char*, arrow::random::(anonymous namespace)::GenerateOptions<unsigned char, std::uniform_int_distribution<short unsigned int> >::GenerateTypedDataNoNan(PhysicalType*, size_t)::<lambda()> > (inlined)
+                       GenerateTypedDataNoNan (inlined)
+                       GenerateTypedData<unsigned char> (inlined)
+                       GenerateData (inlined)
+                       std::shared_ptr<arrow::Array> arrow::random::GenerateBinaryArray<arrow::StringViewType, int>(arrow::random::RandomArrayGenerator*, long, int, int, double, std::optional<long>, long, arrow::MemoryPool*) [clone .isra.0]
+                       arrow::random::RandomArrayGenerator::StringView(long, int, int, double, std::optional<long>, long, arrow::MemoryPool*)
+                       arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                       TakeStringViewInlinedMonotonicIndices (inlined)
+                       benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                       benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                       benchmark::internal::BenchmarkRunner::DoNIterations()
+                       benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                       benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                       benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+                       benchmark::RunSpecifiedBenchmarks()
+                       main
+                       __libc_start_call_main
+                       __libc_start_main_impl (inlined)
+                       _start
+
+     1.19%  arrow-compute-v  libarrow_compute.so.2500.0.0              [.] void std::__merge_adaptive<unsigned long*, long, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, long, long, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+            |          
+             --0.82%--__move_merge_adaptive<long unsigned int*, long unsigned int*, long unsigned int*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(uint64_t*, uint64_t*, const arrow::Array&, int64_t, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*)::<lambda(uint64_t, uint64_t)> > > (inlined)
+                       __merge_adaptive<long unsigned int*, long int, long unsigned int*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(uint64_t*, uint64_t*, const arrow::Array&, int64_t, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*)::<lambda(uint64_t, uint64_t)> > > (inlined)
+                       void std::__stable_sort_adaptive<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+                       std::_Function_handler<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<unsigned long> > (unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*), arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type> >::_M_invoke(std::_Any_data const&, unsigned long*&&, unsigned long*&&, arrow::Array const&, long&&, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*&&)
+                       stable_sort<long unsigned int*, arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(uint64_t*, uint64_t*, const arrow::Array&, int64_t, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*)::<lambda(uint64_t, uint64_t)> > (inlined)
+                       operator() (inlined)
+                       operator() (inlined)
+                       __invoke_impl<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<long unsigned int> >, arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type>&, long unsigned int*, long unsigned int*, const arrow::Array&, long int, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*> (inlined)
+                       __invoke_r<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<long unsigned int> >, arrow::compute::internal::(anonymous namespace)::ArrayCountOrCompareSorter<arrow::Int32Type>&, long unsigned int*, long unsigned int*, const arrow::Array&, long int, const arrow::compute::ArraySortOptions&, arrow::compute::ExecContext*> (inlined)
+                       _M_invoke (inlined)
+                       std::function<arrow::Result<arrow::compute::internal::GenericNullPartitionResult<unsigned long> > (unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*) const (inlined)
+                       Exec (inlined)
+                       arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                       arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                       arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                       arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                       arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                       arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                       arrow::compute::SortIndices(arrow::Array const&, arrow::compute::SortOrder, arrow::compute::ExecContext*)
+                       arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                       arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                       TakeStringViewInlinedMonotonicIndices (inlined)
+                       benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                       benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                       benchmark::internal::BenchmarkRunner::DoNIterations()
+                       benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                       benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                       benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+                       0xffffffffffffffff
+
+     1.10%  arrow-compute-v  libarrow_compute.so.2500.0.0              [.] void std::__merge_sort_with_buffer<unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}> >(unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<arrow::compute::internal::(anonymous namespace)::ArrayCompareSorter<arrow::Int32Type>::operator()(unsigned long*, unsigned long*, arrow::Array const&, long, arrow::compute::ArraySortOptions const&, arrow::compute::ExecContext*)::{lambda(unsigned long, unsigned long)#1}>)
+     0.95%  arrow-compute-v  [kernel.kallsyms]                         [k] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               |          
+                --0.94%--handle_mm_fault
+                          do_user_addr_fault
+                          exc_page_fault
+                          asm_exc_page_fault
+                          |          
+                           --0.91%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                                     arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                     arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                     TakeStringViewInlinedMonotonicIndices (inlined)
+                                     benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                     benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                     benchmark::internal::BenchmarkRunner::DoNIterations()
+                                     benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                     benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                     0xffffffffffffffff
+
+     0.89%  arrow-compute-v  [kernel.kallsyms]                         [k] _raw_spin_trylock
+            |
+            ---_raw_spin_trylock
+
+     0.76%  arrow-compute-v  [kernel.kallsyms]                         [k] __lruvec_stat_mod_folio
+            |
+            ---__lruvec_stat_mod_folio
+               |          
+                --0.66%--__folio_mod_stat
+                          folio_add_new_anon_rmap
+                          do_anonymous_page
+                          handle_pte_fault
+                          __handle_mm_fault
+                          handle_mm_fault
+                          do_user_addr_fault
+                          exc_page_fault
+                          asm_exc_page_fault
+                          |          
+                           --0.64%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                                     arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                     arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                     TakeStringViewInlinedMonotonicIndices (inlined)
+                                     benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                     benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                     benchmark::internal::BenchmarkRunner::DoNIterations()
+                                     benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                     benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                     0xffffffffffffffff
+
+     0.73%  arrow-compute-v  [kernel.kallsyms]                         [k] __raw_callee_save___pv_queued_spin_unlock
+            |
+            ---__raw_callee_save___pv_queued_spin_unlock
+               |          
+                --0.70%--_raw_spin_unlock
+
+     0.72%  arrow-compute-v  [kernel.kallsyms]                         [k] mas_walk
+            |
+            ---mas_walk
+               |          
+                --0.70%--lock_vma_under_rcu
+                          do_user_addr_fault
+                          exc_page_fault
+                          asm_exc_page_fault
+                          |          
+                           --0.67%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                                     arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                     arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                     TakeStringViewInlinedMonotonicIndices (inlined)
+                                     benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                     benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                     benchmark::internal::BenchmarkRunner::DoNIterations()
+                                     benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                     benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                     0xffffffffffffffff
+
+     0.70%  arrow-compute-v  libarrow_testing.so.2500.0.0              [.] std::shared_ptr<arrow::Array> arrow::random::GenerateBinaryArray<arrow::StringViewType, int>(arrow::random::RandomArrayGenerator*, long, int, int, double, std::optional<long>, long, arrow::MemoryPool*) [clone .isra.0]
+     0.62%  arrow-compute-v  libc.so.6                                 [.] __memmove_avx512_unaligned_erms
+            |
+            ---__memcpy_avx512_unaligned_erms (inlined)
+
+     0.61%  arrow-compute-v  [kernel.kallsyms]                         [k] lock_vma_under_rcu
+            |
+            ---lock_vma_under_rcu
+               |          
+                --0.60%--do_user_addr_fault
+                          exc_page_fault
+                          asm_exc_page_fault
+                          |          
+                           --0.58%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                                     arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                     arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                     TakeStringViewInlinedMonotonicIndices (inlined)
+                                     benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                     benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                     benchmark::internal::BenchmarkRunner::DoNIterations()
+                                     benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                     benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                     0xffffffffffffffff
+
+     0.59%  arrow-compute-v  [kernel.kallsyms]                         [k] do_anonymous_page
+            |
+            ---do_anonymous_page
+               |          
+                --0.56%--handle_pte_fault
+                          __handle_mm_fault
+                          handle_mm_fault
+                          do_user_addr_fault
+                          exc_page_fault
+                          asm_exc_page_fault
+                          |          
+                           --0.55%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                                     arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                                     arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                     arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                     arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                     arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                     arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                     TakeStringViewInlinedMonotonicIndices (inlined)
+                                     benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                     benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                     benchmark::internal::BenchmarkRunner::DoNIterations()
+                                     benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                     benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                     0xffffffffffffffff
+
+     0.58%  arrow-compute-v  [kernel.kallsyms]                         [k] free_pages_and_swap_cache
+            |
+            ---free_pages_and_swap_cache
+               __tlb_batch_free_encoded_pages
+               tlb_finish_mmu
+               vms_clear_ptes.part.0
+               vms_complete_munmap_vmas
+               do_vmi_align_munmap
+               |          
+                --0.58%--do_vmi_munmap
+                          __vm_munmap
+                          __x64_sys_munmap
+                          x64_sys_call
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+                          __GI_munmap (inlined)
+                          __GI___libc_free (inlined)
+                          |          
+                           --0.57%--arrow::BaseMemoryPoolImpl<arrow::(anonymous namespace)::SystemAllocator>::Free(unsigned char*, long, long)
+                                     arrow::PoolBuffer::~PoolBuffer()
+                                     std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                     std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() (inlined)
+                                     std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                     std::__shared_ptr<arrow::Buffer, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                     std::shared_ptr<arrow::Buffer>::~shared_ptr() (inlined)
+                                     void std::destroy_at<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                     void std::_Destroy<std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*) (inlined)
+                                     void std::_Destroy_aux<false>::__destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                     void std::_Destroy<std::shared_ptr<arrow::Buffer>*>(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*) (inlined)
+                                     void std::_Destroy<std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer> >(std::shared_ptr<arrow::Buffer>*, std::shared_ptr<arrow::Buffer>*, std::allocator<std::shared_ptr<arrow::Buffer> >&) (inlined)
+                                     std::vector<std::shared_ptr<arrow::Buffer>, std::allocator<std::shared_ptr<arrow::Buffer> > >::~vector() (inlined)
+                                     arrow::ArrayData::~ArrayData() (inlined)
+                                     void std::destroy_at<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                     void std::_Destroy<arrow::ArrayData>(arrow::ArrayData*) (inlined)
+                                     void std::allocator_traits<std::allocator<void> >::destroy<arrow::ArrayData>(std::allocator<void>&, arrow::ArrayData*) (inlined)
+                                     std::_Sp_counted_ptr_inplace<arrow::ArrayData, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+                                     std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+                                     std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+                                     std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() (inlined)
+                                     |          
+                                      --0.56%--std::__shared_ptr<arrow::Table, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() (inlined)
+                                                std::shared_ptr<arrow::Table>::~shared_ptr() (inlined)
+                                                void std::destroy_at<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                void std::_Destroy<std::shared_ptr<arrow::Table> >(std::shared_ptr<arrow::Table>*) (inlined)
+                                                auto std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}::operator()<std::shared_ptr<arrow::Table>&>(std::shared_ptr<arrow::Table>&) (inlined)
+                                                void std::__invoke_impl<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__invoke_other, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                std::enable_if<is_invocable_r_v<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>, void>::type std::__invoke_r<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::shared_ptr<arrow::Table>&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::shared_ptr<arrow::Table>&) (inlined)
+                                                std::__detail::__variant::__gen_vtable_impl<std::__detail::__variant::_Multi_array<void (*)(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&)>, std::integer_sequence<unsigned long, 5ul> >::__visit_invoke(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayD
+                                                decltype(auto) std::__do_visit<void, std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&>(std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset()::{lambda(auto:1&&)#1}&&, std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >&) (inl
+                                                std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::_M_reset() (inlined)
+                                                std::__detail::__variant::_Variant_storage<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_storage() (inlined)
+                                                std::__detail::__variant::_Copy_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_ctor_base() (inlined)
+                                                std::__detail::__variant::_Move_ctor_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_ctor_base() (inlined)
+                                                std::__detail::__variant::_Copy_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Copy_assign_base() (inlined)
+                                                std::__detail::__variant::_Move_assign_base<false, arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Move_assign_base() (inlined)
+                                                std::__detail::__variant::_Variant_base<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~_Variant_base() (inlined)
+                                                std::variant<arrow::Datum::Empty, std::shared_ptr<arrow::Scalar>, std::shared_ptr<arrow::ArrayData>, std::shared_ptr<arrow::ChunkedArray>, std::shared_ptr<arrow::RecordBatch>, std::shared_ptr<arrow::Table> >::~variant() (inlined)
+                                                arrow::Datum::~Datum() (inlined)
+                                                arrow::internal::AlignedStorage<arrow::Datum>::destroy() (inlined)
+                                                arrow::Result<arrow::Datum>::Destroy() (inlined)
+                                                arrow::Result<arrow::Datum>::~Result() (inlined)
+                                                arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                                arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                                TakeStringViewInlinedMonotonicIndices (inlined)
+                                                benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                                benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                                benchmark::internal::BenchmarkRunner::DoNIterations()
+                                                benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                                benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                                benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+                                                benchmark::RunSpecifiedBenchmarks()
+                                                main
+                                                __libc_start_call_main
+                                                __libc_start_main_impl (inlined)
+                                                _start
+
+     0.55%  arrow-compute-v  [kernel.kallsyms]                         [k] __alloc_frozen_pages_noprof
+            |
+            ---__alloc_frozen_pages_noprof
+               |          
+                --0.53%--alloc_pages_mpol
+                          |          
+                           --0.53%--vma_alloc_folio_noprof
+                                     alloc_anon_folio
+                                     do_anonymous_page
+                                     handle_pte_fault
+                                     __handle_mm_fault
+                                     handle_mm_fault
+                                     do_user_addr_fault
+                                     exc_page_fault
+                                     asm_exc_page_fault
+                                     |          
+                                      --0.52%--arrow::compute::internal::VarBinaryViewTakeExec(arrow::compute::KernelContext*, arrow::compute::ExecSpan const&, arrow::compute::ExecResult*)
+                                                arrow::compute::detail::(anonymous namespace)::VectorExecutor::Exec(arrow::compute::ExecSpan const&, arrow::compute::detail::ExecListener*)
+                                                arrow::compute::detail::(anonymous namespace)::VectorExecutor::Execute(arrow::compute::ExecBatch const&, arrow::compute::detail::ExecListener*)
+                                                arrow::compute::detail::FunctionExecutorImpl::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, long)
+                                                arrow::compute::(anonymous namespace)::ExecuteInternal(arrow::compute::Function const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> >, long, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                                arrow::compute::Function::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                                arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::TakeAAA(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                                arrow::compute::internal::(anonymous namespace)::TakeMetaFunction::ExecuteImpl(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                                arrow::compute::MetaFunction::Execute(std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*) const
+                                                arrow::compute::CallFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<arrow::Datum, std::allocator<arrow::Datum> > const&, arrow::compute::FunctionOptions const*, arrow::compute::ExecContext*)
+                                                arrow::compute::Take(arrow::Datum const&, arrow::Datum const&, arrow::compute::TakeOptions const&, arrow::compute::ExecContext*)
+                                                arrow::compute::TakeBenchmark::Bench(std::shared_ptr<arrow::Array> const&)
+                                                arrow::compute::TakeBenchmark::StringViewInlined() (inlined)
+                                                TakeStringViewInlinedMonotonicIndices (inlined)
+                                                benchmark::internal::BenchmarkInstance::Run(long, int, benchmark::internal::ThreadTimer*, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*) const
+                                                benchmark::internal::(anonymous namespace)::RunInThread(benchmark::internal::BenchmarkInstance const*, long, int, benchmark::internal::ThreadManager*, benchmark::internal::PerfCountersMeasurement*)
+                                                benchmark::internal::BenchmarkRunner::DoNIterations()
+                                                benchmark::internal::BenchmarkRunner::DoOneRepetition()
+                                                benchmark::internal::(anonymous namespace)::RunBenchmarks(std::vector<benchmark::internal::BenchmarkInstance, std::allocator<benchmark::internal::BenchmarkInstance> > const&, benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*)
+                                                0xffffffffffffffff
+
+     0.54%  arrow-compute-v  libarrow_testing.so.2500.0.0              [.] int std::uniform_int_distribution<int>::operator()<arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> > >(arrow_vendored::pcg_detail::engine<unsigned int, unsigned long, arrow_vendored::pcg_detail::xsh_rr_mixin<unsigned int, unsigned long>, true, arrow_vendored::pcg_detail::specific_stream<unsigned long>, arrow_vendored::pcg_detail::default_multiplier<unsigned long> >&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]
+     0.50%  arrow-compute-v  [kernel.kallsyms]                         [k] memcg1_commit_charge
+            |
+            ---memcg1_commit_charge
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
