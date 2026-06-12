@@ -257,40 +257,52 @@ Status GroupByNode::Merge() {
   START_COMPUTE_SPAN(span, "Merge",
                      {{"group_by", ToStringExtra(0)}, {"node.label", label()}});
   ThreadLocalState* state0 = &local_states_[0];
+
+  // Pass 1: gather every contributing thread's transposition into state0's
+  // grouper. Each Consume() call may grow state0->grouper; we finish growing
+  // it before touching any kernel state.
+  std::vector<size_t> contributing_threads;
+  contributing_threads.reserve(local_states_.size());
+  std::vector<Datum> transpositions(local_states_.size());
   for (size_t i = 1; i < local_states_.size(); ++i) {
     ThreadLocalState* state = &local_states_[i];
     if (!state->grouper) {
       continue;
     }
-
     ARROW_ASSIGN_OR_RAISE(ExecBatch other_keys, state->grouper->GetUniques());
-    ARROW_ASSIGN_OR_RAISE(Datum transposition,
+    ARROW_ASSIGN_OR_RAISE(transpositions[i],
                           state0->grouper->Consume(ExecSpan(other_keys)));
     state->grouper.reset();
+    contributing_threads.push_back(i);
+  }
 
-    for (size_t span_i = 0; span_i < agg_kernels_.size(); ++span_i) {
-      arrow::util::tracing::Span span_item;
-      START_COMPUTE_SPAN(
-          span_item, aggs_[span_i].function,
-          {{"function.name", aggs_[span_i].function},
-           {"function.options",
-            aggs_[span_i].options ? aggs_[span_i].options->ToString() : "<NULLPTR>"},
-           {"function.kind", std::string(kind_name()) + "::Merge"}});
+  // Pass 2: resize each kernel state exactly once at the final group count,
+  // then merge every contributing thread's state into state0's. This
+  // replaces O(num_threads * num_kernels) resize() calls with O(num_kernels),
+  // which avoids quadratic behaviour when many threads each grow num_groups
+  // by a small amount.
+  const int64_t final_num_groups = state0->grouper->num_groups();
+  for (size_t span_i = 0; span_i < agg_kernels_.size(); ++span_i) {
+    arrow::util::tracing::Span span_item;
+    START_COMPUTE_SPAN(
+        span_item, aggs_[span_i].function,
+        {{"function.name", aggs_[span_i].function},
+         {"function.options",
+          aggs_[span_i].options ? aggs_[span_i].options->ToString() : "<NULLPTR>"},
+         {"function.kind", std::string(kind_name()) + "::Merge"}});
 
-      auto ctx = plan_->query_context()->exec_context();
-      KernelContext batch_ctx{ctx};
-      DCHECK(state0->agg_states[span_i]);
-      batch_ctx.SetState(state0->agg_states[span_i].get());
+    auto ctx = plan_->query_context()->exec_context();
+    KernelContext batch_ctx{ctx};
+    DCHECK(state0->agg_states[span_i]);
+    batch_ctx.SetState(state0->agg_states[span_i].get());
 
-      // XXX this resizes each KernelState (state0->agg_states[span_i]) multiple times.
-      // An alternative would be a two-pass algorithm:
-      // 1. Compute all transpositions (one per local state) and the final number of
-      // groups.
-      // 2. Process all agg kernels, resizing each KernelState only once.
-      RETURN_NOT_OK(
-          agg_kernels_[span_i]->resize(&batch_ctx, state0->grouper->num_groups()));
+    RETURN_NOT_OK(agg_kernels_[span_i]->resize(&batch_ctx, final_num_groups));
+
+    for (size_t i : contributing_threads) {
+      ThreadLocalState* state = &local_states_[i];
       RETURN_NOT_OK(agg_kernels_[span_i]->merge(
-          &batch_ctx, std::move(*state->agg_states[span_i]), *transposition.array()));
+          &batch_ctx, std::move(*state->agg_states[span_i]),
+          *transpositions[i].array()));
       state->agg_states[span_i].reset();
     }
   }
